@@ -1,0 +1,21 @@
+.lq-searchBar {
+  width: 15em;
+  margin: 1em;
+  margin-right: 5em;
+  margin-left: 2em;
+  background-color: none;
+  input[type="text"] {
+    width: 100%;
+    font-size: 1.2em;
+    color: #c4b998;
+    padding: 0.5em;
+    background-color: #111;
+    border: 2px solid #7e633b;
+    &:focus-visible {
+      outline: none;
+    }
+    &:focus {
+      border: 2px solid #dbae6a;
+    }
+  }
+}

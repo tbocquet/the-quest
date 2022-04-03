@@ -1,0 +1,18 @@
+.lq-searchBar-champion-filter {
+  width: 10em;
+  margin: 1em;
+  background-color: none;
+  input[type="text"] {
+    width: 100%;
+    color: #c4b998;
+    padding: 0.5em;
+    background-color: #111;
+    border: 2px solid #7e633b;
+    &:focus-visible {
+      outline: none;
+    }
+    &:focus {
+      border: 2px solid #dbae6a;
+    }
+  }
+}
