@@ -1,4 +1,4 @@
-const KEY = "RGAPI-38c30f2a-4938-4f45-8bfb-e4507f246a32";
+const KEY = "RGAPI-df1bdf03-44a0-44a5-87b2-3057472f59f9";
 
 exports.getChampions = (req, res, next) => {
   const jsonData = require("../Assets/champion.json");
