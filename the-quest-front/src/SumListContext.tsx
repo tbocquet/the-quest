@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { getSummonerProfileIcon } from "./API_call";
 
 type SumElt = {
   id: string;
@@ -32,7 +33,7 @@ export const SumListProvider: React.FC = ({ children }) => {
       const newSumElt: SumElt = {
         id: elt.id,
         name: elt.name,
-        url: `http://localhost:3000/images/profileIcon/${elt.profileIconId}.png`,
+        url: getSummonerProfileIcon(elt.profileIconId),
       };
       if (sumList.length < 10) {
         setSumList([...sumList, newSumElt]);

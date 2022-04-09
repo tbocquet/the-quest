@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Mastery } from "../type";
 import * as calc from "./sucessCalculs";
-import axios from "axios";
 
 import { useSumList } from "../SumListContext";
 import { getMasterySrc } from "../imagesSrc";
 import "./Styles/SucessContainer.scss";
+import { getSummonerInfo, getSummonerProfileIcon } from "../API_call";
 
 type SumData = {
   name: string;
@@ -22,12 +22,11 @@ export function SucessContainer({ summoner, masteries }: Props) {
   const { setSumList } = useSumList();
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/api/lol/summoner/${summoner}`)
+    getSummonerInfo(summoner)
       .then((res) => {
         // @ts-ignore
-        setSumData(res.data);
-        setSumList(res.data);
+        setSumData(res);
+        setSumList(res);
         setError(false);
       })
       .catch(() => setError(true));
@@ -40,7 +39,7 @@ export function SucessContainer({ summoner, masteries }: Props) {
     <div className="lq-sucessContainer">
       <div className="summoner-block">
         <img
-          src={`http://localhost:3000/images/profileIcon/${sumData.profileIconId}.png`}
+          src={getSummonerProfileIcon(sumData.profileIconId)}
           alt=""
           className="summoner-icon"
         />
@@ -60,7 +59,7 @@ export function SucessContainer({ summoner, masteries }: Props) {
           Avancée du voyage : {calc.getQuestProgression(masteries)}%
         </div>
         <div className="nb-total-champion">
-          Nombre total de champion : {calc.countChampions(masteries)}
+          Nombre total de champions : {calc.countChampions(masteries)}
         </div>
         <div className="list-mastery-amount">
           <div className="mastery-amount-block">
