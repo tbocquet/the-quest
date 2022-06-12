@@ -1,4 +1,4 @@
-const KEY = "RGAPI-c3c53c04-0cee-4bcc-bcdd-6f8f8e76ce4d";
+const KEY = "ENTER YOUR API KEY";
 
 exports.getChampions = (req, res, next) => {
   const jsonData = require("../Assets/champion.json");
