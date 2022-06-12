@@ -5,9 +5,9 @@ export function championProgression(champ: Mastery) {
     case 7:
       return 100;
     case 6:
-      return 74 + champ.tokensEarned * 0.13;
+      return 64 + champ.tokensEarned * 11;
     case 5:
-      return 50 + champ.tokensEarned * 0.7;
+      return 50 + champ.tokensEarned * 7;
     default:
       return champ.championPoints / 21600;
   }

@@ -1,11 +1,12 @@
-import { Mastery, Champion } from "../type";
+import { Mastery, Champion, ChampionMastery } from "../type";
 import { CollectionElement } from "./CollectionElement";
 import "./Styles/Collection.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MasteryCheckBox } from "./MasteryCheckBox";
 import { SearchBar } from "./SearchBar";
 import { RoleCheckBox } from "./RoleCheckBox";
 import { ChestCheckBox } from "./ChestCheckBox";
+import { SelectFilter } from "./SelectFilter";
 
 type Props = {
   masteries: Mastery[];
@@ -17,8 +18,75 @@ export function Collection({ champions, masteries }: Props) {
   const [MasteryFilter, setMasteryFilter] = useState<number[]>([]);
   const [championFilter, setChampionFilter] = useState<string>("");
   const [chestFilter, setChestFilter] = useState<boolean>(false);
+  const [sortingOption, setSortingOption] = useState<string>("");
+  const [championMasteries, setChampionMasteries] = useState<ChampionMastery[]>(
+    []
+  );
+  //useEffect(() => console.log(sortingOption), [sortingOption]);
 
-  const allMastery = [7, 6, 5, 4, 3, 2, 1];
+  //Fonction de tri
+  function compareMastery(a: ChampionMastery, b: ChampionMastery) {
+    return b.level - a.level;
+  }
+  function compareMasteryPoint(a: ChampionMastery, b: ChampionMastery) {
+    return b.points - a.points;
+  }
+  function compareChampionsName(a: ChampionMastery, b: ChampionMastery) {
+    return a.name.localeCompare(b.name);
+  }
+
+  useEffect(() => {
+    //Agrégation des données
+    const T: ChampionMastery[] = masteries.map((mastery) => {
+      const champ: Champion | undefined = champions.find(
+        (champ) => parseInt(champ.key) === mastery.championId
+      );
+      const res: ChampionMastery =
+        champ !== undefined
+          ? {
+              id: mastery.championId,
+              level: mastery.championLevel,
+              points: mastery.championPoints,
+              pointsSinceLastLevel: mastery.championPointsSinceLastLevel,
+              pointsUntilNextLevel: mastery.championPointsUntilNextLevel,
+              chestGranted: mastery.chestGranted,
+              tokensEarned: mastery.tokensEarned,
+              name: champ.name,
+              url: champ.url,
+              tags: champ.tags,
+            }
+          : {
+              id: mastery.championId,
+              level: mastery.championLevel,
+              points: mastery.championPoints,
+              pointsSinceLastLevel: mastery.championPointsSinceLastLevel,
+              pointsUntilNextLevel: mastery.championPointsUntilNextLevel,
+              chestGranted: mastery.chestGranted,
+              tokensEarned: mastery.tokensEarned,
+              name: "undefined",
+              url: "undefined",
+              tags: [],
+            };
+      return res;
+    });
+
+    //Tri des données en fonction de sorting Option
+    switch (sortingOption) {
+      case "Niveau de maîtrise":
+        T.sort(compareMastery);
+        break;
+      case "Points de maîtrise":
+        T.sort(compareMasteryPoint);
+        break;
+      case "Nom de champion":
+        T.sort(compareChampionsName);
+        break;
+      default:
+    }
+    setChampionMasteries(T);
+  }, [champions, masteries, sortingOption]);
+
+  const allMastery = [7, 6, 5, 4, 3, 2, 1, 0];
   const allRole = [
     "Assassin",
     "Colossus",
@@ -29,6 +97,11 @@ export function Collection({ champions, masteries }: Props) {
     "Ninja",
     "Support",
     "Tank",
+  ];
+  const allSortingOptions = [
+    "Points de maîtrise",
+    "Niveau de maîtrise",
+    "Nom de champion",
   ];
 
   return (
@@ -42,6 +115,13 @@ export function Collection({ champions, masteries }: Props) {
             []
           )}
         />
+        <div className="sorting-selection">
+          <p>Trier par</p>
+          <SelectFilter
+            values={allSortingOptions}
+            setSelected={setSortingOption}
+          />
+        </div>
         <ul className="mastery-filter-list">
           {allMastery.map((m) => (
             <li key={m}>
@@ -80,38 +160,26 @@ export function Collection({ champions, masteries }: Props) {
         />
       </div>
       <div className="lq-collection">
-        {masteries.map((mastery, index) => {
-          const champ: Champion | undefined = champions.find(
-            (champ) => parseInt(champ.key) === mastery.championId
-          );
-          if (champ === undefined) {
-            return <div>Erreur : champion inconnu</div>;
+        {championMasteries.map((champMast, index) => {
+          const Mfilter = MasteryFilter.length === 0;
+          const Rfilter = RoleFilter.length === 0;
+          const Cfilter = championFilter === "";
+          const ROk = RoleFilter.every((item) => champMast.tags.includes(item));
+          const MOk = MasteryFilter.includes(champMast.level);
+          const champName = champMast.name.toLocaleLowerCase();
+          if (
+            (!chestFilter || (chestFilter && !champMast.chestGranted)) &&
+            ((Rfilter && Mfilter) ||
+              (Rfilter && MOk) ||
+              (Mfilter && ROk) ||
+              (ROk && MOk)) &&
+            (Cfilter || champName.includes(championFilter))
+          ) {
+            return (
+              <CollectionElement key={index} championMastery={champMast} />
+            );
           } else {
-            const Mfilter = MasteryFilter.length === 0;
-            const Rfilter = RoleFilter.length === 0;
-            const Cfilter = championFilter === "";
-            const ROk = RoleFilter.every((item) => champ.tags.includes(item));
-            const MOk = MasteryFilter.includes(mastery.championLevel);
-            const champName = champ.name.toLocaleLowerCase();
-
-            if (
-              (!chestFilter || (chestFilter && !mastery.chestGranted)) &&
-              ((Rfilter && Mfilter) ||
-                (Rfilter && MOk) ||
-                (Mfilter && ROk) ||
-                (ROk && MOk)) &&
-              (Cfilter || champName.includes(championFilter))
-            ) {
-              return (
-                <CollectionElement
-                  key={index}
-                  mastery={mastery}
-                  champion={champ}
-                />
-              );
-            } else {
-              return null;
-            }
+            return null;
           }
         })}
       </div>

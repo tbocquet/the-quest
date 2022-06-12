@@ -16,6 +16,18 @@
   border-top: 1px solid #7e633b;
 }
 
+.sorting-selection {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  p {
+    color: #dbae6a;
+    font-size: 0.9em;
+    padding: 0.5em;
+  }
+}
+
 .role-mastery-block {
   display: flex;
   flex-flow: column wrap;

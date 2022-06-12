@@ -1,50 +1,17 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import { Mastery } from "../type";
 import * as calc from "./sucessCalculs";
 
-import { useSumList } from "../SumListContext";
 import { getMasterySrc } from "../imagesSrc";
+import { SummonerInfoBlock } from "./SummonerInfoBlock";
 import "./Styles/SucessContainer.scss";
-import { getSummonerInfo, getSummonerProfileIcon } from "../API_call";
-
-type SumData = {
-  name: string;
-  profileIconId: number;
-  summonerLevel: number;
-};
 
 type Props = { summoner: string; masteries: Mastery[] };
 
 export function SucessContainer({ summoner, masteries }: Props) {
-  const [sumData, setSumData] = useState<SumData | null>(null);
-  const [error, setError] = useState<boolean>(false);
-
-  const { setSumList } = useSumList();
-
-  useEffect(() => {
-    getSummonerInfo(summoner)
-      .then((res) => {
-        // @ts-ignore
-        setSumData(res);
-        setSumList(res);
-        setError(false);
-      })
-      .catch(() => setError(true));
-  }, [summoner]);
-
-  if (error) return <div>Summoner not found</div>;
-  if (!sumData) return <div>Loading...</div>;
-
   return (
     <div className="lq-sucessContainer">
-      <div className="summoner-block">
-        <img
-          src={getSummonerProfileIcon(sumData.profileIconId)}
-          alt=""
-          className="summoner-icon"
-        />
-        <div className="summoner-name">{sumData.name}</div>
-      </div>
+      <SummonerInfoBlock summonerName={summoner} />
 
       <div className="questProgression-block">
         <img
@@ -55,12 +22,16 @@ export function SucessContainer({ summoner, masteries }: Props) {
       </div>
 
       <div className="stats-block">
-        <div className="questProgression">
-          Avancée du voyage : {calc.getQuestProgression(masteries)}%
-        </div>
-        <div className="nb-total-champion">
-          Nombre total de champions : {calc.countChampions(masteries)}
-        </div>
+        <React.Fragment>
+          <div className="questProgression">
+            Avancée du voyage : {calc.getQuestProgression(masteries)}%
+          </div>
+
+          <div className="nb-total-champion">
+            Nombre total de champions : {calc.countChampions(masteries)}
+          </div>
+        </React.Fragment>
+
         <div className="list-mastery-amount">
           <div className="mastery-amount-block">
             <img src={getMasterySrc(7)} alt="" className="mastery-icon" />

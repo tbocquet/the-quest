@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { getSummonerProfileIcon } from "./API_call";
 
-type SumElt = {
+export type SumElt = {
   id: string;
   name: string;
   url: string;
@@ -10,6 +10,7 @@ type SumElt = {
 type SumListContext = {
   readonly sumList: SumElt[];
   readonly setSumList: (sumElt: SumElt) => void;
+  readonly deleteSumEltFromList: (sumElt: SumElt) => void;
 };
 
 const SumListContext = createContext<SumListContext | undefined>(undefined);
@@ -44,9 +45,17 @@ export const SumListProvider: React.FC = ({ children }) => {
     }
   }
 
+  function deleteSumElt(elt: SumElt): void {
+    const listWithoutTheEltement = sumList.filter(
+      (currentElt) => currentElt.id !== elt.id
+    );
+    setSumList(listWithoutTheEltement);
+  }
+
   const value: SumListContext = {
     sumList,
     setSumList: mySetSumList,
+    deleteSumEltFromList: deleteSumElt,
   };
 
   return (

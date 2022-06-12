@@ -1,20 +1,26 @@
-.lq-header {
+.header {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #7e633b;
-  .connetion-btn {
-    width: 6em;
-    margin: 1em;
-    padding: 0.5em;
-    color: #c4b998;
-    border: 2px solid #7e633b;
-    background-color: #111;
-    cursor: pointer;
-    user-select: none;
-    &:hover {
-      border: 2px solid #dbae6a;
+  .lq-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    .connetion-btn {
+      width: 6em;
+      margin: 1em;
+      padding: 0.5em;
+      color: #c4b998;
+      border: 2px solid #7e633b;
+      background-color: #111;
+      cursor: pointer;
+      user-select: none;
+      &:hover {
+        border: 2px solid #dbae6a;
+      }
     }
   }
 }

@@ -1,25 +1,41 @@
 import "./Styles/CollectionElement.scss";
-import { Mastery, Champion } from "../type";
+import { ChampionMastery } from "../type";
 import { chestSrc, getMasterySrc, getTokenSrc } from "../imagesSrc";
-
-type Props = { champion: Champion; mastery: Mastery };
-export function CollectionElement({ champion, mastery }: Props) {
+type Props = {
+  championMastery: ChampionMastery;
+};
+export function CollectionElement({ championMastery }: Props) {
   return (
     <div className="lq-collectionElement">
       {/*Champion */}
-      <img className="champion" alt="" src={champion.url}></img>
-      <div className="champion-mastery-point">{mastery.championPoints} pts</div>
-
+      <img className="champion" alt="" src={championMastery.url}></img>
+      {championMastery.level > 4 ? (
+        <div className="champion-mastery-point">
+          {championMastery.points} pts
+        </div>
+      ) : (
+        <div className="champion-mastery-point">
+          {championMastery.pointsSinceLastLevel}
+          {" / "}
+          {championMastery.pointsSinceLastLevel +
+            championMastery.pointsUntilNextLevel}{" "}
+          pts
+        </div>
+      )}
       {/*Token */}
-      {mastery.tokensEarned > 0 && (
+      {championMastery.tokensEarned > 0 && (
         <div className="token-block">
           <img
             alt=""
             className="token-overlay"
-            src={getTokenSrc(mastery.championLevel + 1)}
+            src={getTokenSrc(championMastery.level + 1)}
           ></img>
-          <img className="overlay-background" alt="" src={champion.url}></img>
-          <div className="token-amount">{mastery.tokensEarned}</div>
+          <img
+            className="overlay-background"
+            alt=""
+            src={championMastery.url}
+          ></img>
+          <div className="token-amount">{championMastery.tokensEarned}</div>
         </div>
       )}
 
@@ -27,11 +43,11 @@ export function CollectionElement({ champion, mastery }: Props) {
       <img
         alt=""
         className="mastery"
-        src={getMasterySrc(mastery.championLevel)}
+        src={getMasterySrc(championMastery.level)}
       ></img>
 
       {/*Coffre */}
-      {!mastery.chestGranted && (
+      {championMastery.chestGranted && (
         <img alt="" className="chest-icon" src={chestSrc()}></img>
       )}
     </div>

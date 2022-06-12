@@ -35,8 +35,10 @@ export function getMasterySrc(lvl: number): string {
       return require("./Assets/mastery_icon/mastery3_icon.png");
     case 2:
       return require("./Assets/mastery_icon/mastery2_icon.png");
-    default:
+    case 1:
       return require("./Assets/mastery_icon/mastery1_icon.png");
+    default:
+      return require("./Assets/mastery_icon/mastery0_icon.png");
   }
 }
 

@@ -15,3 +15,16 @@ export type Mastery = {
   chestGranted: boolean;
   tokensEarned: number;
 };
+
+export type ChampionMastery = {
+  id: number;
+  level: number;
+  points: number;
+  pointsSinceLastLevel: number;
+  pointsUntilNextLevel: number;
+  chestGranted: boolean;
+  tokensEarned: number;
+  name: string;
+  url: string;
+  tags: string[];
+};

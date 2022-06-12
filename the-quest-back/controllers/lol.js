@@ -1,4 +1,4 @@
-const KEY = "RGAPI-df1bdf03-44a0-44a5-87b2-3057472f59f9";
+const KEY = "RGAPI-c3c53c04-0cee-4bcc-bcdd-6f8f8e76ce4d";
 
 exports.getChampions = (req, res, next) => {
   const jsonData = require("../Assets/champion.json");
@@ -27,7 +27,27 @@ exports.getMasteries = (req, res, next) => {
           `/lol/champion-mastery/v4/champion-masteries/by-summoner/${data.id}`,
           function (err, data) {
             if (data) {
-              res.status(200).json(data);
+              const jsonData = require("../Assets/champion.json");
+              const withLvl0 = jsonData.map((champ) => {
+                const info = data.find(
+                  (elt) => elt.championId === parseInt(champ.key)
+                );
+                if (info !== undefined) {
+                  return info;
+                } else {
+                  return {
+                    championId: parseInt(champ.key),
+                    championLevel: 0,
+                    championPoints: 0,
+                    lastPlayTime: 0,
+                    championPointsSinceLastLevel: 0,
+                    championPointsUntilNextLevel: 0,
+                    chestGranted: false,
+                    tokensEarned: 0,
+                  };
+                }
+              });
+              res.status(200).json(withLvl0);
             } else {
               res.status(400).json({ error });
             }
@@ -49,13 +69,34 @@ exports.getSummoner = (req, res, next) => {
     "summoner",
     `/lol/summoner/v4/summoners/by-name/${SUM_NAME}`,
     function (err, data) {
-      if (data) {
-        res.status(200).json({
-          id: data.id,
-          name: data.name,
-          profileIconId: data.profileIconId,
-          summonerLevel: data.summonerLevel,
-        });
+      if (data && data.id) {
+        console.log(data);
+        //Get sumoners rank
+        riotRequest.request(
+          "euw1",
+          "league",
+          `/lol/league/v4/entries/by-summoner/${data.id}`,
+          function (err, rankData) {
+            if (rankData) {
+              const ranked = rankData.map((Q) => ({
+                queueType: Q.queueType,
+                tier: Q.tier,
+                rank: Q.rank,
+                wins: Q.wins,
+                losses: Q.losses,
+              }));
+              res.status(200).json({
+                id: data.id,
+                name: data.name,
+                profileIconId: data.profileIconId,
+                summonerLevel: data.summonerLevel,
+                ranks: ranked,
+              });
+            } else {
+              res.status(500).json("Summoners not found");
+            }
+          }
+        );
       } else {
         res.status(404).json("Summoners not found");
       }

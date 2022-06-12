@@ -1,9 +1,15 @@
 .lq-searchBar {
-  width: 15em;
+  width: 18em;
   margin: 1em;
   margin-right: 5em;
   margin-left: 2em;
   background-color: none;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
   input[type="text"] {
     width: 100%;
     font-size: 1.2em;
@@ -16,6 +22,28 @@
     }
     &:focus {
       border: 2px solid #dbae6a;
+    }
+  }
+  .refresh-block {
+    position: relative;
+    margin-left: 1em;
+
+    .refresh-icon {
+      top: -0.7em;
+      position: absolute;
+      width: 1.5em;
+    }
+    .refresh-icon-highlight {
+      top: -0.7em;
+      position: absolute;
+      width: 1.5em;
+      opacity: 0%;
+      transition: opacity 0.5s;
+
+      &:hover {
+        z-index: 1;
+        opacity: 100%;
+      }
     }
   }
 }

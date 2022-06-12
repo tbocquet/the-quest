@@ -8,6 +8,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getAllChampions, getSummonerMasteries } from "./API_call";
 import { Mastery, Champion } from "./type";
+import { Loader } from "./Loader";
+import { SummonerNotFound } from "./SummonerNotFound";
 
 function App() {
   const [allChampions, setAllChampions] = useState<Champion[] | null>(null);
@@ -28,7 +30,11 @@ function App() {
     summoner !== "" &&
       getSummonerMasteries(summoner)
         .then((data) => {
-          setMasteries(data);
+          setMasteries(
+            data.sort((a: Mastery, b: Mastery) =>
+              a.championPoints > b.championPoints ? -1 : 1
+            )
+          );
           setError(false);
         })
         .catch(() => setError(true));
@@ -40,9 +46,9 @@ function App() {
       {summoner !== "" && (
         <React.Fragment>
           {error ? (
-            <div>Summoner not found</div>
+            <SummonerNotFound />
           ) : !allChampions || !masteries ? (
-            <div>Loading...</div>
+            <Loader />
           ) : (
             <React.Fragment>
               <SucessContainer summoner={summoner} masteries={masteries} />

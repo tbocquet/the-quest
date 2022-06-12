@@ -2,21 +2,47 @@
   display: flex;
   flex-flow: row wrap;
   .lq-sumList-elt {
+    display: flex;
+    width: 4.5em;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     margin: 0.3em;
     margin-left: 1em;
     margin-right: 1em;
     cursor: pointer;
-    .sumIcon {
+    .sumIcon-container {
+      position: relative;
       width: 3em;
-      border: 1px solid #7e633b;
-      border-radius: 2px;
-      &:hover {
-        border: 1px solid #dbae6a;
+      .delete-sumElt {
+        position: absolute;
+        top: -0.7em;
+        right: -0.6em;
+        z-index: 1;
+        padding: 0.2em;
+        background-color: rgba(1, 12, 22, 0.5);
+        border-radius: 1em;
+
+        color: #7e633b;
+        &:hover {
+          color: #dbae6a;
+          background-color: rgba(1, 12, 22, 0.8);
+        }
+      }
+      .sumIcon {
+        width: 100%;
+        border: 1px solid #7e633b;
+        border-radius: 2px;
+        &:hover {
+          border: 1px solid #dbae6a;
+        }
       }
     }
     .sumName {
       color: white;
       font-size: 0.8em;
+      width: 100%;
+      overflow: hidden;
     }
   }
 }

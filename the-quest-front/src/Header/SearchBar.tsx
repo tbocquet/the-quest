@@ -24,6 +24,18 @@ export function SearchBar({ suggestions, setResult, defaultValue }: Props) {
         onChange={(e) => onChangeHandler(e.target.value)}
         onKeyPress={(e) => handleKeyPress(e.key)}
       ></input>
+      <a href="/" className="refresh-block">
+        <img
+          className="refresh-icon"
+          src={require("../Assets/refresh.png")}
+          alt=""
+        />
+        <img
+          className="refresh-icon-highlight"
+          src={require("../Assets/refresh2.png")}
+          alt=""
+        />
+      </a>
     </div>
   );
 }
