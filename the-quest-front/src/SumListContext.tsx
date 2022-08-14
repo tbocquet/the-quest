@@ -27,20 +27,34 @@ export const SumListProvider: React.FC = ({ children }) => {
   }, [sumList]);
 
   function mySetSumList(elt: any): void {
-    if (
-      elt.id !== undefined &&
-      !sumList.some((sumElt) => sumElt.id === elt.id)
-    ) {
-      const newSumElt: SumElt = {
-        id: elt.id,
-        name: elt.name,
-        url: getSummonerProfileIcon(elt.profileIconId),
-      };
-      if (sumList.length < 10) {
-        setSumList([...sumList, newSumElt]);
-      } else {
-        const [_, ...tail] = sumList;
-        setSumList([...tail, newSumElt]);
+    if (elt.id !== undefined) {
+      //on ajoute le nouvel élément à la fin de la liste
+      if (!sumList.some((sumElt) => sumElt.id === elt.id)) {
+        const newSumElt: SumElt = {
+          id: elt.id,
+          name: elt.name,
+          url: getSummonerProfileIcon(elt.profileIconId),
+        };
+        if (sumList.length < 10) {
+          setSumList([...sumList, newSumElt]);
+        }
+      }
+      //on met à jour les données de l'élément existant
+      else {
+        setSumList(
+          sumList.map((sumElt) =>
+            sumElt.id === elt.id
+              ? {
+                  id: elt.id,
+                  name: elt.name,
+                  url: getSummonerProfileIcon(elt.profileIconId),
+                }
+              : sumElt
+          )
+        );
+
+        sumList[sumList.findIndex((sumElt) => sumElt.id === elt.id)].url =
+          getSummonerProfileIcon(elt.profileIconId);
       }
     }
   }
