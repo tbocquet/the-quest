@@ -1,0 +1,276 @@
+{
+    "general": [
+        {
+            "title": "Tous maîtrise 5",
+            "url": "/success/general/allchamp5.png",
+            "clause": "Obtenir la maîtrise 5 pour tous les champions.",
+            "type": 5,
+            "requireAmount": 163,
+            "description": "Bravo pour cette performance, c'est toujours ça de pris quand on n'arrive pas à faire des S."
+        },
+        {
+            "title": "Tous maîtrise 6",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Obtenir la maîtrise 6 pour tous les champions.",
+            "type": 6,
+            "requireAmount": 163,
+            "description": "Vous avez enfin toutes les maîtrises 6 ! Malheureusement tout le monde s'en fout, mais bon c'est un peu tard pour faire demi-tour non ?"
+        },
+        {
+            "title": "Tous maîtrise 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Obtenir la maîtrise 7 pour tous les champions.",
+            "type": 7,
+            "requireAmount": 163,
+            "description": "Vous voilà maître parmis les maîtres. Bravo pour toutes ces heures que vous avez mis à compléter la quête ! Mais qu'allez vous faire de votre temps maintenant ?"
+        },
+        {
+            "title": "Bâton de bois sec",
+            "url": "/success/general/1champ7.png",
+            "clause": "Obtenir votre premier champion mastery 7",
+            "type": 7,
+            "requireAmount": 1,
+            "description": "Tel l'enfant qui ramassant un bout de bois dans la forêt se sent devenir chevalier, vous venez de faire votre premier pas dans la plus longue aventure de votre vie."
+        },
+        {
+            "title": "Arbrisseau vigoureux",
+            "url": "/success/general/5champ7.png",
+            "type": 7,
+            "requireAmount": 5,
+            "clause": "Obtenir 25 Maîtrises 7 au total",
+            "description": "A mesure que vous avancez, vos racine s'enfoncent plus profond dans le sol. C'est un peu contre-productif..."
+        },
+        {
+            "title": "10 Premier Champion Mastery 7",
+            "url": "/success/general/10champ7.png",
+            "type": 7,
+            "requireAmount": 10,
+            "clause": "",
+            "description": ""
+        },
+        {
+            "title": "Jeune Scarabée",
+            "url": "/success/general/25champ7.png",
+            "type": 7,
+            "requireAmount": 25,
+            "clause": "Obtenir 25 Maîtrises 7 au total",
+            "description": "Votre voyage ne fait que commencer."
+        },
+        {
+            "title": "Disciple Ambitieux",
+            "url": "/success/general/50champ7.png",
+            "type": 7,
+            "requireAmount": 50,
+            "clause": "Obtenir 50 Maîtrises 7 au total",
+            "description": "Les LPs sont temporaires. La gloire est éternelle."
+        },
+        {
+            "title": "Vagabond Honorable",
+            "url": "/success/general/100champ7.png",
+            "type": 7,
+            "requireAmount": 100,
+            "clause": "Obtenir 100 Maîtrises 7 au total",
+            "description": "Y'a-t-il vraiment un but à tout ça ?"
+        },
+        {
+            "title": "Samouraï Polyvalent",
+            "url": "/success/general/125champ7.png",
+            "type": 7,
+            "requireAmount": 125,
+            "clause": "Obtenir 125 Maîtrises 7 au total",
+            "description": "Vous maîtrisez une imposante collection de champions, et pourtant vous êtes encore stuck. C'est fou quand on y pense, non ?"
+        },
+        {
+            "title": "(Trop ?) Vieux Maître",
+            "url": "/success/general/150champ7.png",
+            "type": 7,
+            "requireAmount": 150,
+            "clause": "Obtenir 150 Maîtrises 7 au total",
+            "description": "La frontière entre sagesse et folie est parfois très fine."
+        }
+    ],
+    "role": [
+        {
+            "title": "Tous les Assassins mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les Assassins mastery 7",
+            "role": "Assassin",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les Colosses mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les Colosses mastery 7",
+            "role": "Colossus",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les Enchanteurs mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les Enchanteurs mastery 7",
+            "role": "Enchanteur",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les combatants mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les Combatants mastery 7",
+            "role": "Fighter",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les mages mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les mages mastery 7",
+            "role": "Mage",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les tirreurs mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les tirreurs mastery 7",
+            "role": "Marksman",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les ninjas mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les Ninjas mastery 7",
+            "role": "Ninja",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les supports mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les supports mastery 7",
+            "role": "Support",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        },
+        {
+            "title": "Tous les tanks mastery 7",
+            "url": "/success/general/allchamp6.png",
+            "clause": "Tous les tanks mastery 7",
+            "role": "Tank",
+            "description": "« L'homme est né libre, et partout il est dans les fers »"
+        }
+    ],
+    "rigolo": [
+        {
+            "title": "Aurelion mastery 7",
+            "url": "/success/rigolo/aurelion7.png",
+            "description": "",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "AurelionSol"
+            ]
+        },
+        {
+            "title": "Enorme Batracien",
+            "url": "/success/rigolo/TahmKench7.png",
+            "description": "C'est à vous, vous l'avez léché !",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "TahmKench"
+            ]
+        },
+        {
+            "title": "Roi Des Pirates",
+            "url": "/success/rigolo/gangplank7.png",
+            "description": "jeanplank.blbl.ch",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Gangplank"
+            ]
+        },
+        {
+            "title": "Sale bête !",
+            "url": "/success/rigolo/yuumi7.png",
+            "description": "Vous devriez avoir honte !",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Yuumi"
+            ]
+        },
+        {
+            "title": "Matière première",
+            "url": "/success/general/allchamp6.png",
+            "description": "",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Malphite",
+                "Maokai",
+                "Ivern"
+            ]
+        },
+        {
+            "title": "Maître des éléments",
+            "url": "/success/general/allchamp6.png",
+            "description": "",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Anivia",
+                "Brand",
+                "Janna",
+                "Nami",
+                "Taliyah",
+                "Qyiana",
+                "Udyr"
+            ]
+        },
+        {
+            "title": "La main verte",
+            "url": "/success/rigolo/jardinier.png",
+            "description": "Sacré jardinier que voici.",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Maokai",
+                "Ivern",
+                "Zyra",
+                "Malphite",
+                "Yorick",
+                "Teemo",
+                "Shaco"
+            ]
+        },
+        {
+            "title": "Connu des services de police",
+            "url": "/success/general/allchamp6.png",
+            "description": "Depuis la loi n°2021-478 du 21 avril 2021, si la différence d'âge est de plus de cinq ans, ou s'il y a eu rémunération ou avantage en nature, toute pénétration sexuelle ou acte bucco-génital est considérée comme un viol puni de vingt ans de réclusion criminelle.",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Annie",
+                "Zoe",
+                "Nunu",
+                "Neeko",
+                "Zeri"
+            ]
+        },
+        {
+            "title": "Fiché S",
+            "url": "/success/general/allchamp6.png",
+            "description": "",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Akshan",
+                "Ekko",
+                "Illaoi",
+                "Karma",
+                "Ksante",
+                "Lucian",
+                "Nilah",
+                "Samira",
+                "Senna",
+                "Taliyah"
+            ]
+        }
+    ]
+}

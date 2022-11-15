@@ -1,0 +1,30 @@
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.my-select-filter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  position: relative;
+
+  //width: 12em;
+  color: #c4b998;
+  padding: 0.5em;
+  background-color: #111;
+  border: 1px solid #7e633b;
+  font-size: 0.8em;
+
+  .my-select-option {
+  }
+}

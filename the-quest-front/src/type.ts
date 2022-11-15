@@ -17,7 +17,8 @@ export type Mastery = {
 };
 
 export type ChampionMastery = {
-  id: number;
+  id: string; //Nom du champion
+  championKey: number; //Clef du champion dans l'API riot
   level: number;
   points: number;
   pointsSinceLastLevel: number;
@@ -27,4 +28,24 @@ export type ChampionMastery = {
   name: string;
   url: string;
   tags: string[];
+};
+
+/*----------------Summoner Data-------------------*/
+
+/*Données d'une queue particulière*/
+type RankedQData = {
+  queueType: string;
+  tier: number;
+  rank: string;
+  wins: number;
+  losses: number;
+};
+
+/*Données d'un summoner*/
+export type SummonerData = {
+  id: string;
+  name: string;
+  profileIconId: number;
+  summonerLevel: number;
+  ranks: RankedQData[];
 };

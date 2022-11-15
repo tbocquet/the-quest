@@ -1,26 +1,14 @@
 .header {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #7e633b;
-  .lq-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    .connetion-btn {
-      width: 6em;
-      margin: 1em;
-      padding: 0.5em;
-      color: #c4b998;
-      border: 2px solid #7e633b;
-      background-color: #111;
-      cursor: pointer;
-      user-select: none;
-      &:hover {
-        border: 2px solid #dbae6a;
-      }
-    }
+
+  h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #c79f49;
+    margin: 1em;
   }
 }

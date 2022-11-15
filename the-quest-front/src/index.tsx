@@ -1,15 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
-import { SumListProvider } from "./SumListContext";
-import { SummonerProvider } from "./SummonerContext";
+import { SearchProvider } from "./Context/SearchContext";
+import { SumListProvider } from "./Context/SumListContext";
+import { SummonerProvider } from "./Context/SummonerContext";
+import { SummonerMasteriesProvider } from "./Context/SummonerMasteries";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <SumListProvider>
       <SummonerProvider>
-        <App />
+        <SearchProvider>
+          <SummonerMasteriesProvider>
+            <App />
+          </SummonerMasteriesProvider>
+        </SearchProvider>
       </SummonerProvider>
     </SumListProvider>
   </React.StrictMode>,

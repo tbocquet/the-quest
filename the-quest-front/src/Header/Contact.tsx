@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export function Contact() {
   const [mailVisible, setMailVisible] = useState(false);

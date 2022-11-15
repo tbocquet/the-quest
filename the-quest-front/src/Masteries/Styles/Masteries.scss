@@ -1,0 +1,51 @@
+.lq-collection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: white;
+  margin: 1em;
+  margin-bottom: 0em;
+  padding-bottom: 5em;
+}
+
+.lq-filter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sorting-selection {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  p {
+    color: #dbae6a;
+    font-size: 0.9em;
+    padding: 0.5em;
+  }
+}
+
+.role-mastery-block {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 5em;
+}
+
+.mastery-filter-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.role-filter-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.lane-filter-list {
+  display: flex;
+  flex-flow: row wrap;
+}

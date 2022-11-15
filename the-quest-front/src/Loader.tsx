@@ -1,3 +1,4 @@
+/*Composant à afficher pendant les chargements*/
 export function Loader() {
   return (
     <div className="lq-loader" style={{ margin: "2em" }}>

@@ -1,0 +1,18 @@
+.succcess-champion-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  li {
+    background-color: black;
+    img {
+      height: 2em;
+      margin: 0.2em;
+      opacity: 70%;
+    }
+    .isOwned {
+      opacity: 100%;
+      border: 2px solid #c4b998;
+    }
+  }
+}

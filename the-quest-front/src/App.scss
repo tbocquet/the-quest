@@ -1,0 +1,39 @@
+.App {
+  min-height: 100vh;
+  text-align: center;
+  background: rgb(1, 12, 22);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 12, 22, 1) 0%,
+    rgba(10, 47, 63, 1) 100%
+  );
+  font-family: sans-serif;
+}
+
+.the-quest-app-nav {
+  border-bottom: 2px solid #7e633b;
+  ul {
+    display: flex;
+    margin-left: 1em;
+
+    li {
+      padding: 0.5em;
+      color: #7e633b;
+      box-shadow: none;
+      border-radius: 0.2em 0.2em 0 0;
+
+      &.selected {
+        color: #c79f49;
+        font-weight: bold;
+
+        border: 2px solid #7e633b;
+        border-bottom: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: #c79f49;
+      }
+    }
+  }
+}

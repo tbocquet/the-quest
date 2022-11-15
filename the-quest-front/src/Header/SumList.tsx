@@ -1,10 +1,15 @@
-import { useSumList } from "../SumListContext";
-import { useSummoner } from "../SummonerContext";
+/*Liste des summoners déjà consulté.*/
+
+import { getSummonerDefaultProfileIcon } from "../API_call";
+import { useSumList } from "../Context/SumListContext";
+import { useSummoner } from "../Context/SummonerContext";
+import { getSummonerIcon } from "../imageGetter";
+
 import "./Styles/SumList.scss";
 
 export function SumList() {
   const { sumList, deleteSumEltFromList } = useSumList();
-  const { setSummoner } = useSummoner();
+  const { setSummonerId } = useSummoner();
 
   return (
     <div className="lq-sumList">
@@ -12,7 +17,7 @@ export function SumList() {
         <div
           className="lq-sumList-elt"
           key={sumElt.id}
-          onClick={() => setSummoner(sumElt.name)}
+          onClick={() => setSummonerId(sumElt.id)}
         >
           <div className="sumIcon-container">
             <div
@@ -24,7 +29,15 @@ export function SumList() {
             >
               x
             </div>
-            <img src={sumElt.url} alt={sumElt.name} className="sumIcon"></img>
+            <img
+              src={getSummonerIcon(sumElt.url)}
+              alt={sumElt.name}
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src = getSummonerDefaultProfileIcon();
+              }}
+              className="sumIcon"
+            />
           </div>
           <div className="sumName">{sumElt.name}</div>
         </div>

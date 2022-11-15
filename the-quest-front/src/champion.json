@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "Aatrox",
+    "key": "266",
+    "name": "Aatrox",
+    "url": "Aatrox_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Ahri",
+    "key": "103",
+    "name": "Ahri",
+    "url": "Ahri_0.jpg",
+    "tags": [
+      "mage",
+      "assassin"
+    ]
+  },
+  {
+    "id": "Akali",
+    "key": "84",
+    "name": "Akali",
+    "url": "Akali_0.jpg",
+    "tags": [
+      "assassin",
+      "ninja"
+    ]
+  },
+  {
+    "id": "Akshan",
+    "key": "166",
+    "name": "Akshan",
+    "url": "Akshan_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Alistar",
+    "key": "12",
+    "name": "Alistar",
+    "url": "Alistar_0.jpg",
+    "tags": [
+      "tank",
+      "support"
+    ]
+  },
+  {
+    "id": "Amumu",
+    "key": "32",
+    "name": "Amumu",
+    "url": "Amumu_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Anivia",
+    "key": "34",
+    "name": "Anivia",
+    "url": "Anivia_0.jpg",
+    "tags": [
+      "mage",
+      "Sardoche"
+    ]
+  },
+  {
+    "id": "Annie",
+    "key": "1",
+    "name": "Annie",
+    "url": "Annie_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Aphelios",
+    "key": "523",
+    "name": "Aphelios",
+    "url": "Aphelios_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Ashe",
+    "key": "22",
+    "name": "Ashe",
+    "url": "Ashe_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "AurelionSol",
+    "key": "136",
+    "name": "Aurelion Sol",
+    "url": "AurelionSol_0.jpg",
+    "tags": [
+      "Aurelion"
+    ]
+  },
+  {
+    "id": "Azir",
+    "key": "268",
+    "name": "Azir",
+    "url": "Azir_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Bard",
+    "key": "432",
+    "name": "Bard",
+    "url": "Bard_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Belveth",
+    "key": "200",
+    "name": "Bel'Veth",
+    "url": "Belveth_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Blitzcrank",
+    "key": "53",
+    "name": "Blitzcrank",
+    "url": "Blitzcrank_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Brand",
+    "key": "63",
+    "name": "Brand",
+    "url": "Brand_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Braum",
+    "key": "201",
+    "name": "Braum",
+    "url": "Braum_0.jpg",
+    "tags": [
+      "support",
+      "tank"
+    ]
+  },
+  {
+    "id": "Caitlyn",
+    "key": "51",
+    "name": "Caitlyn",
+    "url": "Caitlyn_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Camille",
+    "key": "164",
+    "name": "Camille",
+    "url": "Camille_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Cassiopeia",
+    "key": "69",
+    "name": "Cassiopeia",
+    "url": "Cassiopeia_0.jpg",
+    "tags": [
+      "mage",
+      "Sardoche"
+    ]
+  },
+  {
+    "id": "Chogath",
+    "key": "31",
+    "name": "Cho'Gath",
+    "url": "Chogath_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Corki",
+    "key": "42",
+    "name": "Corki",
+    "url": "Corki_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Darius",
+    "key": "122",
+    "name": "Darius",
+    "url": "Darius_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Diana",
+    "key": "131",
+    "name": "Diana",
+    "url": "Diana_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Draven",
+    "key": "119",
+    "name": "Draven",
+    "url": "Draven_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "DrMundo",
+    "key": "36",
+    "name": "Dr. Mundo",
+    "url": "DrMundo_0.jpg",
+    "tags": [
+      "fighter",
+      "tank"
+    ]
+  },
+  {
+    "id": "Ekko",
+    "key": "245",
+    "name": "Ekko",
+    "url": "Ekko_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Elise",
+    "key": "60",
+    "name": "Elise",
+    "url": "Elise_0.jpg",
+    "tags": [
+      "assassin",
+      "mage"
+    ]
+  },
+  {
+    "id": "Evelynn",
+    "key": "28",
+    "name": "Evelynn",
+    "url": "Evelynn_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Ezreal",
+    "key": "81",
+    "name": "Ezreal",
+    "url": "Ezreal_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Fiddlesticks",
+    "key": "9",
+    "name": "Fiddlesticks",
+    "url": "Fiddlesticks_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Fiora",
+    "key": "114",
+    "name": "Fiora",
+    "url": "Fiora_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Fizz",
+    "key": "105",
+    "name": "Fizz",
+    "url": "Fizz_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Galio",
+    "key": "3",
+    "name": "Galio",
+    "url": "Galio_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Gangplank",
+    "key": "41",
+    "name": "Gangplank",
+    "url": "Gangplank_0.jpg",
+    "tags": [
+      "Jean Plank"
+    ]
+  },
+  {
+    "id": "Garen",
+    "key": "86",
+    "name": "Garen",
+    "url": "Garen_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Gnar",
+    "key": "150",
+    "name": "Gnar",
+    "url": "Gnar_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Gragas",
+    "key": "79",
+    "name": "Gragas",
+    "url": "Gragas_0.jpg",
+    "tags": [
+      "tank",
+      "mage"
+    ]
+  },
+  {
+    "id": "Graves",
+    "key": "104",
+    "name": "Graves",
+    "url": "Graves_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Gwen",
+    "key": "887",
+    "name": "Gwen",
+    "url": "Gwen_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Hecarim",
+    "key": "120",
+    "name": "Hecarim",
+    "url": "Hecarim_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Heimerdinger",
+    "key": "74",
+    "name": "Heimerdinger",
+    "url": "Heimerdinger_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Illaoi",
+    "key": "420",
+    "name": "Illaoi",
+    "url": "Illaoi_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Irelia",
+    "key": "39",
+    "name": "Irelia",
+    "url": "Irelia_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Ivern",
+    "key": "427",
+    "name": "Ivern",
+    "url": "Ivern_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Janna",
+    "key": "40",
+    "name": "Janna",
+    "url": "Janna_0.jpg",
+    "tags": [
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "JarvanIV",
+    "key": "59",
+    "name": "Jarvan IV",
+    "url": "JarvanIV_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Jax",
+    "key": "24",
+    "name": "Jax",
+    "url": "Jax_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Jayce",
+    "key": "126",
+    "name": "Jayce",
+    "url": "Jayce_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Jhin",
+    "key": "202",
+    "name": "Jhin",
+    "url": "Jhin_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Jinx",
+    "key": "222",
+    "name": "Jinx",
+    "url": "Jinx_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Kaisa",
+    "key": "145",
+    "name": "Kai'Sa",
+    "url": "Kaisa_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Kalista",
+    "key": "429",
+    "name": "Kalista",
+    "url": "Kalista_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Karma",
+    "key": "43",
+    "name": "Karma",
+    "url": "Karma_0.jpg",
+    "tags": [
+      "mage",
+      "support"
+    ]
+  },
+  {
+    "id": "Karthus",
+    "key": "30",
+    "name": "Karthus",
+    "url": "Karthus_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Kassadin",
+    "key": "38",
+    "name": "Kassadin",
+    "url": "Kassadin_0.jpg",
+    "tags": [
+      "assassin",
+      "mage"
+    ]
+  },
+  {
+    "id": "Katarina",
+    "key": "55",
+    "name": "Katarina",
+    "url": "Katarina_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Kayle",
+    "key": "10",
+    "name": "Kayle",
+    "url": "Kayle_0.jpg",
+    "tags": [
+      "Kayle"
+    ]
+  },
+  {
+    "id": "Kayn",
+    "key": "141",
+    "name": "Kayn",
+    "url": "Kayn_0.jpg",
+    "tags": [
+      "fighter",
+      "assassin"
+    ]
+  },
+  {
+    "id": "Kennen",
+    "key": "85",
+    "name": "Kennen",
+    "url": "Kennen_0.jpg",
+    "tags": [
+      "mage",
+      "ninja"
+    ]
+  },
+  {
+    "id": "Khazix",
+    "key": "121",
+    "name": "Kha'Zix",
+    "url": "Khazix_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Kindred",
+    "key": "203",
+    "name": "Kindred",
+    "url": "Kindred_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Kled",
+    "key": "240",
+    "name": "Kled",
+    "url": "Kled_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "KogMaw",
+    "key": "96",
+    "name": "Kog'Maw",
+    "url": "KogMaw_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Leblanc",
+    "key": "7",
+    "name": "LeBlanc",
+    "url": "Leblanc_0.jpg",
+    "tags": [
+      "assassin",
+      "mage"
+    ]
+  },
+  {
+    "id": "LeeSin",
+    "key": "64",
+    "name": "Lee Sin",
+    "url": "LeeSin_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Leona",
+    "key": "89",
+    "name": "Leona",
+    "url": "Leona_0.jpg",
+    "tags": [
+      "tank",
+      "support"
+    ]
+  },
+  {
+    "id": "Lillia",
+    "key": "876",
+    "name": "Lillia",
+    "url": "Lillia_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Lissandra",
+    "key": "127",
+    "name": "Lissandra",
+    "url": "Lissandra_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Lucian",
+    "key": "236",
+    "name": "Lucian",
+    "url": "Lucian_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Lulu",
+    "key": "117",
+    "name": "Lulu",
+    "url": "Lulu_0.jpg",
+    "tags": [
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "Lux",
+    "key": "99",
+    "name": "Lux",
+    "url": "Lux_0.jpg",
+    "tags": [
+      "mage",
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "Malphite",
+    "key": "54",
+    "name": "Malphite",
+    "url": "Malphite_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Malzahar",
+    "key": "90",
+    "name": "Malzahar",
+    "url": "Malzahar_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Maokai",
+    "key": "57",
+    "name": "Maokai",
+    "url": "Maokai_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "MasterYi",
+    "key": "11",
+    "name": "Master Yi",
+    "url": "MasterYi_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "MissFortune",
+    "key": "21",
+    "name": "Miss Fortune",
+    "url": "MissFortune_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "MonkeyKing",
+    "key": "62",
+    "name": "Wukong",
+    "url": "MonkeyKing_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Mordekaiser",
+    "key": "82",
+    "name": "Mordekaiser",
+    "url": "Mordekaiser_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Morgana",
+    "key": "25",
+    "name": "Morgana",
+    "url": "Morgana_0.jpg",
+    "tags": [
+      "mage",
+      "support"
+    ]
+  },
+  {
+    "id": "Nami",
+    "key": "267",
+    "name": "Nami",
+    "url": "Nami_0.jpg",
+    "tags": [
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "Nasus",
+    "key": "75",
+    "name": "Nasus",
+    "url": "Nasus_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Nautilus",
+    "key": "111",
+    "name": "Nautilus",
+    "url": "Nautilus_0.jpg",
+    "tags": [
+      "tank",
+      "support"
+    ]
+  },
+  {
+    "id": "Neeko",
+    "key": "518",
+    "name": "Neeko",
+    "url": "Neeko_0.jpg",
+    "tags": [
+      "mage",
+      "support"
+    ]
+  },
+  {
+    "id": "Nidalee",
+    "key": "76",
+    "name": "Nidalee",
+    "url": "Nidalee_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Nilah",
+    "key": "895",
+    "name": "Nilah",
+    "url": "Nilah_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Nocturne",
+    "key": "56",
+    "name": "Nocturne",
+    "url": "Nocturne_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Nunu",
+    "key": "20",
+    "name": "Nunu & Willump",
+    "url": "Nunu_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Olaf",
+    "key": "2",
+    "name": "Olaf",
+    "url": "Olaf_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Orianna",
+    "key": "61",
+    "name": "Orianna",
+    "url": "Orianna_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Ornn",
+    "key": "516",
+    "name": "Ornn",
+    "url": "Ornn_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Pantheon",
+    "key": "80",
+    "name": "Pantheon",
+    "url": "Pantheon_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Poppy",
+    "key": "78",
+    "name": "Poppy",
+    "url": "Poppy_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Pyke",
+    "key": "555",
+    "name": "Pyke",
+    "url": "Pyke_0.jpg",
+    "tags": [
+      "support",
+      "assassin"
+    ]
+  },
+  {
+    "id": "Qiyana",
+    "key": "246",
+    "name": "Qiyana",
+    "url": "Qiyana_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Quinn",
+    "key": "133",
+    "name": "Quinn",
+    "url": "Quinn_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Rakan",
+    "key": "497",
+    "name": "Rakan",
+    "url": "Rakan_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Rammus",
+    "key": "33",
+    "name": "Rammus",
+    "url": "Rammus_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "RekSai",
+    "key": "421",
+    "name": "Rek'Sai",
+    "url": "RekSai_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Rell",
+    "key": "526",
+    "name": "Rell",
+    "url": "Rell_0.jpg",
+    "tags": [
+      "tank",
+      "support"
+    ]
+  },
+  {
+    "id": "Renata",
+    "key": "888",
+    "name": "Renata Glasc",
+    "url": "Renata_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Renekton",
+    "key": "58",
+    "name": "Renekton",
+    "url": "Renekton_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Rengar",
+    "key": "107",
+    "name": "Rengar",
+    "url": "Rengar_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Riven",
+    "key": "92",
+    "name": "Riven",
+    "url": "Riven_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Rumble",
+    "key": "68",
+    "name": "Rumble",
+    "url": "Rumble_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Ryze",
+    "key": "13",
+    "name": "Ryze",
+    "url": "Ryze_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Samira",
+    "key": "360",
+    "name": "Samira",
+    "url": "Samira_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Sejuani",
+    "key": "113",
+    "name": "Sejuani",
+    "url": "Sejuani_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Senna",
+    "key": "235",
+    "name": "Senna",
+    "url": "Senna_0.jpg",
+    "tags": [
+      "marksman",
+      "support"
+    ]
+  },
+  {
+    "id": "Seraphine",
+    "key": "147",
+    "name": "Seraphine",
+    "url": "Seraphine_0.jpg",
+    "tags": [
+      "mage",
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "Sett",
+    "key": "875",
+    "name": "Sett",
+    "url": "Sett_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Shaco",
+    "key": "35",
+    "name": "Shaco",
+    "url": "Shaco_0.jpg",
+    "tags": [
+      "assassin",
+      "Shaco"
+    ]
+  },
+  {
+    "id": "Shen",
+    "key": "98",
+    "name": "Shen",
+    "url": "Shen_0.jpg",
+    "tags": [
+      "tank",
+      "support",
+      "ninja"
+    ]
+  },
+  {
+    "id": "Shyvana",
+    "key": "102",
+    "name": "Shyvana",
+    "url": "Shyvana_0.jpg",
+    "tags": [
+      "fighter",
+      "mage"
+    ]
+  },
+  {
+    "id": "Singed",
+    "key": "27",
+    "name": "Singed",
+    "url": "Singed_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Sion",
+    "key": "14",
+    "name": "Sion",
+    "url": "Sion_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Sivir",
+    "key": "15",
+    "name": "Sivir",
+    "url": "Sivir_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Skarner",
+    "key": "72",
+    "name": "Skarner",
+    "url": "Skarner_0.jpg",
+    "tags": [
+      "Skarner",
+      "colosse"
+    ]
+  },
+  {
+    "id": "Sona",
+    "key": "37",
+    "name": "Sona",
+    "url": "Sona_0.jpg",
+    "tags": [
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "Soraka",
+    "key": "16",
+    "name": "Soraka",
+    "url": "Soraka_0.jpg",
+    "tags": [
+      "support",
+      "enchanteur"
+    ]
+  },
+  {
+    "id": "Swain",
+    "key": "50",
+    "name": "Swain",
+    "url": "Swain_0.jpg",
+    "tags": [
+      "mage",
+      "support"
+    ]
+  },
+  {
+    "id": "Sylas",
+    "key": "517",
+    "name": "Sylas",
+    "url": "Sylas_0.jpg",
+    "tags": [
+      "mage",
+      "fighter",
+      "assassin"
+    ]
+  },
+  {
+    "id": "Syndra",
+    "key": "134",
+    "name": "Syndra",
+    "url": "Syndra_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "TahmKench",
+    "key": "223",
+    "name": "Tahm Kench",
+    "url": "TahmKench_0.jpg",
+    "tags": [
+      "support",
+      "tank"
+    ]
+  },
+  {
+    "id": "Taliyah",
+    "key": "163",
+    "name": "Taliyah",
+    "url": "Taliyah_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Talon",
+    "key": "91",
+    "name": "Talon",
+    "url": "Talon_0.jpg",
+    "tags": [
+      "assassin"
+    ]
+  },
+  {
+    "id": "Taric",
+    "key": "44",
+    "name": "Taric",
+    "url": "Taric_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Teemo",
+    "key": "17",
+    "name": "Teemo",
+    "url": "Teemo_0.jpg",
+    "tags": [
+      "mage",
+      "Teemo",
+      "Enculé"
+    ]
+  },
+  {
+    "id": "Thresh",
+    "key": "412",
+    "name": "Thresh",
+    "url": "Thresh_0.jpg",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": "Tristana",
+    "key": "18",
+    "name": "Tristana",
+    "url": "Tristana_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Trundle",
+    "key": "48",
+    "name": "Trundle",
+    "url": "Trundle_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Tryndamere",
+    "key": "23",
+    "name": "Tryndamere",
+    "url": "Tryndamere_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "TwistedFate",
+    "key": "4",
+    "name": "Twisted Fate",
+    "url": "TwistedFate_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Twitch",
+    "key": "29",
+    "name": "Twitch",
+    "url": "Twitch_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Udyr",
+    "key": "77",
+    "name": "Udyr",
+    "url": "Udyr_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Urgot",
+    "key": "6",
+    "name": "Urgot",
+    "url": "Urgot_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Varus",
+    "key": "110",
+    "name": "Varus",
+    "url": "Varus_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Vayne",
+    "key": "67",
+    "name": "Vayne",
+    "url": "Vayne_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Veigar",
+    "key": "45",
+    "name": "Veigar",
+    "url": "Veigar_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Velkoz",
+    "key": "161",
+    "name": "Vel'Koz",
+    "url": "Velkoz_0.jpg",
+    "tags": [
+      "mage",
+      "Sardoche"
+    ]
+  },
+  {
+    "id": "Vex",
+    "key": "711",
+    "name": "Vex",
+    "url": "Vex_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Vi",
+    "key": "254",
+    "name": "Vi",
+    "url": "Vi_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Viego",
+    "key": "234",
+    "name": "Viego",
+    "url": "Viego_0.jpg",
+    "tags": [
+      "assassin",
+      "fighter"
+    ]
+  },
+  {
+    "id": "Viktor",
+    "key": "112",
+    "name": "Viktor",
+    "url": "Viktor_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Vladimir",
+    "key": "8",
+    "name": "Vladimir",
+    "url": "Vladimir_0.jpg",
+    "tags": [
+      "mage",
+      "fighter"
+    ]
+  },
+  {
+    "id": "Volibear",
+    "key": "106",
+    "name": "Volibear",
+    "url": "Volibear_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Warwick",
+    "key": "19",
+    "name": "Warwick",
+    "url": "Warwick_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Xayah",
+    "key": "498",
+    "name": "Xayah",
+    "url": "Xayah_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Xerath",
+    "key": "101",
+    "name": "Xerath",
+    "url": "Xerath_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "XinZhao",
+    "key": "5",
+    "name": "Xin Zhao",
+    "url": "XinZhao_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Yasuo",
+    "key": "157",
+    "name": "Yasuo",
+    "url": "Yasuo_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Yone",
+    "key": "777",
+    "name": "Yone",
+    "url": "Yone_0.jpg",
+    "tags": [
+      "fighter"
+    ]
+  },
+  {
+    "id": "Yorick",
+    "key": "83",
+    "name": "Yorick",
+    "url": "Yorick_0.jpg",
+    "tags": [
+      "colosse"
+    ]
+  },
+  {
+    "id": "Yuumi",
+    "key": "350",
+    "name": "Yuumi",
+    "url": "Yuumi_0.jpg",
+    "tags": [
+      "support",
+      "enchanteur",
+      "Yuumi",
+      "Enculé"
+    ]
+  },
+  {
+    "id": "Zac",
+    "key": "154",
+    "name": "Zac",
+    "url": "Zac_0.jpg",
+    "tags": [
+      "tank"
+    ]
+  },
+  {
+    "id": "Zed",
+    "key": "238",
+    "name": "Zed",
+    "url": "Zed_0.jpg",
+    "tags": [
+      "assassin",
+      "ninja"
+    ]
+  },
+  {
+    "id": "Zeri",
+    "key": "221",
+    "name": "Zeri",
+    "url": "Zeri_0.jpg",
+    "tags": [
+      "marksman"
+    ]
+  },
+  {
+    "id": "Ziggs",
+    "key": "115",
+    "name": "Ziggs",
+    "url": "Ziggs_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Zilean",
+    "key": "26",
+    "name": "Zilean",
+    "url": "Zilean_0.jpg",
+    "tags": [
+      "support",
+      "mage"
+    ]
+  },
+  {
+    "id": "Zoe",
+    "key": "142",
+    "name": "Zoe",
+    "url": "Zoe_0.jpg",
+    "tags": [
+      "mage"
+    ]
+  },
+  {
+    "id": "Zyra",
+    "key": "143",
+    "name": "Zyra",
+    "url": "Zyra_0.jpg",
+    "tags": [
+      "mage",
+      "support",
+      "Sardoche"
+    ]
+  }
+]
