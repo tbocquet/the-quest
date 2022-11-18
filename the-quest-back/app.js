@@ -1,7 +1,7 @@
 const express = require("express");
 
 const lolRoutes = require("./routes/lol");
-const path = require("path");
+//const path = require("path");
 
 var cors = require("cors");
 const app = express();
@@ -23,7 +23,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/images", express.static(path.join(__dirname, "images")));
+/*Rendre accessibles les images du dossier images*/
+//app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/lol", lolRoutes);
 
 module.exports = app;

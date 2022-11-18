@@ -3,8 +3,12 @@ const router = express.Router();
 
 const lolCtrl = require("../controllers/lol");
 
-router.get("/champions", lolCtrl.getChampions);
-router.get("/masteries/:id", lolCtrl.getMasteries);
-router.get("/summoner/:id", lolCtrl.getSummoner);
+router.get("/masteriesBySummonerId/:id", lolCtrl.getMasteriesBySummonerId);
+router.get(
+  "/masteriesBySummonerName/:name",
+  lolCtrl.getMasteriesBySummonerName
+);
+router.get("/summonerById/:id", lolCtrl.getSummonerById);
+router.get("/summonerByName/:name", lolCtrl.getSummonerByName);
 
 module.exports = router;
