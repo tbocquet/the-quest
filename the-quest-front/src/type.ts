@@ -26,7 +26,6 @@ export type ChampionMastery = {
   chestGranted: boolean;
   tokensEarned: number;
   name: string;
-  url: string;
   tags: string[];
 };
 

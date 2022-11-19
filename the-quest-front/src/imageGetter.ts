@@ -22,7 +22,11 @@ export function getChestIcon(): string {
 
 /*Champions*/
 export function getChampionTile(id: string): string {
-  return "/image/champion/tile/" + id;
+  return "/image/champion/tile/" + id + "_0.jpg";
+}
+
+export function getChampionCentered(id: string): string {
+  return "/image/champion/centered/" + id + "_0.jpg";
 }
 
 /*Summoner icons*/
@@ -32,4 +36,13 @@ export function getSummonerIcon(id: number): string {
 
 export function getSummonerDefaultProfileIcon(): string {
   return "/image/profileIcon/default.png";
+}
+
+/*Success*/
+export function getSuccessIcon(id: string): string {
+  return "/image/success/" + id;
+}
+
+export function getSuccessNotOwnedIcon(): string {
+  return "/image/success/notOwned.png";
 }

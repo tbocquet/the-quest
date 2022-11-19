@@ -6,7 +6,7 @@ import { getSummonerProfileIcon } from "../API_call";
 export type SumElt = {
   id: string; // SummonerId
   name: string; // SummonerName
-  url: string; // Profile icon url
+  iconId: number; // Profile iconId
 };
 
 type SumListContext = {
@@ -35,7 +35,7 @@ export const SumListProvider: React.FC = ({ children }) => {
         const newSumElt: SumElt = {
           id: elt.id,
           name: elt.name,
-          url: "/profileIcons/" + elt.profileIconId + ".png",
+          iconId: elt.profileIconId,
         };
 
         if (sumList.length < 10) {
@@ -50,7 +50,7 @@ export const SumListProvider: React.FC = ({ children }) => {
               ? {
                   id: elt.id,
                   name: elt.name,
-                  url: getSummonerProfileIcon(elt.profileIconId),
+                  iconId: elt.profileIconId,
                 }
               : sumElt
           )

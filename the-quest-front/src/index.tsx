@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { SearchProvider } from "./Context/SearchContext";
 import { SumListProvider } from "./Context/SumListContext";
 import { SummonerProvider } from "./Context/SummonerContext";
 import { SummonerMasteriesProvider } from "./Context/SummonerMasteries";
@@ -11,11 +10,9 @@ ReactDOM.render(
   <React.StrictMode>
     <SumListProvider>
       <SummonerProvider>
-        <SearchProvider>
-          <SummonerMasteriesProvider>
-            <App />
-          </SummonerMasteriesProvider>
-        </SearchProvider>
+        <SummonerMasteriesProvider>
+          <App />
+        </SummonerMasteriesProvider>
       </SummonerProvider>
     </SumListProvider>
   </React.StrictMode>,

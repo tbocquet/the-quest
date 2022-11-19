@@ -1,48 +1,24 @@
 {
     "general": [
         {
-            "title": "Tous maîtrise 5",
-            "url": "/success/general/allchamp5.png",
-            "clause": "Obtenir la maîtrise 5 pour tous les champions.",
-            "type": 5,
-            "requireAmount": 163,
-            "description": "Bravo pour cette performance, c'est toujours ça de pris quand on n'arrive pas à faire des S."
-        },
-        {
-            "title": "Tous maîtrise 6",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Obtenir la maîtrise 6 pour tous les champions.",
-            "type": 6,
-            "requireAmount": 163,
-            "description": "Vous avez enfin toutes les maîtrises 6 ! Malheureusement tout le monde s'en fout, mais bon c'est un peu tard pour faire demi-tour non ?"
-        },
-        {
-            "title": "Tous maîtrise 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Obtenir la maîtrise 7 pour tous les champions.",
-            "type": 7,
-            "requireAmount": 163,
-            "description": "Vous voilà maître parmis les maîtres. Bravo pour toutes ces heures que vous avez mis à compléter la quête ! Mais qu'allez vous faire de votre temps maintenant ?"
-        },
-        {
             "title": "Bâton de bois sec",
-            "url": "/success/general/1champ7.png",
-            "clause": "Obtenir votre premier champion mastery 7",
+            "url": "general/1champ7.png",
+            "clause": "Obtenir votre premier champion maîtrise 7",
             "type": 7,
             "requireAmount": 1,
             "description": "Tel l'enfant qui ramassant un bout de bois dans la forêt se sent devenir chevalier, vous venez de faire votre premier pas dans la plus longue aventure de votre vie."
         },
         {
             "title": "Arbrisseau vigoureux",
-            "url": "/success/general/5champ7.png",
+            "url": "general/5champ7.png",
             "type": 7,
             "requireAmount": 5,
             "clause": "Obtenir 25 Maîtrises 7 au total",
             "description": "A mesure que vous avancez, vos racine s'enfoncent plus profond dans le sol. C'est un peu contre-productif..."
         },
         {
-            "title": "10 Premier Champion Mastery 7",
-            "url": "/success/general/10champ7.png",
+            "title": "10 Premier Champion maîtrise 7",
+            "url": "general/10champ7.png",
             "type": 7,
             "requireAmount": 10,
             "clause": "",
@@ -50,7 +26,7 @@
         },
         {
             "title": "Jeune Scarabée",
-            "url": "/success/general/25champ7.png",
+            "url": "general/25champ7.png",
             "type": 7,
             "requireAmount": 25,
             "clause": "Obtenir 25 Maîtrises 7 au total",
@@ -58,7 +34,7 @@
         },
         {
             "title": "Disciple Ambitieux",
-            "url": "/success/general/50champ7.png",
+            "url": "general/50champ7.png",
             "type": 7,
             "requireAmount": 50,
             "clause": "Obtenir 50 Maîtrises 7 au total",
@@ -66,7 +42,7 @@
         },
         {
             "title": "Vagabond Honorable",
-            "url": "/success/general/100champ7.png",
+            "url": "general/100champ7.png",
             "type": 7,
             "requireAmount": 100,
             "clause": "Obtenir 100 Maîtrises 7 au total",
@@ -74,7 +50,7 @@
         },
         {
             "title": "Samouraï Polyvalent",
-            "url": "/success/general/125champ7.png",
+            "url": "general/125champ7.png",
             "type": 7,
             "requireAmount": 125,
             "clause": "Obtenir 125 Maîtrises 7 au total",
@@ -82,83 +58,107 @@
         },
         {
             "title": "(Trop ?) Vieux Maître",
-            "url": "/success/general/150champ7.png",
+            "url": "general/150champ7.png",
             "type": 7,
             "requireAmount": 150,
             "clause": "Obtenir 150 Maîtrises 7 au total",
             "description": "La frontière entre sagesse et folie est parfois très fine."
+        },
+        {
+            "title": "Tous maîtrise 7",
+            "url": "general/allchamp7.png",
+            "clause": "Obtenir la maîtrise 7 pour tous les champions.",
+            "type": 7,
+            "requireAmount": 162,
+            "description": "Vous voilà maître parmis les maîtres. Bravo pour toutes ces heures que vous avez mis à compléter la quête ! Mais qu'allez vous faire de votre temps maintenant ?"
+        },
+        {
+            "title": "Tous maîtrise 5",
+            "url": "general/allchamp5.png",
+            "clause": "Obtenir la maîtrise 5 pour tous les champions.",
+            "type": 5,
+            "requireAmount": 162,
+            "description": "Bravo pour cette performance, c'est toujours ça de pris quand on n'arrive pas à faire des S."
+        },
+        {
+            "title": "Tous maîtrise 6",
+            "url": "general/allchamp6.png",
+            "clause": "Obtenir la maîtrise 6 pour tous les champions.",
+            "type": 6,
+            "requireAmount": 162,
+            "description": "Vous avez enfin toutes les maîtrises 6 ! Malheureusement tout le monde s'en fout, mais bon c'est un peu tard pour faire demi-tour non ?"
         }
     ],
     "role": [
         {
-            "title": "Tous les Assassins mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les Assassins mastery 7",
-            "role": "Assassin",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des assassins",
+            "url": "role/assassin7.png",
+            "clause": "Tous les Assassins maîtrise 7",
+            "role": "assassin",
+            "description": "« Un jardinier qui sabote une pelouse est un assassin en herbe »"
         },
         {
-            "title": "Tous les Colosses mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les Colosses mastery 7",
-            "role": "Colossus",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des colossess",
+            "url": "role/colosse7.png",
+            "clause": "Tous les Colosses maîtrise 7",
+            "role": "colosse",
+            "description": "« Pour taper sur le ventre d'un colosse, il faut pouvoir s'y hausser »"
         },
         {
-            "title": "Tous les Enchanteurs mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les Enchanteurs mastery 7",
-            "role": "Enchanteur",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des combatants",
+            "url": "role/fighter7.png",
+            "clause": "Tous les Combatants maîtrise 7",
+            "role": "fighter",
+            "description": "« Et le combat cessa faute de combattants. »"
         },
         {
-            "title": "Tous les combatants mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les Combatants mastery 7",
-            "role": "Fighter",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des mages",
+            "url": "role/mage7.png",
+            "clause": "Tous les mages maîtrise 7",
+            "role": "mage",
+            "description": "« Le monde est sa propre magie »"
         },
         {
-            "title": "Tous les mages mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les mages mastery 7",
-            "role": "Mage",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des tireurs",
+            "url": "role/marksman7.png",
+            "clause": "Tous les tireurs maîtrise 7",
+            "role": "marksman",
+            "description": "« L'homme est cible sur terre pour des tireurs secrets »"
         },
         {
-            "title": "Tous les tirreurs mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les tirreurs mastery 7",
-            "role": "Marksman",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des ninjas",
+            "url": "role/ninja7.png",
+            "clause": "Tous les Ninjas maîtrise 7",
+            "role": "ninja",
+            "description": "« Les ninjas sont les fantômes d'un passé qui n'a jamais existé »"
         },
         {
-            "title": "Tous les ninjas mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les Ninjas mastery 7",
-            "role": "Ninja",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "E-girls professionelles",
+            "url": "role/enchanteur7.png",
+            "clause": "Tous les Enchanteurs maîtrise 7",
+            "role": "enchanteur",
+            "description": "« Act like a lady, think like a boss »"
         },
         {
-            "title": "Tous les supports mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les supports mastery 7",
-            "role": "Support",
-            "description": "« L'homme est né libre, et partout il est dans les fers »"
+            "title": "Maître des supports",
+            "url": "role/support7.png",
+            "clause": "Tous les supports maîtrise 7",
+            "role": "support",
+            "description": "« Servitude pour servitude, il vaut encore mieux être asservi par son coeur que l'esclave de ses sens »"
         },
         {
-            "title": "Tous les tanks mastery 7",
-            "url": "/success/general/allchamp6.png",
-            "clause": "Tous les tanks mastery 7",
-            "role": "Tank",
+            "title": "Maître des tanks",
+            "url": "role/tank7.png",
+            "clause": "Tous les tanks maîtrise 7",
+            "role": "tank",
             "description": "« L'homme est né libre, et partout il est dans les fers »"
         }
     ],
     "rigolo": [
         {
-            "title": "Aurelion mastery 7",
-            "url": "/success/rigolo/aurelion7.png",
-            "description": "",
+            "title": "Aurelion maîtrise 7",
+            "url": "rigolo/aurelion7.png",
+            "description": "Qui peut le plus peut le moins... Le reste de la quête sera une simple formalité pour vous.",
             "clause": "",
             "isSecret": "",
             "championsList": [
@@ -167,7 +167,7 @@
         },
         {
             "title": "Enorme Batracien",
-            "url": "/success/rigolo/TahmKench7.png",
+            "url": "rigolo/TahmKench7.png",
             "description": "C'est à vous, vous l'avez léché !",
             "clause": "",
             "isSecret": "",
@@ -177,7 +177,7 @@
         },
         {
             "title": "Roi Des Pirates",
-            "url": "/success/rigolo/gangplank7.png",
+            "url": "rigolo/gangplank7.png",
             "description": "jeanplank.blbl.ch",
             "clause": "",
             "isSecret": "",
@@ -187,7 +187,7 @@
         },
         {
             "title": "Sale bête !",
-            "url": "/success/rigolo/yuumi7.png",
+            "url": "rigolo/yuumi7.png",
             "description": "Vous devriez avoir honte !",
             "clause": "",
             "isSecret": "",
@@ -197,7 +197,7 @@
         },
         {
             "title": "Matière première",
-            "url": "/success/general/allchamp6.png",
+            "url": "general/allchamp6.png",
             "description": "",
             "clause": "",
             "isSecret": "",
@@ -209,7 +209,7 @@
         },
         {
             "title": "Maître des éléments",
-            "url": "/success/general/allchamp6.png",
+            "url": "general/allchamp6.png",
             "description": "",
             "clause": "",
             "isSecret": "",
@@ -219,13 +219,13 @@
                 "Janna",
                 "Nami",
                 "Taliyah",
-                "Qyiana",
+                "Qiyana",
                 "Udyr"
             ]
         },
         {
             "title": "La main verte",
-            "url": "/success/rigolo/jardinier.png",
+            "url": "rigolo/jardinier.png",
             "description": "Sacré jardinier que voici.",
             "clause": "",
             "isSecret": "",
@@ -241,8 +241,8 @@
         },
         {
             "title": "Connu des services de police",
-            "url": "/success/general/allchamp6.png",
-            "description": "Depuis la loi n°2021-478 du 21 avril 2021, si la différence d'âge est de plus de cinq ans, ou s'il y a eu rémunération ou avantage en nature, toute pénétration sexuelle ou acte bucco-génital est considérée comme un viol puni de vingt ans de réclusion criminelle.",
+            "url": "general/allchamp6.png",
+            "description": "Depuis la loi n°2021-478 du 21 avril 2021, si la différence d'âge est de plus de cinq ans, ou s'il y a eu rémunération ou avantage en nature, tout acte sexuel sera puni de vingt ans de réclusion criminelle.",
             "clause": "",
             "isSecret": "",
             "championsList": [
@@ -255,8 +255,8 @@
         },
         {
             "title": "Fiché S",
-            "url": "/success/general/allchamp6.png",
-            "description": "",
+            "url": "general/allchamp6.png",
+            "description": "Pas raciste, juste patriote.",
             "clause": "",
             "isSecret": "",
             "championsList": [
@@ -264,12 +264,32 @@
                 "Ekko",
                 "Illaoi",
                 "Karma",
-                "Ksante",
+                "KSante",
                 "Lucian",
                 "Nilah",
                 "Samira",
                 "Senna",
                 "Taliyah"
+            ]
+        },
+        {
+            "title": "GigaChad",
+            "url": "rigolo/gigachad.png",
+            "description": "Yes.",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Braum",
+                "Darius",
+                "Galio",
+                "Illaoi",
+                "KSante",
+                "Ornn",
+                "Pantheon",
+                "Sett",
+                "Sion",
+                "Taric",
+                "Yorick"
             ]
         }
     ]

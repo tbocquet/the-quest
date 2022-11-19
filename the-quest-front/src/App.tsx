@@ -4,15 +4,10 @@ import championData from "./champion.json";
 import React from "react";
 import { Header } from "./Header/Header";
 import { Masteries } from "./Masteries/Masteries";
-import { useSearch } from "./Context/SearchContext";
 import { useSummoner } from "./Context/SummonerContext";
 import { useSumList } from "./Context/SumListContext";
 import { useState, useEffect } from "react";
-import {
-  getSummonerDataById,
-  getSummonerDataByName,
-  getSummonerMasteriesById,
-} from "./API_call";
+import { getSummonerDataById, getSummonerMasteriesById } from "./API_call";
 import { Mastery, Champion, ChampionMastery } from "./type";
 import { Loader } from "./Loader";
 import { SummonerNotFound } from "./SummonerNotFound";
@@ -22,8 +17,7 @@ import { useSummonerMasteries } from "./Context/SummonerMasteries";
 
 function App() {
   /*Context*/
-  const { summonerId, setSummonerId } = useSummoner();
-  const { search, setSearch } = useSearch();
+  const { summonerId } = useSummoner();
   const { setSumList } = useSumList();
   const { sumMasteryList, setSumMasteryList } = useSummonerMasteries();
 
@@ -37,24 +31,12 @@ function App() {
   const [error, setError] = useState<boolean>(false);
   const [onglet, setOnglet] = useState(0);
 
-  /*Récupérations des données de l'invocateur à partir de la barre de recherche*/
-  useEffect(() => {
-    search !== "" &&
-      getSummonerDataByName(search)
-        .then((data) => {
-          setSummonerId(data.id);
-          setSumList(data);
-          setError(false);
-        })
-        .catch(() => setError(true));
-  }, [search]);
-
   /*Récupérations des masteries et des données de l'invocateur*/
   useEffect(() => {
     if (summonerId !== "") {
+      /*Rajouter le summoner dans l'historique de recherche*/
       getSummonerDataById(summonerId).then((data) => {
         setSumList(data);
-        setSearch("");
       });
 
       getSummonerMasteriesById(summonerId)
@@ -65,34 +47,8 @@ function App() {
 
           if (M !== null) {
             //On aggrège les données des masteries et des champions connus par le Front
-            const res = M.reduce(
-              (masteryList: ChampionMastery[], mastery: Mastery) => {
-                const C: Champion | undefined = allChampions.find(
-                  (champ) => parseInt(champ.key) === mastery.championId
-                );
-                if (C !== undefined)
-                  return [
-                    ...masteryList,
-                    {
-                      id: C.id,
-                      championKey: mastery.championId,
-                      level: mastery.championLevel,
-                      points: mastery.championPoints,
-                      pointsSinceLastLevel:
-                        mastery.championPointsSinceLastLevel,
-                      pointsUntilNextLevel:
-                        mastery.championPointsUntilNextLevel,
-                      chestGranted: mastery.chestGranted,
-                      tokensEarned: mastery.tokensEarned,
-                      name: C.name,
-                      url: C.url,
-                      tags: C.tags,
-                    },
-                  ];
-                else return masteryList;
-              },
-              []
-            );
+            const res = aggregateMasteriesData(M, allChampions);
+
             setSumMasteryList(res);
             setChampMasteries(res);
           }
@@ -100,16 +56,49 @@ function App() {
           setError(false);
         })
         .catch((error) => {
-          console.log(error);
           setError(true);
         });
     }
   }, [summonerId]);
 
+  useEffect(() => {
+    console.log("HOOK : " + summonerId);
+  }, [summonerId]);
+
+  //Agrège les Masteries et les Champions en un unique object
+  function aggregateMasteriesData(
+    masteryList: Mastery[],
+    championList: Champion[]
+  ): ChampionMastery[] {
+    return masteryList.reduce((resList: ChampionMastery[], M: Mastery) => {
+      const C: Champion | undefined = championList.find(
+        (champ) => parseInt(champ.key) === M.championId
+      );
+      if (C !== undefined)
+        return [
+          ...resList,
+          {
+            id: C.id,
+            championKey: M.championId,
+            level: M.championLevel,
+            points: M.championPoints,
+            pointsSinceLastLevel: M.championPointsSinceLastLevel,
+            pointsUntilNextLevel: M.championPointsUntilNextLevel,
+            chestGranted: M.chestGranted,
+            tokensEarned: M.tokensEarned,
+            name: C.name,
+            url: C.url,
+            tags: C.tags,
+          },
+        ];
+      else return resList;
+    }, []);
+  }
+
   return (
     <div className="App">
       <Header />
-      {summonerId !== null && summonerId !== "error" && (
+      {summonerId !== "" && (
         <React.Fragment>
           {error ? (
             <SummonerNotFound />

@@ -13,11 +13,15 @@ export function SumList() {
 
   return (
     <div className="lq-sumList">
+      {console.log(sumList)}
       {sumList.map((sumElt) => (
         <div
           className="lq-sumList-elt"
           key={sumElt.id}
-          onClick={() => setSummonerId(sumElt.id)}
+          onClick={() => {
+            console.log("SummonerId is set with : " + sumElt.id);
+            setSummonerId(sumElt.id);
+          }}
         >
           <div className="sumIcon-container">
             <div
@@ -29,8 +33,9 @@ export function SumList() {
             >
               x
             </div>
+
             <img
-              src={getSummonerIcon(sumElt.url)}
+              src={getSummonerIcon(sumElt.iconId)}
               alt={sumElt.name}
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null; // prevents looping

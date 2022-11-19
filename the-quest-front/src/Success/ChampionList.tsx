@@ -1,5 +1,6 @@
 /*Petite liste montrant quels champions sont necessaires pour un succès*/
 import { useSummonerMasteries } from "../Context/SummonerMasteries";
+import { getChampionTile } from "../imageGetter";
 import { ChampionMastery } from "../type";
 import "./Styles/ChampionList.scss";
 
@@ -22,7 +23,7 @@ export function ChampionList({ champions }: Props) {
         <li key={index}>
           <img
             className={isChampMastery7(champId) ? "isOwned" : ""}
-            src={"/champions/" + champId + ".png"}
+            src={getChampionTile(champId)}
             alt=""
           />
         </li>

@@ -49,49 +49,6 @@ export function SuccessBlock() {
           </li>
         ))}
       </ul>
-      {/* <ul className="successList">
-        {general.map((elt, index) => (
-          <li key={index}>
-            <SuccessElement
-              title={elt.title}
-              url={elt.url}
-              description={elt.description}
-              clause={elt.clause}
-              champions={elt.championsList}
-              owned={elt.owned}
-            />
-          </li>
-        ))}
-      </ul>
-
-      <ul className="successList">
-        {role.map((elt, index) => (
-          <li key={index}>
-            <SuccessElement
-              title={elt.title}
-              url={elt.url}
-              description={elt.description}
-              clause={elt.clause}
-              champions={elt.championsList}
-              owned={elt.owned}
-            />
-          </li>
-        ))}
-      </ul>
-      <ul className="successList">
-        {rigolo.map((elt, index) => (
-          <li key={index}>
-            <SuccessElement
-              title={elt.title}
-              url={elt.url}
-              description={elt.description}
-              clause={elt.clause}
-              champions={elt.championsList}
-              owned={elt.owned}
-            />
-          </li>
-        ))}
-      </ul> */}
     </>
   );
 }

@@ -10,5 +10,8 @@
     text-transform: uppercase;
     color: #c79f49;
     margin: 1em;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

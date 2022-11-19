@@ -1,12 +1,13 @@
 import { SearchBar } from "./SearchBar";
 import { SumList } from "./SumList";
-import { Contact } from "./Contact";
+import { useSummoner } from "../Context/SummonerContext";
 import "./Styles/Header.scss";
 
 export function Header() {
+  const { setSummonerId } = useSummoner();
   return (
     <div className="header">
-      <h2>La quête</h2>
+      <h2 onClick={() => setSummonerId("")}>La quête</h2>
       <SumList />
       <SearchBar />
     </div>

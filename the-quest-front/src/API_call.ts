@@ -1,22 +1,41 @@
 import axios from "axios";
+import championData from "./champion.json";
+import { Mastery } from "./type";
 
 const SERVER_URL: string = process.env.REACT_APP_SERVER_URL as string;
 
-/*Deprecated*/
-export function getAllChampions() {
-  return axios.get(`${SERVER_URL}api/lol/champions`).then((res) => res.data);
+function addChampWithNoMastery(masteries: Mastery[]): Mastery[] {
+  const masteriesWithAllChamp: Mastery[] = championData.map((champ) => {
+    const M = masteries.find((elt) => elt.championId === parseInt(champ.key));
+
+    if (M !== undefined) {
+      return M;
+    } else {
+      return {
+        championId: parseInt(champ.key),
+        championLevel: 0,
+        championPoints: 0,
+        lastPlayTime: 0,
+        championPointsSinceLastLevel: 0,
+        championPointsUntilNextLevel: 0,
+        chestGranted: false,
+        tokensEarned: 0,
+      };
+    }
+  });
+  return masteriesWithAllChamp;
 }
 
 export function getSummonerMasteriesByName(summonerName: string) {
   return axios
     .get(`${SERVER_URL}api/lol/masteriesBySummonerName/${summonerName}`)
-    .then((res) => res.data);
+    .then((res) => addChampWithNoMastery(res.data));
 }
 
 export function getSummonerMasteriesById(summonerId: string) {
   return axios
     .get(`${SERVER_URL}api/lol/masteriesBySummonerId/${summonerId}`)
-    .then((res) => res.data);
+    .then((res) => addChampWithNoMastery(res.data));
 }
 
 export function getSummonerDataById(summonerId: string) {

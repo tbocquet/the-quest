@@ -18,7 +18,7 @@ export function CollectionElement({ championMastery }: Props) {
         <img
           className="champion"
           alt=""
-          src={getChampionTile(championMastery.url)}
+          src={getChampionTile(championMastery.id)}
         ></img>
       </div>
       {championMastery.level > 4 ? (
@@ -45,7 +45,7 @@ export function CollectionElement({ championMastery }: Props) {
           <img
             className="overlay-background"
             alt=""
-            src={getChampionTile(championMastery.url)}
+            src={getChampionTile(championMastery.id)}
           ></img>
           <div className="token-amount">{championMastery.tokensEarned}</div>
         </div>

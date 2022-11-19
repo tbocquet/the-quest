@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { getSuccessIcon, getSuccessNotOwnedIcon } from "../imageGetter";
 import { ChampionList } from "./ChampionList";
 import "./Styles/SuccesElement.scss";
 
@@ -49,7 +50,7 @@ export function SuccessElement({
     <div className="successElement" ref={boxRef}>
       <div className="iconContainer">
         <img
-          src={owned ? url : "/Success/notOwned.png"}
+          src={owned ? getSuccessIcon(url) : getSuccessNotOwnedIcon()}
           alt=""
           onMouseEnter={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
