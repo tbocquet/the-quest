@@ -5,7 +5,7 @@ export type Champion = {
   url: string;
   lane: string[];
   tags: string[];
-  region?: string | undefined;
+  region: string[];
 };
 
 export type Mastery = {
@@ -30,7 +30,7 @@ export type ChampionMastery = {
   name: string;
   lane: string[];
   tags: string[];
-  region: string;
+  region: string[];
 };
 
 /*----------------Summoner Data-------------------*/

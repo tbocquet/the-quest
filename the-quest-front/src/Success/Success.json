@@ -105,10 +105,10 @@
             "description": "« Pour taper sur le ventre d'un colosse, il faut pouvoir s'y hausser »"
         },
         {
-            "title": "Maître des combatants",
+            "title": "Maître des combattants",
             "url": "role/fighter7.png",
-            "clause": "Tous les Combatants maîtrise 7",
-            "role": "fighter",
+            "clause": "Tous les combattants maîtrise 7",
+            "role": "combattant",
             "description": "« Et le combat cessa faute de combattants »"
         },
         {
@@ -122,7 +122,7 @@
             "title": "Maître des tireurs",
             "url": "role/marksman7.png",
             "clause": "Tous les tireurs maîtrise 7",
-            "role": "marksman",
+            "role": "tireur",
             "description": "« L'homme est cible sur terre pour des tireurs secrets »"
         },
         {

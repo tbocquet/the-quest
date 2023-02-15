@@ -8,9 +8,9 @@
       "top"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Shurima"
+    "region": []
   },
   {
     "id": "Ahri",
@@ -24,7 +24,9 @@
       "mage",
       "assassin"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Akali",
@@ -39,7 +41,9 @@
       "assassin",
       "ninja"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Akshan",
@@ -52,7 +56,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Alistar",
@@ -65,7 +71,8 @@
     "tags": [
       "tank",
       "support"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Amumu",
@@ -80,7 +87,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Anivia",
@@ -91,10 +100,11 @@
       "mid"
     ],
     "tags": [
-      "mage",
-      "Sardoche"
+      "mage"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Annie",
@@ -107,7 +117,8 @@
     ],
     "tags": [
       "mage"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Aphelios",
@@ -120,7 +131,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Ashe",
@@ -134,7 +147,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "AurelionSol",
@@ -145,9 +160,11 @@
       "mid"
     ],
     "tags": [
-      "Aurelion"
+      "Mage"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Azir",
@@ -160,7 +177,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Bard",
@@ -172,7 +191,8 @@
     ],
     "tags": [
       "support"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Belveth",
@@ -184,9 +204,11 @@
       "top"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Blitzcrank",
@@ -202,7 +224,9 @@
     "tags": [
       "support"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Brand",
@@ -216,7 +240,8 @@
     ],
     "tags": [
       "mage"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Braum",
@@ -231,7 +256,9 @@
       "support",
       "tank"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Caitlyn",
@@ -245,7 +272,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Camille",
@@ -257,9 +286,11 @@
       "top"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Cassiopeia",
@@ -272,10 +303,11 @@
       "adc"
     ],
     "tags": [
-      "mage",
-      "Sardoche"
+      "mage"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Chogath",
@@ -290,7 +322,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Corki",
@@ -303,7 +337,10 @@
     "tags": [
       "mage"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle",
+      "Piltover"
+    ]
   },
   {
     "id": "Darius",
@@ -317,7 +354,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Diana",
@@ -332,7 +371,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Draven",
@@ -347,7 +388,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "DrMundo",
@@ -359,10 +402,12 @@
       "jungle"
     ],
     "tags": [
-      "combatant",
+      "combattant",
       "tank"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Ekko",
@@ -375,6 +420,9 @@
     ],
     "tags": [
       "assassin"
+    ],
+    "region": [
+      "Zaun"
     ]
   },
   {
@@ -390,7 +438,9 @@
       "assassin",
       "mage"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Evelynn",
@@ -402,6 +452,9 @@
     ],
     "tags": [
       "assassin"
+    ],
+    "region": [
+      "Les Îles Obscures"
     ]
   },
   {
@@ -416,7 +469,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Fiddlesticks",
@@ -428,6 +483,9 @@
     ],
     "tags": [
       "mage"
+    ],
+    "region": [
+      "Les Îles Obscures"
     ]
   },
   {
@@ -439,9 +497,11 @@
       "top"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Fizz",
@@ -454,7 +514,10 @@
     "tags": [
       "assassin"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bandle",
+      "Bilgewater"
+    ]
   },
   {
     "id": "Galio",
@@ -468,7 +531,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Gangplank",
@@ -480,9 +545,11 @@
       "mid"
     ],
     "tags": [
-      "Jean Plank"
+      "combattant"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Garen",
@@ -497,7 +564,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Gnar",
@@ -508,9 +577,12 @@
       "top"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Freljord"
+    "region": [
+      "Bandle",
+      "Freljord"
+    ]
   },
   {
     "id": "Gragas",
@@ -527,7 +599,9 @@
       "tank",
       "mage"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Graves",
@@ -540,9 +614,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Gwen",
@@ -554,9 +630,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Hecarim",
@@ -568,9 +646,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Heimerdinger",
@@ -586,7 +666,10 @@
     "tags": [
       "mage"
     ],
-    "region": "Piltover"
+    "region": [
+      "Bandle",
+      "Piltover"
+    ]
   },
   {
     "id": "Illaoi",
@@ -599,7 +682,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Irelia",
@@ -611,9 +696,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Ivern",
@@ -627,7 +714,9 @@
     "tags": [
       "support"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Janna",
@@ -641,7 +730,9 @@
       "support",
       "enchanteur"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "JarvanIV",
@@ -655,9 +746,11 @@
       "support"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Jax",
@@ -669,8 +762,9 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
-    ]
+      "combattant"
+    ],
+    "region": []
   },
   {
     "id": "Jayce",
@@ -682,9 +776,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Jhin",
@@ -697,7 +793,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Jinx",
@@ -710,7 +808,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Kaisa",
@@ -724,7 +824,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Kalista",
@@ -737,7 +839,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Karma",
@@ -753,7 +857,9 @@
       "mage",
       "support"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Karthus",
@@ -768,7 +874,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Kassadin",
@@ -783,7 +891,9 @@
       "assassin",
       "mage"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Katarina",
@@ -796,7 +906,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Kayle",
@@ -808,9 +920,11 @@
       "mid"
     ],
     "tags": [
-      "Kayle"
+      "combattant"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Kayn",
@@ -823,10 +937,12 @@
       "mid"
     ],
     "tags": [
-      "combatant",
+      "combattant",
       "assassin"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Kennen",
@@ -841,7 +957,10 @@
       "mage",
       "ninja"
     ],
-    "region": "Ionia"
+    "region": [
+      "Bandle",
+      "Ionia"
+    ]
   },
   {
     "id": "Khazix",
@@ -854,7 +973,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Kindred",
@@ -866,7 +987,8 @@
     ],
     "tags": [
       "tireur"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Kled",
@@ -879,9 +1001,12 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Noxus"
+    "region": [
+      "Bandle",
+      "Noxus"
+    ]
   },
   {
     "id": "KogMaw",
@@ -895,7 +1020,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "KSante",
@@ -907,9 +1034,9 @@
     ],
     "tags": [
       "tank",
-      "combatant"
+      "combattant"
     ],
-    "region": "Shurima"
+    "region": []
   },
   {
     "id": "Leblanc",
@@ -923,7 +1050,9 @@
       "assassin",
       "mage"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "LeeSin",
@@ -937,9 +1066,11 @@
       "support"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Leona",
@@ -955,7 +1086,9 @@
       "tank",
       "support"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Lillia",
@@ -970,7 +1103,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Lissandra",
@@ -984,7 +1119,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Lucian",
@@ -998,7 +1135,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Lulu",
@@ -1013,7 +1152,9 @@
       "support",
       "enchanteur"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Lux",
@@ -1029,7 +1170,9 @@
       "support",
       "enchanteur"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Malphite",
@@ -1045,7 +1188,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Ixtal"
+    "region": [
+      "Ixtal"
+    ]
   },
   {
     "id": "Malzahar",
@@ -1059,7 +1204,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Maokai",
@@ -1075,7 +1222,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "MasterYi",
@@ -1089,7 +1238,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "MissFortune",
@@ -1104,7 +1255,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "MonkeyKing",
@@ -1117,9 +1270,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Mordekaiser",
@@ -1134,7 +1289,7 @@
     "tags": [
       "colosse"
     ],
-    "region": "Noxus"
+    "region": []
   },
   {
     "id": "Morgana",
@@ -1150,7 +1305,9 @@
       "mage",
       "support"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Nami",
@@ -1164,7 +1321,8 @@
     "tags": [
       "support",
       "enchanteur"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Nasus",
@@ -1179,7 +1337,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Nautilus",
@@ -1193,7 +1353,9 @@
       "tank",
       "support"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Neeko",
@@ -1210,7 +1372,9 @@
       "mage",
       "support"
     ],
-    "region": "Ixtal"
+    "region": [
+      "Ixtal"
+    ]
   },
   {
     "id": "Nidalee",
@@ -1224,7 +1388,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Ixtal"
+    "region": [
+      "Ixtal"
+    ]
   },
   {
     "id": "Nilah",
@@ -1236,7 +1402,8 @@
     ],
     "tags": [
       "tireur"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Nocturne",
@@ -1250,7 +1417,8 @@
     ],
     "tags": [
       "assassin"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Nunu",
@@ -1265,7 +1433,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Olaf",
@@ -1277,9 +1447,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Orianna",
@@ -1292,7 +1464,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Ornn",
@@ -1305,7 +1479,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Pantheon",
@@ -1322,7 +1498,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Poppy",
@@ -1337,7 +1515,10 @@
     "tags": [
       "tank"
     ],
-    "region": "Demacia"
+    "region": [
+      "Bandle",
+      "Demacia"
+    ]
   },
   {
     "id": "Pyke",
@@ -1353,7 +1534,9 @@
       "support",
       "assassin"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Qiyana",
@@ -1367,7 +1550,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Ixtal"
+    "region": [
+      "Ixtal"
+    ]
   },
   {
     "id": "Quinn",
@@ -1380,7 +1565,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Rakan",
@@ -1394,7 +1581,9 @@
     "tags": [
       "support"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Rammus",
@@ -1408,7 +1597,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "RekSai",
@@ -1420,9 +1611,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Rell",
@@ -1435,6 +1628,9 @@
     "tags": [
       "tank",
       "support"
+    ],
+    "region": [
+      "Noxus"
     ]
   },
   {
@@ -1448,7 +1644,9 @@
     "tags": [
       "support"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Renekton",
@@ -1460,9 +1658,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Rengar",
@@ -1478,7 +1678,9 @@
     "tags": [
       "assassin"
     ],
-    "region": "Ixtal"
+    "region": [
+      "Ixtal"
+    ]
   },
   {
     "id": "Riven",
@@ -1491,9 +1693,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Rumble",
@@ -1508,7 +1712,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Ryze",
@@ -1521,7 +1727,8 @@
     ],
     "tags": [
       "mage"
-    ]
+    ],
+    "region": []
   },
   {
     "id": "Samira",
@@ -1535,7 +1742,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Sejuani",
@@ -1551,7 +1760,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Senna",
@@ -1565,6 +1776,9 @@
     "tags": [
       "tireur",
       "support"
+    ],
+    "region": [
+      "Les Îles Obscures"
     ]
   },
   {
@@ -1582,7 +1796,9 @@
       "support",
       "enchanteur"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Sett",
@@ -1594,9 +1810,11 @@
       "support"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Shaco",
@@ -1609,9 +1827,9 @@
       "support"
     ],
     "tags": [
-      "assassin",
-      "Shaco"
-    ]
+      "assassin"
+    ],
+    "region": []
   },
   {
     "id": "Shen",
@@ -1628,7 +1846,9 @@
       "support",
       "ninja"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Shyvana",
@@ -1640,10 +1860,12 @@
       "jungle"
     ],
     "tags": [
-      "combatant",
+      "combattant",
       "mage"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Singed",
@@ -1655,9 +1877,11 @@
       "mid"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Sion",
@@ -1671,7 +1895,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Sivir",
@@ -1684,7 +1910,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Skarner",
@@ -1698,7 +1926,9 @@
       "Skarner",
       "colosse"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Sona",
@@ -1711,6 +1941,9 @@
     "tags": [
       "support",
       "enchanteur"
+    ],
+    "region": [
+      "Demacia"
     ]
   },
   {
@@ -1727,7 +1960,9 @@
       "support",
       "enchanteur"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Swain",
@@ -1744,7 +1979,9 @@
       "mage",
       "support"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Sylas",
@@ -1758,10 +1995,12 @@
     ],
     "tags": [
       "mage",
-      "combatant",
+      "combattant",
       "assassin"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Syndra",
@@ -1775,7 +2014,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "TahmKench",
@@ -1790,7 +2031,9 @@
       "support",
       "tank"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Taliyah",
@@ -1805,7 +2048,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "Talon",
@@ -1818,6 +2063,9 @@
     ],
     "tags": [
       "assassin"
+    ],
+    "region": [
+      "Noxus"
     ]
   },
   {
@@ -1833,7 +2081,9 @@
     "tags": [
       "support"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Teemo",
@@ -1848,11 +2098,11 @@
       "support"
     ],
     "tags": [
-      "mage",
-      "Teemo",
-      "Enculé"
+      "mage"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Thresh",
@@ -1865,7 +2115,9 @@
     "tags": [
       "support"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Tristana",
@@ -1879,7 +2131,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Trundle",
@@ -1892,9 +2146,11 @@
       "support"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Tryndamere",
@@ -1906,9 +2162,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "TwistedFate",
@@ -1923,7 +2181,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Bilgewater"
+    "region": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "Twitch",
@@ -1938,7 +2198,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Udyr",
@@ -1952,7 +2214,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Urgot",
@@ -1965,7 +2229,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Varus",
@@ -1980,7 +2246,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Vayne",
@@ -1994,7 +2262,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Veigar",
@@ -2009,7 +2279,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Velkoz",
@@ -2021,10 +2293,11 @@
       "support"
     ],
     "tags": [
-      "mage",
-      "Sardoche"
+      "mage"
     ],
-    "region": "Le Néant"
+    "region": [
+      "Le Néant"
+    ]
   },
   {
     "id": "Vex",
@@ -2038,7 +2311,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Vi",
@@ -2050,9 +2325,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Piltover"
+    "region": [
+      "Piltover"
+    ]
   },
   {
     "id": "Viego",
@@ -2064,9 +2341,11 @@
     ],
     "tags": [
       "assassin",
-      "combatant"
+      "combattant"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Viktor",
@@ -2079,7 +2358,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Vladimir",
@@ -2092,9 +2373,11 @@
     ],
     "tags": [
       "mage",
-      "combatant"
+      "combattant"
     ],
-    "region": "Noxus"
+    "region": [
+      "Noxus"
+    ]
   },
   {
     "id": "Volibear",
@@ -2106,9 +2389,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Freljord"
+    "region": [
+      "Freljord"
+    ]
   },
   {
     "id": "Warwick",
@@ -2122,9 +2407,11 @@
       "support"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Xayah",
@@ -2137,7 +2424,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Xerath",
@@ -2151,7 +2440,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Shurima"
+    "region": [
+      "Shurima"
+    ]
   },
   {
     "id": "XinZhao",
@@ -2163,9 +2454,11 @@
       "jungle"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Demacia"
+    "region": [
+      "Demacia"
+    ]
   },
   {
     "id": "Yasuo",
@@ -2178,9 +2471,11 @@
       "adc"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Yone",
@@ -2193,9 +2488,11 @@
       "adc"
     ],
     "tags": [
-      "combatant"
+      "combattant"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Yorick",
@@ -2210,7 +2507,9 @@
     "tags": [
       "colosse"
     ],
-    "region": "Les Îles Obscures"
+    "region": [
+      "Les Îles Obscures"
+    ]
   },
   {
     "id": "Yuumi",
@@ -2222,11 +2521,11 @@
     ],
     "tags": [
       "support",
-      "enchanteur",
-      "Yuumi",
-      "Enculé"
+      "enchanteur"
     ],
-    "region": "Bandle"
+    "region": [
+      "Bandle"
+    ]
   },
   {
     "id": "Zac",
@@ -2242,7 +2541,9 @@
     "tags": [
       "tank"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Zed",
@@ -2257,7 +2558,9 @@
       "assassin",
       "ninja"
     ],
-    "region": "Ionia"
+    "region": [
+      "Ionia"
+    ]
   },
   {
     "id": "Zeri",
@@ -2270,7 +2573,9 @@
     "tags": [
       "tireur"
     ],
-    "region": "Zaun"
+    "region": [
+      "Zaun"
+    ]
   },
   {
     "id": "Ziggs",
@@ -2285,7 +2590,10 @@
     "tags": [
       "mage"
     ],
-    "region": "Zaun"
+    "region": [
+      "Bandle",
+      "Zaun"
+    ]
   },
   {
     "id": "Zilean",
@@ -2299,6 +2607,9 @@
     "tags": [
       "support",
       "mage"
+    ],
+    "region": [
+      "Shurima"
     ]
   },
   {
@@ -2313,7 +2624,9 @@
     "tags": [
       "mage"
     ],
-    "region": "Targon"
+    "region": [
+      "Targon"
+    ]
   },
   {
     "id": "Zyra",
@@ -2327,9 +2640,10 @@
     ],
     "tags": [
       "mage",
-      "support",
-      "Sardoche"
+      "support"
     ],
-    "region": "Ixtal"
+    "region": [
+      "Ixtal"
+    ]
   }
 ]

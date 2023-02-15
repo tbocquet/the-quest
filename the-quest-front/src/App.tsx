@@ -87,7 +87,7 @@ function App() {
             url: C.url,
             lane: C.lane,
             tags: C.tags,
-            region: C.region !== undefined ? C.region : "",
+            region: C.region,
           },
         ];
       else return resList;

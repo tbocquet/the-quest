@@ -74,7 +74,9 @@ export function Masteries({ masteries }: Props) {
         const LOK = champMast.lane.some((lane) => LaneFilter.includes(lane)); //L'element contient t'il au moins une des lanes selectionnées
         const ROk = RoleFilter.every((item) => champMast.tags.includes(item));
         const MOk = MasteryFilter.includes(champMast.level);
-        const REOK = regionFilter.includes(champMast.region);
+        const REOK = regionFilter.some((region) =>
+          champMast.region.includes(region)
+        );
         const champName = champMast.name.toLocaleLowerCase();
 
         //L'élément correspond t'il à tous les filtres actif ?
@@ -125,7 +127,7 @@ export function Masteries({ masteries }: Props) {
     "assassin",
     "colosse",
     "enchanteur",
-    "combatant",
+    "combattant",
     "mage",
     "tireur",
     "ninja",

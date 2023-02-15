@@ -69,14 +69,23 @@ export function LeePrediction({ masteries }: Props) {
 
           <div className="champion-info-block">
             <h3 className="champion-name">{prediction.name}</h3>
-            {/* Regions */}
 
-            {prediction.region !== "" && (
-              <div className="line-info-block">
-                <img alt="Region icon" src={getRegionIcon(prediction.region)} />
-                <p>{prediction.region}</p>
-              </div>
-            )}
+            {/* Regions */}
+            <div className="line-info-block">
+              {prediction.region.map((tag) => (
+                <img
+                  alt="Region icon"
+                  key={tag + "_icon_index"}
+                  src={getRegionIcon(tag)}
+                />
+              ))}
+              {prediction.region.map((tag, index) => (
+                <p key={tag + "_index"}>
+                  {tag}
+                  {index < prediction.region.length - 1 && <>&nbsp;/&nbsp;</>}
+                </p>
+              ))}
+            </div>
 
             {/* Rôles */}
             <div className="line-info-block">
