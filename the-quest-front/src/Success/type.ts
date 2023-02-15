@@ -5,4 +5,5 @@ export type Success = {
   clause: string | null;
   championsList: string[] | null;
   owned: boolean;
+  music: undefined | string;
 };

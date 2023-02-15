@@ -29,6 +29,39 @@
   justify-content: center;
   align-items: center;
   z-index: 6;
+
+  .champion-info-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1em;
+    text-align: left;
+
+    color: #c79f49;
+    font-family: "FizzQuadrataRegular";
+    .champion-name {
+      font-size: 3em;
+      text-transform: uppercase;
+      margin-bottom: 0.3em;
+    }
+    .line-info-block {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1em;
+      img {
+        height: 3em;
+        margin-right: 0.5em;
+      }
+      p {
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+
   .okButton {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.123);

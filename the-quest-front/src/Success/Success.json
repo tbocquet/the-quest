@@ -6,23 +6,23 @@
             "clause": "Obtenir votre premier champion maîtrise 7",
             "type": 7,
             "requireAmount": 1,
-            "description": "Tel l'enfant qui ramassant un bout de bois dans la forêt se sent devenir chevalier, vous venez de faire votre premier pas dans la plus longue aventure de votre vie."
+            "description": "Tel l'enfant qui ramasse un bout de bois dans la forêt et se sent devenir chevalier, vous venez de faire votre premier pas dans la plus longue aventure de votre vie."
         },
         {
             "title": "Arbrisseau vigoureux",
             "url": "general/5champ7.png",
             "type": 7,
             "requireAmount": 5,
-            "clause": "Obtenir 25 Maîtrises 7 au total",
-            "description": "A mesure que vous avancez, vos racine s'enfoncent plus profond dans le sol. C'est un peu contre-productif..."
+            "clause": "Obtenir 5 Maîtrises 7 au total",
+            "description": "À mesure que vous avancez, vos racines s'enfoncent plus profond dans le sol. C'est un peu contre-productif..."
         },
         {
-            "title": "10 Premier Champion maîtrise 7",
+            "title": "Buisson qui pousse",
             "url": "general/10champ7.png",
             "type": 7,
             "requireAmount": 10,
-            "clause": "",
-            "description": ""
+            "clause": "Obtenir 10 Maîtrises 7 au total",
+            "description": "La truite remonte le ruisseau pas à pas."
         },
         {
             "title": "Jeune Scarabée",
@@ -86,7 +86,7 @@
             "clause": "Obtenir la maîtrise 6 pour tous les champions.",
             "type": 6,
             "requireAmount": 162,
-            "description": "Vous avez enfin toutes les maîtrises 6 ! Malheureusement tout le monde s'en fout, mais bon c'est un peu tard pour faire demi-tour non ?"
+            "description": "Vous avez enfin toutes les maîtrises 6 ! Malheureusement tout le monde s'en fout, mais bon, c'est un peu tard pour faire demi-tour non ?"
         }
     ],
     "role": [
@@ -98,7 +98,7 @@
             "description": "« Un jardinier qui sabote une pelouse est un assassin en herbe »"
         },
         {
-            "title": "Maître des colossess",
+            "title": "Maître des colosses",
             "url": "role/colosse7.png",
             "clause": "Tous les Colosses maîtrise 7",
             "role": "colosse",
@@ -109,7 +109,7 @@
             "url": "role/fighter7.png",
             "clause": "Tous les Combatants maîtrise 7",
             "role": "fighter",
-            "description": "« Et le combat cessa faute de combattants. »"
+            "description": "« Et le combat cessa faute de combattants »"
         },
         {
             "title": "Maître des mages",
@@ -241,7 +241,7 @@
         },
         {
             "title": "Connu des services de police",
-            "url": "general/allchamp6.png",
+            "url": "rigolo/FBI.png",
             "description": "Depuis la loi n°2021-478 du 21 avril 2021, si la différence d'âge est de plus de cinq ans, ou s'il y a eu rémunération ou avantage en nature, tout acte sexuel sera puni de vingt ans de réclusion criminelle.",
             "clause": "",
             "isSecret": "",
@@ -290,7 +290,23 @@
                 "Sion",
                 "Taric",
                 "Yorick"
-            ]
+            ],
+            "music": "/music/success/DrLivesayWalk.ogg"
+        },
+        {
+            "title": "Ornithologue",
+            "url": "rigolo/ornithologue.png",
+            "description": "",
+            "clause": "",
+            "isSecret": "",
+            "championsList": [
+                "Anivia",
+                "Azir",
+                "Fiddlesticks",
+                "Quinn",
+                "Swain"
+            ],
+            "music": "/music/success/Yves-la-Mouette-son-histoire.ogg"
         }
     ]
 }

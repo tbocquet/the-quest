@@ -14,6 +14,7 @@ import { SummonerNotFound } from "./SummonerNotFound";
 import { SummonerStats } from "./SummonerStats/SummonerStats";
 import { SuccessBlock } from "./Success/Success";
 import { useSummonerMasteries } from "./Context/SummonerMasteries";
+import { Home } from "./Home/Home";
 
 function App() {
   /*Context*/
@@ -33,7 +34,7 @@ function App() {
 
   /*Récupérations des masteries et des données de l'invocateur*/
   useEffect(() => {
-    if (summonerId !== "") {
+    if (summonerId !== "" && summonerId !== "-1") {
       /*Rajouter le summoner dans l'historique de recherche*/
       getSummonerDataById(summonerId).then((data) => {
         setSumList(data);
@@ -61,10 +62,6 @@ function App() {
     }
   }, [summonerId]);
 
-  useEffect(() => {
-    console.log("HOOK : " + summonerId);
-  }, [summonerId]);
-
   //Agrège les Masteries et les Champions en un unique object
   function aggregateMasteriesData(
     masteryList: Mastery[],
@@ -88,7 +85,9 @@ function App() {
             tokensEarned: M.tokensEarned,
             name: C.name,
             url: C.url,
+            lane: C.lane,
             tags: C.tags,
+            region: C.region !== undefined ? C.region : "",
           },
         ];
       else return resList;
@@ -97,10 +96,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      {summonerId !== "" && (
+      {summonerId !== "" ? (
         <React.Fragment>
-          {error ? (
+          <Header />
+          {error || summonerId === "-1" ? (
             <SummonerNotFound />
           ) : !masteries ? (
             <Loader />
@@ -113,13 +112,13 @@ function App() {
                     className={onglet === 0 ? "selected" : ""}
                     onClick={() => setOnglet(0)}
                   >
-                    Maîtrise
+                    Maîtrises
                   </li>
                   <li
                     className={onglet === 1 ? "selected" : ""}
                     onClick={() => setOnglet(1)}
                   >
-                    Success
+                    Succès
                   </li>
                 </ul>
               </nav>
@@ -128,6 +127,10 @@ function App() {
             </React.Fragment>
           )}
         </React.Fragment>
+      ) : (
+        <>
+          <Home />
+        </>
       )}
     </div>
   );

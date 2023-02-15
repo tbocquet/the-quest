@@ -3,7 +3,9 @@ export type Champion = {
   key: string;
   name: string;
   url: string;
+  lane: string[];
   tags: string[];
+  region?: string | undefined;
 };
 
 export type Mastery = {
@@ -26,7 +28,9 @@ export type ChampionMastery = {
   chestGranted: boolean;
   tokensEarned: number;
   name: string;
+  lane: string[];
   tags: string[];
+  region: string;
 };
 
 /*----------------Summoner Data-------------------*/

@@ -1,5 +1,4 @@
 import { ChampionMastery } from "../type";
-import { CollectionElement } from "./CollectionElement";
 import "./Styles/Masteries.scss";
 import React, { useEffect, useState } from "react";
 import { MasteryCheckBox } from "./MasteryCheckBox";
@@ -9,18 +8,31 @@ import { ChestCheckBox } from "./ChestCheckBox";
 import { SelectFilter } from "./SelectFilter";
 import { LeePrediction } from "./LeePrediction";
 import { LaneCheckBox } from "./LaneCheckBox";
+import { Mastery } from "./Mastery";
+import { RegionCheckBox } from "./RegionCheckBox";
 
 type Props = {
   masteries: ChampionMastery[];
 };
 
 export function Masteries({ masteries }: Props) {
+  const savedSortingOption = localStorage.getItem("masterySortingOption");
+  const savedMasteryFilter = localStorage.getItem("masteryLevelFilter");
+
   const [LaneFilter, setLaneFilter] = useState<string[]>([]);
   const [RoleFilter, setRoleFilter] = useState<string[]>([]);
-  const [MasteryFilter, setMasteryFilter] = useState<number[]>([]);
+
+  const [MasteryFilter, setMasteryFilter] = useState<number[]>(
+    savedMasteryFilter ? JSON.parse(savedMasteryFilter) : []
+  );
   const [championFilter, setChampionFilter] = useState<string>("");
   const [chestFilter, setChestFilter] = useState<boolean>(false);
-  const [sortingOption, setSortingOption] = useState<string>("");
+
+  const [sortingOption, setSortingOption] = useState<string>(
+    savedSortingOption ? JSON.parse(savedSortingOption) : ""
+  );
+  const [regionFilter, setRegionFilter] = useState<string[]>([]);
+
   const [championMasteries, setChampionMasteries] =
     useState<ChampionMastery[]>(masteries);
 
@@ -35,26 +47,44 @@ export function Masteries({ masteries }: Props) {
     return a.name.localeCompare(b.name);
   }
 
+  //Sauvegarde de l'option de tri
+  useEffect(() => {
+    //console.log("sorting opt : " + sortingOption);
+    localStorage.setItem("masterySortingOption", JSON.stringify(sortingOption));
+  }, [sortingOption]);
+
+  //Sauvegarde du filtre sur le niveau de maitrise
+  useEffect(() => {
+    localStorage.setItem("masteryLevelFilter", JSON.stringify(MasteryFilter));
+  }, [MasteryFilter]);
+
   //Filtrage et des masteries
   useEffect(() => {
     //Filtrage
     let T: ChampionMastery[] = masteries.reduce(
       (acc: ChampionMastery[], champMast: ChampionMastery) => {
-        const Lfilter = LaneFilter.length === 0;
-        const Mfilter = MasteryFilter.length === 0;
-        const Rfilter = RoleFilter.length === 0;
-        const Cfilter = championFilter === "";
+        /*Le filtre est il actif ?*/
+        const Lfilter = LaneFilter.length !== 0;
+        const Mfilter = MasteryFilter.length !== 0;
+        const Rfilter = RoleFilter.length !== 0;
+        const Cfilter = championFilter !== "";
+        const REfilter = regionFilter.length !== 0;
+
+        /*L'élément correspond t'il aux filtres ?*/
+        const LOK = champMast.lane.some((lane) => LaneFilter.includes(lane)); //L'element contient t'il au moins une des lanes selectionnées
         const ROk = RoleFilter.every((item) => champMast.tags.includes(item));
         const MOk = MasteryFilter.includes(champMast.level);
+        const REOK = regionFilter.includes(champMast.region);
         const champName = champMast.name.toLocaleLowerCase();
 
+        //L'élément correspond t'il à tous les filtres actif ?
         if (
-          (!chestFilter || (chestFilter && !champMast.chestGranted)) &&
-          ((Rfilter && Mfilter) ||
-            (Rfilter && MOk) ||
-            (Mfilter && ROk) ||
-            (ROk && MOk)) &&
-          (Cfilter || champName.includes(championFilter))
+          (!Cfilter || (Cfilter && champName.includes(championFilter))) && //Ok with championSearchFilter
+          (!chestFilter || (chestFilter && !champMast.chestGranted)) && //Ok with chestFilter
+          (!Lfilter || (Lfilter && LOK)) && //Ok with laneFilter
+          (!Mfilter || (Mfilter && MOk)) && //Ok with masteryFilter
+          (!Rfilter || (Rfilter && ROk)) && //ok with roleFilter
+          (!REfilter || (REfilter && REOK))
         ) {
           return [...acc, champMast];
         } else {
@@ -78,16 +108,26 @@ export function Masteries({ masteries }: Props) {
       default:
     }
     setChampionMasteries(T);
-  }, [masteries, sortingOption, MasteryFilter, RoleFilter, championFilter]);
+  }, [
+    masteries,
+    sortingOption,
+    MasteryFilter,
+    RoleFilter,
+    championFilter,
+    LaneFilter,
+    chestFilter,
+    regionFilter,
+  ]);
 
+  const allLane = ["top", "jungle", "mid", "adc", "support"];
   const allMastery = [7, 6, 5, 4, 3, 2, 1, 0];
   const allRole = [
     "assassin",
     "colosse",
     "enchanteur",
-    "fighter",
+    "combatant",
     "mage",
-    "marksman",
+    "tireur",
     "ninja",
     "support",
     "tank",
@@ -97,8 +137,21 @@ export function Masteries({ masteries }: Props) {
     "Niveau de maîtrise",
     "Nom de champion",
   ];
-
-  const allLane = ["top", "jungle", "mid", "bot", "support"];
+  const allRegions = [
+    "Bandle",
+    "Bilgewater",
+    "Demacia",
+    "Freljord",
+    "Ionia",
+    "Ixtal",
+    "Le Néant",
+    "Les Îles Obscures",
+    "Noxus",
+    "Piltover",
+    "Shurima",
+    "Targon",
+    "Zaun",
+  ];
 
   return (
     <React.Fragment>
@@ -113,6 +166,7 @@ export function Masteries({ masteries }: Props) {
           <SelectFilter
             values={allSortingOptions}
             setSelected={setSortingOption}
+            current={sortingOption}
           />
         </div>
 
@@ -163,6 +217,22 @@ export function Masteries({ masteries }: Props) {
             </li>
           ))}
         </ul>
+
+        <ul className="region-filter-list">
+          {allRegions.map((tag) => (
+            <li key={tag}>
+              <RegionCheckBox
+                region={tag}
+                isSelected={regionFilter.includes(tag)}
+                onCheckboxChange={() => {
+                  regionFilter.includes(tag)
+                    ? setRegionFilter(regionFilter.filter((t) => t !== tag))
+                    : setRegionFilter([...regionFilter, tag]);
+                }}
+              />
+            </li>
+          ))}
+        </ul>
         <ChestCheckBox
           isSelected={chestFilter}
           onCheckboxChange={() =>
@@ -174,7 +244,8 @@ export function Masteries({ masteries }: Props) {
 
       <div className="lq-collection">
         {championMasteries.map((champMast, index) => (
-          <CollectionElement key={index} championMastery={champMast} />
+          // <CollectionElement key={index} championMastery={champMast} />
+          <Mastery key={index} championMastery={champMast} />
         ))}
       </div>
     </React.Fragment>

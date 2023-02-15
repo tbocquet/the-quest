@@ -66,6 +66,7 @@ export function getRigoloSuccess(sumMasteries: ChampionMastery[]): Success[] {
     description: obj.description,
     championsList: obj.championsList,
     owned: isChampionsInListMastery7(sumMasteries, obj.championsList),
+    music: obj.music ? obj.music : undefined,
   }));
   return mySuccess as Success[];
 }

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { getSuccessIcon, getSuccessNotOwnedIcon } from "../imageGetter";
 import { ChampionList } from "./ChampionList";
+import ReactAudioPlayer from "react-audio-player";
 import "./Styles/SuccesElement.scss";
 
 type Props = {
@@ -10,6 +11,7 @@ type Props = {
   champions: string[] | null;
   clause: string | null;
   owned: boolean;
+  music: undefined | string;
 };
 
 export function SuccessElement({
@@ -19,8 +21,11 @@ export function SuccessElement({
   clause,
   champions,
   owned,
+  music,
 }: Props) {
   const [visible, setVisible] = useState(false);
+  //const [myClassName,setMyClassName] = useState();
+
   const boxRef = useRef<HTMLDivElement>(null);
   // X
   const [x, setX] = useState<number | undefined>();
@@ -56,6 +61,12 @@ export function SuccessElement({
           onMouseLeave={() => setVisible(false)}
           className={visible ? "successIcon bigger" : "successIcon"}
         />
+        {/* Pour les succes ayant une musiques */}
+        <div className="music-block">
+          {music && owned && visible && (
+            <ReactAudioPlayer src={music} autoPlay controls volume={0.5} />
+          )}
+        </div>
       </div>
 
       <div

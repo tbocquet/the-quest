@@ -1,11 +1,10 @@
 /*Liste des summoners déjà consulté.*/
 
-import { getSummonerDefaultProfileIcon } from "../API_call";
 import { useSumList } from "../Context/SumListContext";
 import { useSummoner } from "../Context/SummonerContext";
-import { getSummonerIcon } from "../imageGetter";
 
 import "./Styles/SumList.scss";
+import { SumListElementIcon } from "./SumListElementIcon";
 
 export function SumList() {
   const { sumList, deleteSumEltFromList } = useSumList();
@@ -13,7 +12,6 @@ export function SumList() {
 
   return (
     <div className="lq-sumList">
-      {console.log(sumList)}
       {sumList.map((sumElt) => (
         <div
           className="lq-sumList-elt"
@@ -34,15 +32,7 @@ export function SumList() {
               x
             </div>
 
-            <img
-              src={getSummonerIcon(sumElt.iconId)}
-              alt={sumElt.name}
-              onError={({ currentTarget }) => {
-                currentTarget.onerror = null; // prevents looping
-                currentTarget.src = getSummonerDefaultProfileIcon();
-              }}
-              className="sumIcon"
-            />
+            <SumListElementIcon iconId={sumElt.iconId} />
           </div>
           <div className="sumName">{sumElt.name}</div>
         </div>

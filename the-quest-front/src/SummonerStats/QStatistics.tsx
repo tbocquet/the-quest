@@ -19,8 +19,10 @@ export function QStatistics({ Q }: Props) {
     return (
       <div className="summoner-rank-item">
         <h4>
-          {Q.queueType === "RANKED_SOLO_5x5" ? "Soloqueue " : "Flex "}: {Q.tier}{" "}
-          {Q.rank}
+          {Q.queueType === "RANKED_SOLO_5x5"
+            ? "Classé Solo/Duo "
+            : "Classé Flex "}
+          : {Q.tier} {Q.rank}
         </h4>
         <p>
           {Q.wins} victoires (

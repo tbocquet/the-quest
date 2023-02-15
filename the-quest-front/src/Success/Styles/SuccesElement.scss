@@ -33,16 +33,14 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 400%;
-    height: 100%;
+    width: 410%;
+    height: 200%;
     overflow: hidden;
 
     .infoBlockContainer {
       position: relative;
       background-color: rgba(0, 0, 0, 0.849);
-      padding-left: 18%;
-      width: 80%;
-      height: 98%;
+      padding-left: 8em;
       border: 2px solid #7e633b;
       color: #c4b998;
 
@@ -62,16 +60,14 @@
     position: absolute;
     top: 0;
     right: 50%;
-    width: 400%;
-    height: 100%;
+    width: 420%;
+    height: 200%;
     overflow: hidden;
 
     .infoBlockContainer {
       position: relative;
       background-color: rgba(0, 0, 0, 0.849);
-      padding-right: 18%;
-      width: 80%;
-      height: 98%;
+      padding-right: 8em;
       border: 2px solid #7e633b;
       color: #c4b998;
 

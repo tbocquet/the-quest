@@ -12,6 +12,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  padding-top: 0.8em;
   align-items: center;
 }
 
@@ -46,6 +47,11 @@
 }
 
 .lane-filter-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.region-filter-list {
   display: flex;
   flex-flow: row wrap;
 }

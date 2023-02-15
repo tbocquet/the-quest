@@ -45,6 +45,7 @@ export function SuccessBlock() {
               clause={elt.clause}
               champions={elt.championsList}
               owned={elt.owned}
+              music={elt.music}
             />
           </li>
         ))}

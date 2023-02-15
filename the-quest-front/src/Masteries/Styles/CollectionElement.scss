@@ -1,134 +1,112 @@
-.lq-collectionElement {
+.lq-mastery {
   position: relative;
-  margin: 1em;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10em;
   height: 10em;
+  margin: 1em;
+  border: 1px solid #7e633b;
+  border-radius: 1px;
 
-  .champion {
-    position: relative;
-    z-index: 0;
+  .champion-img {
     width: 100%;
-    height: auto;
-  }
-  .champion-container {
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    height: auto;
   }
 
-  .champion-container::before {
+  .info-container {
     position: absolute;
-    content: "";
-    z-index: 1;
-    //border: 14px solid red;
     width: 100%;
     height: 100%;
-    background: transparent;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0) 75%,
-      rgba(0, 0, 0, 1) 98%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    /*
-      linear-gradient(0deg, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.8) 100%),
-      linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 90%,
-        rgba(0, 0, 0, 0.7) 100%
-      ),
-      linear-gradient(
-        185deg,
-        rgba(255, 255, 255, 0) 90%,
-        rgba(0, 0, 0, 0.8) 100%
-      ),
-      linear-gradient(
-        270deg,
-        rgba(255, 255, 255, 0) 90%,
-        rgba(0, 0, 0, 0.7) 100%
-      );*/
-  }
-
-  .champion-mastery-point {
-    position: absolute;
     top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000d0;
-    color: white;
-    text-align: center;
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    z-index: 0;
+    left: 0;
 
-    transition: opacity 0.5s;
-    &:hover {
-      opacity: 100;
-    }
-  }
-
-  .mastery {
-    position: absolute;
-    right: 70%;
-    bottom: 65%;
-    width: 45%;
-    height: auto;
-  }
-
-  .token-block {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    border: 1px solid #7e633b;
-    border-top: none;
-    border-radius: 1em;
-    width: 30%;
-    height: 30%;
-    margin: 0.3em;
-    overflow: hidden;
-
-    .token-overlay {
-      left: 0;
-      right: 0;
+    .mastery-icon {
       position: absolute;
-      width: 100%;
-      height: auto;
-      z-index: 1;
+      z-index: 3;
+      top: -1.5em;
+      left: -1.5em;
+      width: 4em;
     }
-    .overlay-background {
-      left: 0;
-      right: 0;
+
+    .chest-icon {
       position: absolute;
-      margin-top: 5%;
-      width: 100%;
-      height: auto;
-      z-index: 0;
+      z-index: 3;
+      top: -0.5em;
+      right: -1em;
+      width: 3em;
     }
-    .token-amount {
+
+    .champion-name {
       position: absolute;
-      right: 0;
-      bottom: 0;
-      margin: 0.1em;
-      margin-right: 0.3em;
-      font-size: 1.1em;
+
+      border-radius: 1em;
+      left: 0.2em;
+      bottom: 0.2em;
+      padding: 0.5em;
       font-weight: bold;
-      z-index: 2;
+      text-shadow: 1px 1px 3px black;
     }
-  }
 
-  .chest-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 0.2em;
-    width: 30%;
-    height: auto;
+    .champion-mastery-point {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000d0;
+      color: white;
+      text-align: center;
+      user-select: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      z-index: 0;
+
+      transition: opacity 0.5s;
+      &:hover {
+        z-index: 1;
+        opacity: 100;
+      }
+    }
+
+    .token-container {
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      right: 0;
+      width: 3em;
+      height: 3em;
+      margin: 0.2em;
+      z-index: 0;
+
+      .token-amount {
+        position: absolute;
+        font-weight: bold;
+        padding: 0.1em;
+        border-radius: 1em;
+        right: 0.5em;
+        bottom: 0.4em;
+        text-shadow: 1px 1px 3px black;
+      }
+      .overlay-img {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      .champion-img {
+        position: absolute;
+        top: 0;
+        left: 0.15em;
+        z-index: 0;
+        height: 85%;
+        width: 85%;
+        border: 1px solid #7e633b;
+        border-radius: 0.3em;
+      }
+    }
   }
 }

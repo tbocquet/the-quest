@@ -2,9 +2,11 @@ import "./Styles/CollectionElement.scss";
 import { ChampionMastery } from "../type";
 import {
   getChampionTile,
+  getChampionSmallTile,
   getChestIcon,
   getMasteryIcon,
   getTokenIcon,
+  getTokenIcon2,
 } from "../imageGetter";
 
 type Props = {
@@ -12,56 +14,65 @@ type Props = {
 };
 export function CollectionElement({ championMastery }: Props) {
   return (
-    <div className="lq-collectionElement">
-      {/*Champion */}
-      <div className="champion-container">
-        <img
-          className="champion"
-          alt=""
-          src={getChampionTile(championMastery.id)}
-        ></img>
-      </div>
-      {championMastery.level > 4 ? (
-        <div className="champion-mastery-point">
-          {championMastery.points} pts
-        </div>
-      ) : (
-        <div className="champion-mastery-point">
-          {championMastery.pointsSinceLastLevel}
-          {" / "}
-          {championMastery.pointsSinceLastLevel +
-            championMastery.pointsUntilNextLevel}{" "}
-          pts
-        </div>
-      )}
-      {/*Token */}
-      {championMastery.tokensEarned > 0 && (
-        <div className="token-block">
-          <img
-            alt=""
-            className="token-overlay"
-            src={getTokenIcon(championMastery.level + 1)}
-          ></img>
-          <img
-            className="overlay-background"
-            alt=""
-            src={getChampionTile(championMastery.id)}
-          ></img>
-          <div className="token-amount">{championMastery.tokensEarned}</div>
-        </div>
-      )}
-
-      {/*Mastery */}
+    <div className="lq-mastery">
       <img
+        className="champion-img"
         alt=""
-        className="mastery"
-        src={getMasteryIcon(championMastery.level)}
+        src={getChampionTile(championMastery.id)}
       ></img>
 
-      {/*Coffre */}
-      {championMastery.chestGranted && (
-        <img alt="" className="chest-icon" src={getChestIcon()}></img>
-      )}
+      <div className="info-container">
+        {/*Icon Mastery */}
+        <img
+          alt=""
+          className="mastery-icon"
+          src={getMasteryIcon(championMastery.level)}
+        ></img>
+
+        {/*Coffre */}
+        {championMastery.chestGranted && (
+          <img alt="" className="chest-icon" src={getChestIcon()}></img>
+        )}
+
+        {/* Nom du champion */}
+        <div className="champion-name">{championMastery.name}</div>
+        {/* Point de maitrise */}
+        {championMastery.level > 4 ? (
+          <div className="champion-mastery-point">
+            {championMastery.points} pts
+          </div>
+        ) : (
+          <div className="champion-mastery-point">
+            {championMastery.pointsSinceLastLevel}
+            {" / "}
+            {championMastery.pointsSinceLastLevel +
+              championMastery.pointsUntilNextLevel}{" "}
+            pts
+          </div>
+        )}
+
+        {/*Token */}
+        {championMastery.tokensEarned > 0 && (
+          <div className="token-container">
+            {/* Overlay */}
+            <img
+              alt=""
+              className="overlay-img"
+              src={getTokenIcon2(championMastery.level + 1)}
+            ></img>
+
+            {/* Champion Icon */}
+            <div className="champion-img-container">
+              <img
+                className="champion-img"
+                alt=""
+                src={getChampionSmallTile(championMastery.id)}
+              ></img>
+              <div className="token-amount">{championMastery.tokensEarned}</div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

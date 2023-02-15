@@ -4,10 +4,12 @@ import "./Styles/ProfileBox.scss";
 import { QStatistics } from "./QStatistics";
 import { SummonerData } from "../type";
 import { getSummonerIcon, getSummonerDefaultProfileIcon } from "../imageGetter";
+import { useEffect } from "react";
 
 type Props = { sumData: SummonerData };
 
 export function ProfileBox({ sumData }: Props) {
+  // useEffect(() => console.log(sumData), [sumData]);
   return (
     <div className="summoner-info-block">
       <div>

@@ -2,6 +2,12 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: "FizzQuadrataRegular";
+  src: local("FizzQuadrataRegular"),
+   url("./Assets/Fonts/Friz Quadrata Regular.ttf") format("truetype");
+  font-weight:normal;
+  }
 
 html,
 body,
@@ -126,4 +132,13 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html{
+  background: rgb(1, 12, 22);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 12, 22, 1) 0%,
+    rgba(10, 47, 63, 1) 100%
+  );
 }

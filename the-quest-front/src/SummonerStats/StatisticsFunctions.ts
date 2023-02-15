@@ -2,16 +2,19 @@
 
 import { Mastery } from "../type";
 
-export function championProgression(champ: Mastery) {
+export function getChampionProgression(champ: Mastery) {
   switch (champ.championLevel) {
     case 7:
       return 100;
     case 6:
-      return 64 + champ.tokensEarned * 11;
+      //Mastery 6 : 67% + 3 token (10%) = 97% | 97% + achat mastery (3%) = 100%
+      return 68 + champ.tokensEarned * 10;
     case 5:
+      //Mastery 5 : 50% + 2 token (7%) = 64% | 64% + achat mastery (3%) = 67%
       return 50 + champ.tokensEarned * 7;
     default:
-      return champ.championPoints / 21600;
+      //Nombre de point requis pour la mastery 5 = 1800 + 4200 + 6600 + 9000
+      return (champ.championPoints / 21600) * 50;
   }
 }
 
@@ -45,7 +48,7 @@ export function countMastery7(masteries: Mastery[]): number {
 export function getQuestProgression(masteries: Mastery[]): number {
   const res = masteries.reduce(
     (previousValue, champ: Mastery) =>
-      championProgression(champ) + previousValue,
+      getChampionProgression(champ) + previousValue,
     0
   );
   return Math.round((res * 100) / masteries.length) / 100;
