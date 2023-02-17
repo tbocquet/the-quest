@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { MasteriesFiltersProvider } from "./Context/MasteriesFilterContext";
 import { SumListProvider } from "./Context/SumListContext";
 import { SummonerProvider } from "./Context/SummonerContext";
 import { SummonerMasteriesProvider } from "./Context/SummonerMasteries";
@@ -11,7 +12,9 @@ ReactDOM.render(
     <SumListProvider>
       <SummonerProvider>
         <SummonerMasteriesProvider>
-          <App />
+          <MasteriesFiltersProvider>
+            <App />
+          </MasteriesFiltersProvider>
         </SummonerMasteriesProvider>
       </SummonerProvider>
     </SumListProvider>

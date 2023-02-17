@@ -15,6 +15,36 @@ import { SummonerStats } from "./SummonerStats/SummonerStats";
 import { SuccessBlock } from "./Success/Success";
 import { useSummonerMasteries } from "./Context/SummonerMasteries";
 import { Home } from "./Home/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+//Routing
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/Home",
+//     element: <Home />,
+//   },
+//   {
+//     path: "/",
+//     element: <App />,
+//     // children: [
+//     //   {
+//     //     path: "/:summonerId",
+//     //     element: <App />,
+//     //     children: [
+//     //       {
+//     //         path: "/masteries",
+//     //         element: <SuccessBlock />,
+//     //       },
+//     //       {
+//     //         path: "/success",
+//     //         element: <SuccessBlock />,
+//     //       },
+//     //     ],
+//     //   },
+//     // ],
+//   },
+// ]);
 
 function App() {
   /*Context*/
@@ -96,6 +126,8 @@ function App() {
 
   return (
     <div className="App">
+      {/* <RouterProvider router={router} /> */}
+
       {summonerId !== "" ? (
         <React.Fragment>
           <Header />

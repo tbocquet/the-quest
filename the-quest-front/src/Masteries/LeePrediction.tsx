@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { useSummonerMasteries } from "../Context/SummonerMasteries";
 import {
   getChampionCentered,
   getLaneIcon,
@@ -8,11 +9,9 @@ import {
 import { ChampionMastery } from "../type";
 import "./Styles/LeePrediction.scss";
 
-type Props = {
-  masteries: ChampionMastery[];
-};
-
-export function LeePrediction({ masteries }: Props) {
+export function LeePrediction() {
+  const Mcontext = useSummonerMasteries();
+  const masteries = Mcontext.sumMasteryList;
   const [prediction, setPrediction] = useState<ChampionMastery | null>(null);
   const [imgLoaded, setImgLoaded] = useState(false);
 
