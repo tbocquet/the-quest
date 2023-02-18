@@ -1,12 +1,9 @@
 import { ChampionMastery } from "../type";
 import "./Styles/Masteries.scss";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Mastery } from "./Mastery";
-import {
-  MasteriesFiltersProvider,
-  useMasteriesFilters,
-} from "../Context/MasteriesFilterContext";
+import { useMasteriesFilters } from "../Context/MasteriesFilterContext";
 import { FiltersSection } from "./FiltersSection";
 
 type Props = {
@@ -103,7 +100,6 @@ export function Masteries({ masteries }: Props) {
       <FiltersSection />
       <div className="lq-collection">
         {championMasteries.map((champMast, index) => (
-          // <CollectionElement key={index} championMastery={champMast} />
           <Mastery key={index} championMastery={champMast} />
         ))}
       </div>

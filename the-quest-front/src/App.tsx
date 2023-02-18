@@ -90,7 +90,8 @@ function App() {
           setError(true);
         });
     }
-  }, [summonerId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allChampions, summonerId]);
 
   //Agrège les Masteries et les Champions en un unique object
   function aggregateMasteriesData(
