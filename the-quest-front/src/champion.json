@@ -1243,6 +1243,21 @@
     ]
   },
   {
+    "id": "Milio",
+    "key": "902",
+    "name": "Milio",
+    "url": "Milio_0.jpg",
+    "lane": [
+      "support"
+    ],
+    "tags": [
+      "enchanteur"
+    ],
+    "region": [
+      "Ixtal"
+    ]
+  },
+  {
     "id": "MissFortune",
     "key": "21",
     "name": "Miss Fortune",

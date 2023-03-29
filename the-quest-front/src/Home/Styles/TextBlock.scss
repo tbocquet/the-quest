@@ -29,6 +29,8 @@
     position: absolute;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     bottom: 0em;
     .nav-element {
       border-radius: 0.1em;
@@ -38,10 +40,12 @@
       margin: 0.7em;
 
       &.home-selected-nav-elt {
-        background-color: white;
+        border: 2px solid #d4ad64;
+        box-shadow: 0px 0px 3px #d4ad64;
       }
       &:hover {
-        background-color: white;
+        border: 2px solid #d4ad64;
+        box-shadow: 0px 0px 3px #d4ad64;
         cursor: pointer;
       }
     }

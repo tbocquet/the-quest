@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { useMasteriesFilters } from "../Context/MasteriesFilterContext";
 import { useSummonerMasteries } from "../Context/SummonerMasteries";
 import {
   getChampionCentered,
@@ -11,15 +12,17 @@ import "./Styles/LeePrediction.scss";
 
 export function LeePrediction() {
   const Mcontext = useSummonerMasteries();
-  const masteries = Mcontext.sumMasteryList;
+  const filters = useMasteriesFilters();
   const [prediction, setPrediction] = useState<ChampionMastery | null>(null);
   const [imgLoaded, setImgLoaded] = useState(false);
 
   function getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
-  function getPrediction(): ChampionMastery {
-    return masteries[getRandomInt(masteries.length)];
+
+  function getPrediction(): ChampionMastery | null {
+    let MList = getSelectedChampionList(Mcontext.sumMasteryList);
+    return MList.length > 0 ? MList[getRandomInt(MList.length)] : null;
   }
 
   /**
@@ -47,6 +50,51 @@ export function LeePrediction() {
     }, [ref]);
   }
 
+  function getSelectedChampionList(
+    Mlist: ChampionMastery[]
+  ): ChampionMastery[] {
+    return Mlist.reduce(
+      (acc: ChampionMastery[], champMast: ChampionMastery) => {
+        /*Le filtre est il actif ?*/
+        const Lfilter = filters.laneFilter.length !== 0;
+        const Mfilter = filters.masteriesLevelFilter.length !== 0;
+        const Rfilter = filters.roleFilter.length !== 0;
+        const Cfilter = filters.championFilter !== "";
+        const REfilter = filters.regionFilter.length !== 0;
+
+        /*L'élément correspond t'il aux filtres ?*/
+        const LOK = champMast.lane.some((lane) =>
+          filters.laneFilter.includes(lane)
+        ); //L'element contient t'il au moins une des lanes selectionnées
+        const ROk = filters.roleFilter.every((item) =>
+          champMast.tags.includes(item)
+        );
+        const MOk = filters.masteriesLevelFilter.includes(champMast.level);
+        const REOK = filters.regionFilter.some((region) =>
+          champMast.region.includes(region)
+        );
+        const champName = champMast.name.toLocaleLowerCase();
+
+        //L'élément correspond t'il à tous les filtres actif ?
+        if (
+          (!Cfilter ||
+            (Cfilter && champName.includes(filters.championFilter))) && //Ok with championSearchFilter
+          (!filters.chestFilter ||
+            (filters.chestFilter && !champMast.chestGranted)) && //Ok with chestFilter
+          (!Lfilter || (Lfilter && LOK)) && //Ok with laneFilter
+          (!Mfilter || (Mfilter && MOk)) && //Ok with masteryFilter
+          (!Rfilter || (Rfilter && ROk)) && //ok with roleFilter
+          (!REfilter || (REfilter && REOK))
+        ) {
+          return [...acc, champMast];
+        } else {
+          return acc;
+        }
+      },
+      []
+    );
+  }
+
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
 
@@ -54,7 +102,7 @@ export function LeePrediction() {
     <>
       <div
         className="lee-sin-choice"
-        onClick={() => masteries.length > 0 && setPrediction(getPrediction())}
+        onClick={() => setPrediction(getPrediction())}
       >
         <img alt="" src="/image/lee-prediction.png"></img>
       </div>

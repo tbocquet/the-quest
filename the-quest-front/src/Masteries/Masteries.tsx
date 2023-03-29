@@ -26,10 +26,11 @@ export function Masteries({ masteries }: Props) {
     return a.name.localeCompare(b.name);
   }
 
-  //Filtrage et des masteries
-  useEffect(() => {
-    //Filtrage
-    let T: ChampionMastery[] = masteries.reduce(
+  //Renvoit une liste des championsMasteries correspondant aux filtres
+  function getFilteredChampionMasteries(
+    Mlist: ChampionMastery[]
+  ): ChampionMastery[] {
+    return Mlist.reduce(
       (acc: ChampionMastery[], champMast: ChampionMastery) => {
         /*Le filtre est il actif ?*/
         const Lfilter = filters.laneFilter.length !== 0;
@@ -69,6 +70,12 @@ export function Masteries({ masteries }: Props) {
       },
       []
     );
+  }
+
+  //Filtrage et des masteries
+  useEffect(() => {
+    //Filtrage
+    let T = getFilteredChampionMasteries(masteries);
 
     //Tri
     switch (filters.sortingOption) {
