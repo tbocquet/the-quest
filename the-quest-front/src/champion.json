@@ -1325,6 +1325,20 @@
     ]
   },
   {
+    "id": "Naafiri",
+    "key": "950",
+    "name": "Naafiri",
+    "url": "Naafiri_0.jpg",
+    "lane": [
+      "jungle",
+      "mid"
+    ],
+    "tags": [
+      "assassin"
+    ],
+    "region": []
+  },
+  {
     "id": "Nami",
     "key": "267",
     "name": "Nami",
