@@ -1,13 +1,13 @@
 /*Bare de recherche du header, set le context useSummoner. Quand l'incovateur n'existe pas,set le summonerId à "-1"*/
 import { useState } from "react";
 import { getSummonerDataByName } from "../API_call";
-import { useSummoner } from "../Context/SummonerContext";
 import "./Styles/SearchBar.scss";
+import { useNavigate } from "react-router-dom";
 
 export function SearchBar() {
   const [searchState, setStateSearch] = useState<string>("");
   const [searchIcon, setSearchIcon] = useState("/icons/search-icon2.png");
-  const { setSummonerId } = useSummoner();
+  const navigate = useNavigate();
 
   /*Capture les entrées clavier de l'input text*/
   function onChangeHandler(v: string): void {
@@ -17,18 +17,14 @@ export function SearchBar() {
   /*Lancer la recherche quand on appuie sur "entrer"*/
   function handleKeyPress(key: string) {
     if (key === "Enter" && searchState !== "") {
-      getSummonerDataByName(searchState)
-        .then((res) => setSummonerId(res.id))
-        .catch(() => setSummonerId("-1"));
+      navigate(`/summoner/${searchState}`);
     }
   }
 
   /*Lancer la recherche quand on clique sur l'icon de loupe*/
   function onClickSearch() {
     if (searchState !== "") {
-      getSummonerDataByName(searchState)
-        .then((res) => setSummonerId(res.id))
-        .catch(() => setSummonerId("-1"));
+      navigate(`/summoner/${searchState}`);
     }
   }
 

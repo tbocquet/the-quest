@@ -1,65 +1,45 @@
 /*Context de gestion de la liste des Invocateurs déjà recherchés*/
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { getSummonerProfileIcon } from "../API_call";
-
-export type SumElt = {
-  id: string; // SummonerId
-  name: string; // SummonerName
-  iconId: number; // Profile iconId
-};
+import { SummonerData } from "../type";
 
 type SumListContext = {
-  readonly sumList: SumElt[];
-  readonly setSumList: (sumElt: SumElt) => void;
-  readonly deleteSumEltFromList: (sumElt: SumElt) => void;
+  readonly sumList: SummonerData[];
+  readonly setSumList: (sumElt: SummonerData) => void;
+  readonly deleteSumEltFromList: (sumElt: SummonerData) => void;
 };
 
 const SumListContext = createContext<SumListContext | undefined>(undefined);
 
 export const SumListProvider: React.FC = ({ children }) => {
-  const savedSumList = localStorage.getItem("sumList");
-  const [sumList, setSumList] = useState<SumElt[]>(
+  const savedSumList = localStorage.getItem("summonerHistoryList");
+  const [sumList, setSumList] = useState<SummonerData[]>(
     savedSumList ? JSON.parse(savedSumList) : []
   );
 
   useEffect(() => {
-    localStorage.setItem("sumList", JSON.stringify(sumList));
+    localStorage.setItem("summonerHistoryList", JSON.stringify(sumList));
     //console.log(sumList);
   }, [sumList]);
 
-  function mySetSumList(elt: any): void {
+  function mySetSumList(elt: SummonerData): void {
     if (elt.id !== undefined) {
       //on ajoute le nouvel élément à la fin de la liste
       if (!sumList.some((sumElt) => sumElt.id === elt.id)) {
-        const newSumElt: SumElt = {
-          id: elt.id,
-          name: elt.name,
-          iconId: elt.profileIconId,
-        };
-
         if (sumList.length < 10) {
-          setSumList([...sumList, newSumElt]);
+          setSumList([...sumList, elt]);
         }
       }
       //on met à jour les données de l'élément existant
       else {
         setSumList(
-          sumList.map((sumElt) =>
-            sumElt.id === elt.id
-              ? {
-                  id: elt.id,
-                  name: elt.name,
-                  iconId: elt.profileIconId,
-                }
-              : sumElt
-          )
+          sumList.map((sumElt) => (sumElt.id === elt.id ? elt : sumElt))
         );
       }
     }
   }
 
-  function deleteSumElt(elt: SumElt): void {
+  function deleteSumElt(elt: SummonerData): void {
     const listWithoutTheEltement = sumList.filter(
       (currentElt) => currentElt.id !== elt.id
     );

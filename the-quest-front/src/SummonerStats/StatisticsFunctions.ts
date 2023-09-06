@@ -1,9 +1,9 @@
 /*Fonctions permettant le calcul de l'avancement de la quête*/
 
-import { Mastery } from "../type";
+import { ChampionMastery, Mastery } from "../type";
 
-export function getChampionProgression(champ: Mastery) {
-  switch (champ.championLevel) {
+export function getChampionProgression(champ: ChampionMastery) {
+  switch (champ.level) {
     case 7:
       return 100;
     case 6:
@@ -14,40 +14,40 @@ export function getChampionProgression(champ: Mastery) {
       return 50 + champ.tokensEarned * 7;
     default:
       //Nombre de point requis pour la mastery 5 = 1800 + 4200 + 6600 + 9000
-      return (champ.championPoints / 21600) * 50;
+      return (champ.points / 21600) * 50;
   }
 }
 
-export function countChampions(masteries: Mastery[]): number {
+export function countChampions(masteries: ChampionMastery[]): number {
   return masteries.length;
 }
 
-export function countMastery5(masteries: Mastery[]): number {
+export function countMastery5(masteries: ChampionMastery[]): number {
   return masteries.reduce(
-    (previousValue, champ: Mastery) =>
-      champ.championLevel === 5 ? previousValue + 1 : previousValue,
+    (previousValue, champ: ChampionMastery) =>
+      champ.level === 5 ? previousValue + 1 : previousValue,
     0
   );
 }
 
-export function countMastery6(masteries: Mastery[]): number {
+export function countMastery6(masteries: ChampionMastery[]): number {
   return masteries.reduce(
-    (previousValue, champ: Mastery) =>
-      champ.championLevel === 6 ? previousValue + 1 : previousValue,
+    (previousValue, champ: ChampionMastery) =>
+      champ.level === 6 ? previousValue + 1 : previousValue,
     0
   );
 }
-export function countMastery7(masteries: Mastery[]): number {
+export function countMastery7(masteries: ChampionMastery[]): number {
   return masteries.reduce(
-    (previousValue, champ: Mastery) =>
-      champ.championLevel === 7 ? previousValue + 1 : previousValue,
+    (previousValue, champ: ChampionMastery) =>
+      champ.level === 7 ? previousValue + 1 : previousValue,
     0
   );
 }
 
-export function getQuestProgression(masteries: Mastery[]): number {
+export function getQuestProgression(masteries: ChampionMastery[]): number {
   const res = masteries.reduce(
-    (previousValue, champ: Mastery) =>
+    (previousValue, champ: ChampionMastery) =>
       getChampionProgression(champ) + previousValue,
     0
   );

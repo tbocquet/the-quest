@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { MasteriesFiltersProvider } from "./Context/MasteriesFilterContext";
 import { SumListProvider } from "./Context/SumListContext";
 import { SummonerProvider } from "./Context/SummonerContext";
 import { SummonerMasteriesProvider } from "./Context/SummonerMasteries";
 import "./index.css";
+import { Router } from "./Router";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +13,7 @@ ReactDOM.render(
       <SummonerProvider>
         <SummonerMasteriesProvider>
           <MasteriesFiltersProvider>
-            <App />
+            <Router />
           </MasteriesFiltersProvider>
         </SummonerMasteriesProvider>
       </SummonerProvider>

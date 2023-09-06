@@ -15,36 +15,7 @@ import { SummonerStats } from "./SummonerStats/SummonerStats";
 import { SuccessBlock } from "./Success/Success";
 import { useSummonerMasteries } from "./Context/SummonerMasteries";
 import { Home } from "./Home/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-//Routing
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/Home",
-//     element: <Home />,
-//   },
-//   {
-//     path: "/",
-//     element: <App />,
-//     // children: [
-//     //   {
-//     //     path: "/:summonerId",
-//     //     element: <App />,
-//     //     children: [
-//     //       {
-//     //         path: "/masteries",
-//     //         element: <SuccessBlock />,
-//     //       },
-//     //       {
-//     //         path: "/success",
-//     //         element: <SuccessBlock />,
-//     //       },
-//     //     ],
-//     //   },
-//     // ],
-//   },
-// ]);
+import { aggregateMasteriesData } from "./functions";
 
 function App() {
   /*Context*/
@@ -72,6 +43,7 @@ function App() {
 
       getSummonerMasteriesById(summonerId)
         .then((data) => {
+          //On tri par taille de mastery
           const M = data.sort((a: Mastery, b: Mastery) =>
             a.championPoints > b.championPoints ? -1 : 1
           );
@@ -93,38 +65,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allChampions, summonerId]);
 
-  //Agrège les Masteries et les Champions en un unique object
-  function aggregateMasteriesData(
-    masteryList: Mastery[],
-    championList: Champion[]
-  ): ChampionMastery[] {
-    return masteryList.reduce((resList: ChampionMastery[], M: Mastery) => {
-      const C: Champion | undefined = championList.find(
-        (champ) => parseInt(champ.key) === M.championId
-      );
-      if (C !== undefined)
-        return [
-          ...resList,
-          {
-            id: C.id,
-            championKey: M.championId,
-            level: M.championLevel,
-            points: M.championPoints,
-            pointsSinceLastLevel: M.championPointsSinceLastLevel,
-            pointsUntilNextLevel: M.championPointsUntilNextLevel,
-            chestGranted: M.chestGranted,
-            tokensEarned: M.tokensEarned,
-            name: C.name,
-            url: C.url,
-            lane: C.lane,
-            tags: C.tags,
-            region: C.region,
-          },
-        ];
-      else return resList;
-    }, []);
-  }
-
   return (
     <div className="App">
       {/* <RouterProvider router={router} /> */}
@@ -138,7 +78,7 @@ function App() {
             <Loader />
           ) : (
             <React.Fragment>
-              <SummonerStats summonerId={summonerId} masteries={masteries} />
+              {/* <SummonerStats summonerId={summonerId} masteries={masteries} /> */}
               <nav className="the-quest-app-nav">
                 <ul>
                   <li

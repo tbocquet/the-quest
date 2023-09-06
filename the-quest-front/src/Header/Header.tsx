@@ -1,13 +1,14 @@
 import { SearchBar } from "./SearchBar";
 import { SumList } from "./SumList";
-import { useSummoner } from "../Context/SummonerContext";
 import "./Styles/Header.scss";
+import { Link } from "react-router-dom";
 
 export function Header() {
-  const { setSummonerId } = useSummoner();
   return (
     <div className="header">
-      <h2 onClick={() => setSummonerId("")}>La quête</h2>
+      <Link to="/">
+        <h2>La quête</h2>
+      </Link>
       <SumList />
       <SearchBar />
     </div>

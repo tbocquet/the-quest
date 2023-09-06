@@ -3,10 +3,10 @@
 import React from "react";
 import * as calc from "./StatisticsFunctions";
 import { getMasteryIcon } from "../imageGetter";
-import { Mastery } from "../type";
+import { ChampionMastery } from "../type";
 import "./Styles/QuestStatistics.scss";
 
-type Props = { masteries: Mastery[] };
+type Props = { masteries: ChampionMastery[] };
 
 export function QuestStatistics({ masteries }: Props) {
   return (
