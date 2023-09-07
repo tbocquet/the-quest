@@ -1,6 +1,6 @@
 import { getSummonerDataByName, getSummonerMasteriesById } from "./API_call";
 import { Champion, ChampionMastery, Mastery, SummonerData } from "./type";
-import championData from "./champion.json";
+import championData from "./assets/champion.json";
 
   //Agrège les Masteries et les Champions en un unique object
   export function aggregateMasteriesData(

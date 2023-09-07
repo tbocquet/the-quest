@@ -5,7 +5,7 @@
 @font-face {
   font-family: "FizzQuadrataRegular";
   src: local("FizzQuadrataRegular"),
-   url("./Assets/Fonts/Friz Quadrata Regular.ttf") format("truetype");
+   url("./assets/Fonts/Friz Quadrata Regular.ttf") format("truetype");
   font-weight:normal;
   }
 
