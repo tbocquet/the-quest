@@ -1,7 +1,7 @@
 /*Context contenant les niveau de masteries de l'invocateur recherché*/
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { ChampionMastery } from "../type";
+import { ChampionMastery } from "@/type";
 
 type SummonerMasteriesContext = {
   readonly sumMasteryList: ChampionMastery[];
@@ -13,7 +13,9 @@ const SummonerMasteriesContext = createContext<
   SummonerMasteriesContext | undefined
 >(undefined);
 
-export const SummonerMasteriesProvider: React.FC = ({ children }) => {
+export const SummonerMasteriesProvider: React.FC<{
+  children?: React.ReactNode;
+}> = ({ children }) => {
   const saved = localStorage.getItem("SummonerMasteries");
   const [sumMasteryList, setSumMasteryList] = useState<ChampionMastery[]>(
     saved ? JSON.parse(saved) : []

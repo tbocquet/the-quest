@@ -9,7 +9,7 @@ export function SummonerNotFound() {
   `;
   return (
     <div>
-      <Img src={require("./Assets/blitz_question.png")} alt="" />
+      <Img src="/images/blitz_question.png" alt="" />
       <Msg>Invocateur introuvable</Msg>
     </div>
   );

@@ -1,0 +1,110 @@
+//Mastery 7
+.gradient-M7-back {
+  background: rgb(36, 224, 207);
+  background: linear-gradient(
+    90deg,
+    rgb(102, 192, 184) 0,
+    rgb(74, 152, 172) 69%,
+    rgb(41, 60, 97) 100%
+  );
+}
+
+.gradient-M7-front {
+  background: rgb(17, 45, 101);
+  background: linear-gradient(
+    90deg,
+    rgb(41, 60, 97) 0%,
+    rgb(74, 152, 172) 69%,
+    rgb(102, 192, 184) 100%
+  );
+}
+
+//Mastery 6
+.gradient-M6-back {
+  background: rgb(162, 23, 127);
+  background: linear-gradient(
+    90deg,
+    rgb(160, 75, 139) 18%,
+    rgba(140, 55, 118, 1) 62%,
+    rgb(74, 36, 77) 100%
+  );
+}
+
+.gradient-M6-front {
+  background: rgb(69, 15, 73);
+  background: linear-gradient(
+    90deg,
+    rgb(80, 38, 83) 0%,
+    rgba(140, 55, 118, 1) 69%,
+    rgba(162, 23, 127, 1) 100%
+  );
+}
+
+//Mastery 5
+.gradient-M5-back {
+  background: rgb(212, 42, 48);
+  background: linear-gradient(
+    52deg,
+    rgb(189, 73, 77) 0%,
+    rgb(165, 49, 53) 55%,
+    rgba(70, 30, 31, 1) 100%
+  );
+}
+
+.gradient-M5-front {
+  background: rgb(70, 30, 31);
+  background: linear-gradient(
+    52deg,
+    rgb(70, 25, 25) 0%,
+    rgb(163, 43, 47) 71%,
+    rgb(209, 64, 68) 97%
+  );
+}
+
+//Mastery 4
+.gradient-M4-back {
+  background: rgb(219, 151, 83);
+  background: linear-gradient(
+    90deg,
+    rgba(219, 151, 83, 1) 0%,
+    rgba(139, 83, 54, 1) 74%,
+    rgba(52, 23, 10, 1) 100%
+  );
+}
+
+.gradient-M4-front {
+  background: rgb(52, 23, 10);
+  background: linear-gradient(
+    52deg,
+    rgba(52, 23, 10, 1) 0%,
+    rgba(139, 83, 54, 1) 68%,
+    rgba(219, 151, 83, 1) 100%
+  );
+}
+
+//Mastery 5
+.gradient-M3-back,
+.gradient-M2-back,
+.gradient-M1-back,
+.gradient-M0-back {
+  background: rgb(89, 109, 130);
+  background: linear-gradient(
+    283deg,
+    rgba(89, 109, 130, 1) 0%,
+    rgba(59, 68, 78, 1) 78%,
+    rgba(52, 59, 65, 1) 100%
+  );
+}
+
+.gradient-M3-front,
+.gradient-M2-front,
+.gradient-M1-front,
+.gradient-M0-front {
+  background: rgb(52, 59, 65);
+  background: linear-gradient(
+    283deg,
+    rgba(52, 59, 65, 1) 0%,
+    rgba(59, 68, 78, 1) 69%,
+    rgba(74, 94, 115, 1) 100%
+  );
+}

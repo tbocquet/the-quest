@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #7e633b;
+  z-index: 1;
+
+  h2 {
+    font-family: "FizzQuadrataRegular";
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #c79f49;
+    margin: 1em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

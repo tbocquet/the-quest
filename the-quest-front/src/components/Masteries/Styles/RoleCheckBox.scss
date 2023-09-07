@@ -1,0 +1,54 @@
+.role-checkBox {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0.3em;
+  border: 2px solid #ffffff00;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border 0.6s linear;
+  &:hover {
+    border: 2px solid #7e633b;
+  }
+  .roleIcon {
+    width: 2em;
+  }
+}
+.selected {
+  border: 2px solid #7e633b;
+  box-shadow: 0px 0px 5px #d4ad64;
+}
+
+.tooltip {
+  position: absolute;
+  //text-align: center;
+  align-items: center;
+  color: #d4ad64;
+  font-size: 0.9em;
+  top: -75%;
+  z-index: 2;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    z-index: 1;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #7e633b transparent transparent transparent;
+  }
+}
+
+.role-checkBox:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

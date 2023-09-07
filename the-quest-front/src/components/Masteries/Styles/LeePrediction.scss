@@ -1,0 +1,87 @@
+.lee-sin-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #7e633b;
+  border-radius: 1em;
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    transition: width 0.2s linear;
+    padding-bottom: 0em;
+    &:hover {
+      cursor: pointer;
+      width: 250%;
+      top: -1em;
+      padding-bottom: 3.5em;
+      transition: width 3s linear, padding-bottom 3s linear;
+    }
+  }
+}
+
+.lee-sin-prediction {
+  position: fixed;
+  border: 2px solid #dbae6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+
+  .champion-info-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1em;
+    text-align: left;
+
+    color: #c79f49;
+    font-family: "FizzQuadrataRegular";
+    .champion-name {
+      font-size: 3em;
+      text-transform: uppercase;
+      margin-bottom: 0.3em;
+    }
+    .line-info-block {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1em;
+      img {
+        height: 3em;
+        margin-right: 0.5em;
+      }
+      p {
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .okButton {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.123);
+    bottom: 4em;
+    width: 15em;
+    border: 2px solid #7e633b;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.5em;
+    font-size: large;
+    color: white;
+
+    box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.62);
+    transition: border 0.6s linear;
+    &:hover {
+      cursor: pointer;
+      border: 2px solid #dbae6a;
+      transition: border 0.6s linear;
+    }
+  }
+}

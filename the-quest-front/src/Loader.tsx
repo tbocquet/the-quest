@@ -3,7 +3,7 @@ export function Loader() {
   return (
     <div className="lq-loader" style={{ margin: "2em" }}>
       <img
-        src={require("./Assets/kled.gif")}
+        src={require("/gifs/kled.gif")}
         style={{ height: "15em" }}
         alt="loader-animated-gif"
       ></img>

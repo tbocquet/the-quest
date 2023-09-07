@@ -28,7 +28,9 @@ const MasteriesFiltersContext = createContext<
   MasteriesFiltersContext | undefined
 >(undefined);
 
-export const MasteriesFiltersProvider: React.FC = ({ children }) => {
+export const MasteriesFiltersProvider: React.FC<{
+  children?: React.ReactNode;
+}> = ({ children }) => {
   //Récupération des données en caches
   const savedSortingOption = localStorage.getItem("masterySortingOption");
   const savedMasteriesLevelFilter = localStorage.getItem(

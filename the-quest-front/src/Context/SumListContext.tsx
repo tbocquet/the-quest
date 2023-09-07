@@ -1,7 +1,7 @@
 /*Context de gestion de la liste des Invocateurs déjà recherchés*/
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { SummonerData } from "../type";
+import { SummonerData } from "@/type";
 
 type SumListContext = {
   readonly sumList: SummonerData[];
@@ -11,7 +11,9 @@ type SumListContext = {
 
 const SumListContext = createContext<SumListContext | undefined>(undefined);
 
-export const SumListProvider: React.FC = ({ children }) => {
+export const SumListProvider: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   const savedSumList = localStorage.getItem("summonerHistoryList");
   const [sumList, setSumList] = useState<SummonerData[]>(
     savedSumList ? JSON.parse(savedSumList) : []

@@ -1,0 +1,25 @@
+#error-page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+
+  & > * {
+    margin: 0.2em;
+  }
+
+  color: white;
+
+  .button {
+    display: block;
+    border-radius: 0.2em 0.2em 0 0;
+    color: #7e633b;
+
+    &:hover {
+      color: #c79f49;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}

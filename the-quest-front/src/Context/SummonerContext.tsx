@@ -8,7 +8,9 @@ type SummonerContext = {
 
 const SummonerContext = createContext<SummonerContext | undefined>(undefined);
 
-export const SummonerProvider: React.FC = ({ children }) => {
+export const SummonerProvider: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   const savedSum = localStorage.getItem("summonerId");
   const [summonerId, setSummonerId] = useState<string>(
     savedSum ? JSON.parse(savedSum) : ""
