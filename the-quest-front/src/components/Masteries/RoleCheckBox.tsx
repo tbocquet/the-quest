@@ -1,5 +1,5 @@
 import "./Styles/RoleCheckBox.scss";
-import { getRoleIcon } from "@/imageGetter";
+import { getRoleIcon } from "@/services/imageGetter";
 
 type Props = {
   role: string;

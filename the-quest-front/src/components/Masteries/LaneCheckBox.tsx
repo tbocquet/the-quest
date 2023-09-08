@@ -1,5 +1,5 @@
 import "./Styles/LaneCheckBox.scss";
-import { getLaneIcon } from "@/imageGetter";
+import { getLaneIcon } from "@/services/imageGetter";
 
 type Props = {
   lane: string;

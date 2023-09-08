@@ -2,7 +2,7 @@ import { Outlet, useLoaderData } from "react-router-dom";
 import { SummonerStats } from "../../components/SummonerStats/SummonerStats";
 import { SummonerNavBar } from "../../components/SummonerNavBar/SummonerNavBar";
 import { useEffect } from "react";
-import { ChampionMastery, SummonerData } from "@/type";
+import { ChampionMastery, SummonerData } from "@/models/type";
 import { useSumList } from "../../context/SumListContext";
 
 export function Summoner() {

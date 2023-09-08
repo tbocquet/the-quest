@@ -1,5 +1,5 @@
 import { useRouteLoaderData } from "react-router-dom";
-import { ChampionMastery } from "@/type";
+import { ChampionMastery } from "@/models/type";
 import { SuccessBlock } from "../../components/Success/Success";
 
 export function SummonerSuccess() {

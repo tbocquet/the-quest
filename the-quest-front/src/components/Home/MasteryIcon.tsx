@@ -1,4 +1,4 @@
-import { getMasteryIcon } from "@/imageGetter";
+import { getMasteryIcon } from "@/services/imageGetter";
 
 type Props = {
   lvl: number;

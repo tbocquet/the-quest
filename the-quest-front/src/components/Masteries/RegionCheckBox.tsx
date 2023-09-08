@@ -1,5 +1,5 @@
 import "./Styles/RegionCheckBox.scss";
-import { getRegionIcon } from "@/imageGetter";
+import { getRegionIcon } from "@/services/imageGetter";
 
 type Props = {
   region: string;

@@ -9,7 +9,7 @@ import {
 } from "./SuccessFunctions";
 import { Success } from "./type";
 import "./Styles/Success.scss";
-import { ChampionMastery } from "@/type";
+import { ChampionMastery } from "@/models/type";
 
 type Props = {
   sumMasteryList: ChampionMastery[];

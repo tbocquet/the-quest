@@ -1,12 +1,12 @@
 import "./Styles/Mastery.scss";
 import "./Styles/Mastery-gradient.scss";
-import { ChampionMastery } from "@/type";
+import { ChampionMastery } from "@/models/type";
 import {
   getChampionTile,
   getChestIcon2,
   getMasteryIcon,
   getMasteryToken,
-} from "@/imageGetter";
+} from "@/services/imageGetter";
 
 type Props = {
   championMastery: ChampionMastery;

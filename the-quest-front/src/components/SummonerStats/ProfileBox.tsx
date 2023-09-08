@@ -2,8 +2,11 @@
 
 import "./Styles/ProfileBox.scss";
 import { QStatistics } from "./QStatistics";
-import { SummonerData } from "@/type";
-import { getSummonerIcon, getSummonerDefaultProfileIcon } from "@/imageGetter";
+import { SummonerData } from "@/models/type";
+import {
+  getSummonerIcon,
+  getSummonerDefaultProfileIcon,
+} from "@/services/imageGetter";
 
 type Props = { sumData: SummonerData };
 

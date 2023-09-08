@@ -2,9 +2,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Root } from "./routes/Root";
 import { Home } from "../components/Home/Home";
 import { Summoner } from "./routes/Summoner";
-import { summonerDataLoader as loader } from "../functions";
+import { summonerDataLoader as loader } from "../services/summonerMateriesUtils";
 import { SummonerMasteries } from "./routes/SummonerMasteries";
-import { SummonerNotFound } from "../SummonerNotFound";
+import { SummonerNotFound } from "../components/SummonerNotFound";
 import { SummonerSuccess } from "./routes/SummonerSuccess";
 import { Error } from "./routes/Error";
 
@@ -35,7 +35,7 @@ export function Router() {
               element: <SummonerMasteries />,
             },
             {
-              path: "/invocateur/:summonerName/succes",
+              path: "/invocateur/:summonerName/accomplissements",
               element: <SummonerSuccess />,
             },
           ],

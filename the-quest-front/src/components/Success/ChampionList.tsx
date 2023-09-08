@@ -1,7 +1,7 @@
 /*Petite liste montrant quels champions sont necessaires pour un succès*/
 import { useSummonerMasteries } from "../../context/SummonerMasteries";
-import { getChampionTile } from "@/imageGetter";
-import { ChampionMastery } from "@/type";
+import { getChampionTile } from "@/services/imageGetter";
+import { ChampionMastery } from "@/models/type";
 import "./Styles/ChampionList.scss";
 import { useRouteLoaderData } from "react-router-dom";
 

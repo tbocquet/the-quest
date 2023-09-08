@@ -1,5 +1,5 @@
 import "./Styles/CollectionElement.scss";
-import { ChampionMastery } from "@/type";
+import { ChampionMastery } from "@/models/type";
 import {
   getChampionTile,
   getChampionSmallTile,
@@ -7,7 +7,7 @@ import {
   getMasteryIcon,
   getTokenIcon,
   getTokenIcon2,
-} from "@/imageGetter";
+} from "@/services/imageGetter";
 
 type Props = {
   championMastery: ChampionMastery;

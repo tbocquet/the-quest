@@ -1,5 +1,5 @@
 import { useRouteLoaderData } from "react-router-dom";
-import { ChampionMastery } from "@/type";
+import { ChampionMastery } from "@/models/type";
 import { Masteries } from "../../components/Masteries/Masteries";
 
 export function SummonerMasteries() {

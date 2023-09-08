@@ -8,7 +8,9 @@ export function SummonerNavBar() {
   const location = useLocation();
 
   useEffect(() => {
-    location.pathname.endsWith("/succes") ? setOnglet(1) : setOnglet(0);
+    location.pathname.endsWith("/accomplissements")
+      ? setOnglet(1)
+      : setOnglet(0);
   }, [location]);
 
   return (
@@ -17,7 +19,7 @@ export function SummonerNavBar() {
         <Link to="">
           <li className={onglet === 0 ? "selected" : ""}>Maîtrises</li>
         </Link>
-        <Link to="succes">
+        <Link to="accomplissements">
           <li className={onglet === 1 ? "selected" : ""}>Succès</li>
         </Link>
       </ul>

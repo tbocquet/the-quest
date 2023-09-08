@@ -1,4 +1,4 @@
-import { getChestIcon } from "@/imageGetter";
+import { getChestIcon } from "@/services/imageGetter";
 import "./Styles/ChestCheckBox.scss";
 
 type Props = {

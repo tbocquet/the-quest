@@ -1,7 +1,7 @@
 /*Context de gestion de la liste des Invocateurs déjà recherchés*/
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { SummonerData } from "@/type";
+import { SummonerData } from "@/models/type";
 
 type SumListContext = {
   readonly sumList: SummonerData[];

@@ -7,8 +7,8 @@ import {
   getRegionIcon,
   getRoleIcon,
   leePredictionImage,
-} from "@/imageGetter";
-import { ChampionMastery } from "@/type";
+} from "@/services/imageGetter";
+import { ChampionMastery } from "@/models/type";
 import "./Styles/LeePrediction.scss";
 import { useRouteLoaderData } from "react-router-dom";
 

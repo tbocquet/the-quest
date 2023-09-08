@@ -1,4 +1,4 @@
-import { ChampionMastery } from "@/type";
+import { ChampionMastery } from "@/models/type";
 import "./Styles/Masteries.scss";
 import { useEffect, useState } from "react";
 

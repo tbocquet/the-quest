@@ -2,8 +2,8 @@
 
 import React from "react";
 import * as calc from "./StatisticsFunctions";
-import { getMasteryIcon } from "@/imageGetter";
-import { ChampionMastery } from "@/type";
+import { getMasteryIcon } from "@/services/imageGetter";
+import { ChampionMastery } from "@/models/type";
 import "./Styles/QuestStatistics.scss";
 
 type Props = { masteries: ChampionMastery[] };

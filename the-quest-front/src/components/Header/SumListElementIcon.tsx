@@ -1,7 +1,10 @@
 /* Affiche l'icone d'invocateur si connue coté front-end sinon affiche l'icon par default */
 /* Css du parent*/
 
-import { getSummonerIcon, getSummonerDefaultProfileIcon } from "@/imageGetter";
+import {
+  getSummonerIcon,
+  getSummonerDefaultProfileIcon,
+} from "@/services/imageGetter";
 import { useState } from "react";
 
 type Props = {

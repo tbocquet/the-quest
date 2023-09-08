@@ -1,9 +1,8 @@
 import axios from "axios";
-import championData from "./assets/champion.json";
-import { Mastery } from "./type";
+import championData from "../assets/champion.json";
+import { Mastery } from "../models/type";
 
-// const SERVER_URL: string = process.env.REACT_APP_SERVER_URL as string;
-const SERVER_URL = "https://laquete.shiroimao.blbl.ch/";
+const SERVER_URL = import.meta.env.VITE_APP_BACKEND_URL;
 
 function addChampWithNoMastery(masteries: Mastery[]): Mastery[] {
   const masteriesWithAllChamp: Mastery[] = championData.map((champ) => {

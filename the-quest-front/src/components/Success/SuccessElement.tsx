@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { getSuccessIcon, getSuccessNotOwnedIcon } from "@/imageGetter";
+import { getSuccessIcon, getSuccessNotOwnedIcon } from "@/services/imageGetter";
 import { ChampionList } from "./ChampionList";
 import ReactAudioPlayer from "react-audio-player";
 import "./Styles/SuccesElement.scss";
