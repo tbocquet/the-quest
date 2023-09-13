@@ -24,7 +24,6 @@ export function SumList() {
               >
                 x
               </div>
-
               <SumListElementIcon iconId={sumElt.profileIconId} />
             </div>
             <div className="sumName">{sumElt.name}</div>

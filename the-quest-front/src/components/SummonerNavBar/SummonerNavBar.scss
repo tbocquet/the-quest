@@ -1,4 +1,6 @@
 .the-quest-app-nav {
+  display: flex;
+  justify-content: space-between;
   border-bottom: 2px solid #7e633b;
   ul {
     display: flex;
@@ -24,5 +26,9 @@
         color: #c79f49;
       }
     }
+  }
+  .animations-toggle-switch {
+    margin-right: 5em;
+    font-size: 0.8em;
   }
 }

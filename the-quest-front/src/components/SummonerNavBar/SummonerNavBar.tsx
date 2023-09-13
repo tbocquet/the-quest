@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./SummonerNavBar.scss";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { ToggleSwitch } from "../ToggleSwitch/ToggleSwitch";
 
 export function SummonerNavBar() {
   const [onglet, setOnglet] = useState(0);
@@ -23,6 +24,9 @@ export function SummonerNavBar() {
           <li className={onglet === 1 ? "selected" : ""}>Succès</li>
         </Link>
       </ul>
+      <div className="animations-toggle-switch">
+        <ToggleSwitch />
+      </div>
     </nav>
   );
 }

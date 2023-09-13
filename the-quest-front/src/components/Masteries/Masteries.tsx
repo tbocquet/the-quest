@@ -1,10 +1,11 @@
 import { ChampionMastery } from "@/models/type";
 import "./Styles/Masteries.scss";
-import { useEffect, useState } from "react";
-
-import { Mastery } from "./Mastery";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useMasteriesFilters } from "@/context/MasteriesFilterContext";
 import { FiltersSection } from "./FiltersSection";
+import { ReorderingList } from "../ReorderingList/ReorderingList";
+import { useIsAnimationEnable } from "@/context/EnableAnimationsContext";
+import { Mastery, MasteryProps } from "./Mastery";
 
 type Props = {
   masteries: ChampionMastery[];
@@ -12,8 +13,24 @@ type Props = {
 
 export function Masteries({ masteries }: Props) {
   const filters = useMasteriesFilters();
+  const { isEnable } = useIsAnimationEnable();
   const [championMasteries, setChampionMasteries] =
     useState<ChampionMastery[]>(masteries);
+
+  function useWindowSize() {
+    const [size, setSize] = useState([window.innerWidth, window.innerWidth]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener("resize", updateSize);
+      updateSize();
+      return () => window.removeEventListener("resize", updateSize);
+    }, []);
+    return size;
+  }
+
+  const [width, height] = useWindowSize();
 
   //Fonction de tri
   function compareMastery(a: ChampionMastery, b: ChampionMastery) {
@@ -105,11 +122,30 @@ export function Masteries({ masteries }: Props) {
   return (
     <>
       <FiltersSection />
-      <div className="lq-collection">
-        {championMasteries.map((champMast, index) => (
-          <Mastery key={index} championMastery={champMast} />
-        ))}
-      </div>
+      {isEnable ? (
+        <div className="lq-collection">
+          <ReorderingList
+            items={championMasteries.map(
+              (item: ChampionMastery): MasteryProps => ({
+                championMastery: item,
+              })
+            )}
+            maxWidth={width * 0.9}
+            elementHeight={200}
+            elementWidth={200}
+            itemsRenderFunction={Mastery}
+            // itemsRenderFunction={(item, key) => (
+            //   <Mastery championMastery={item} key={key} />
+            // )}
+          />
+        </div>
+      ) : (
+        <div className="lq-collection">
+          {championMasteries.map((champMast, index) => (
+            <Mastery key={index} championMastery={champMast} />
+          ))}
+        </div>
+      )}
     </>
   );
 }
