@@ -1,0 +1,74 @@
+[
+  {
+    "id": 5001,
+    "name": "PV croissants",
+    "majorChangePatchVersion": "",
+    "tooltip": "+@f1@ PV (selon le niveau)",
+    "shortDesc": "+15 - 140 PV (selon le niveau)",
+    "longDesc": "+15 - 140 PV (selon le niveau)",
+    "recommendationDescriptor": "",
+    "iconPath": "/images/perk-images/StatMods/StatModsHealthScalingIcon.png",
+    "endOfGameStatDescs": [],
+    "recommendationDescriptorAttributes": {}
+  },
+  {
+    "id": 5002,
+    "name": "Armure",
+    "majorChangePatchVersion": "",
+    "tooltip": "+6 armure",
+    "shortDesc": "+6 armure",
+    "longDesc": "+6 armure",
+    "recommendationDescriptor": "",
+    "iconPath": "/images/perk-images/StatMods/StatModsArmorIcon.png",
+    "endOfGameStatDescs": [],
+    "recommendationDescriptorAttributes": {}
+  },
+  {
+    "id": 5003,
+    "name": "Résistance magique",
+    "majorChangePatchVersion": "",
+    "tooltip": "+8 résistance magique",
+    "shortDesc": "+8 résistance magique",
+    "longDesc": "+8 résistance magique",
+    "recommendationDescriptor": "",
+    "iconPath": "/images/perk-images/StatMods/StatModsMagicResIcon.png",
+    "endOfGameStatDescs": [],
+    "recommendationDescriptorAttributes": {}
+  },
+  {
+    "id": 5005,
+    "name": "Vitesse d'attaque",
+    "majorChangePatchVersion": "",
+    "tooltip": "+10% vitesse d'attaque",
+    "shortDesc": "+10% vitesse d'attaque",
+    "longDesc": "+10% vitesse d'attaque",
+    "recommendationDescriptor": "",
+    "iconPath": "/images/perk-images/StatMods/StatModsAttackSpeedIcon.png",
+    "endOfGameStatDescs": [],
+    "recommendationDescriptorAttributes": {}
+  },
+  {
+    "id": 5007,
+    "name": "Accélération de compétence",
+    "majorChangePatchVersion": "",
+    "tooltip": "+@f1@ accélération de compétence",
+    "shortDesc": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>accélération de compétence</lol-uikit-tooltipped-keyword> ",
+    "longDesc": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>accélération de compétence</lol-uikit-tooltipped-keyword> ",
+    "recommendationDescriptor": "",
+    "iconPath": "/images/perk-images/StatMods/StatModsCDRScalingIcon.png",
+    "endOfGameStatDescs": [],
+    "recommendationDescriptorAttributes": {}
+  },
+  {
+    "id": 5008,
+    "name": "Adaptive Force",
+    "majorChangePatchVersion": "",
+    "tooltip": "<scaleAD>+@f2@ Attack Damage</scaleAD>",
+    "shortDesc": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>",
+    "longDesc": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>",
+    "recommendationDescriptor": "",
+    "iconPath": "/images/perk-images/StatMods/StatModsAdaptiveForceIcon.png",
+    "endOfGameStatDescs": [],
+    "recommendationDescriptorAttributes": {}
+  }
+]

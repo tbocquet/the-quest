@@ -1,0 +1,19 @@
+.summonerTags {
+  display: flex;
+  flex-flow: row wrap;
+  .tag {
+    font-size: 0.8em;
+    margin: 0 0.4em 0 0.4em;
+    padding: 0.2em 0.4em 0.4em 0.2em;
+    border-radius: 0 0 5px 5px;
+  }
+  .good {
+    background-color: green;
+  }
+  .bad {
+    background-color: red;
+  }
+  .neutral {
+    background-color: yellow;
+  }
+}

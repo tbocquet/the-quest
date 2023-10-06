@@ -1,7 +1,10 @@
 /*Icons*/
 
+import { getPerk } from "@/utils/perks";
+import { getSummonerSpell as getSumSpell } from "@/utils/summonerSpells";
+
 export function getLaneIcon(id: string): string {
-  return "/images/icons/lanes/" + id + ".png";
+  return "/images/icons/lanes/" + id.toLowerCase() + ".png";
 }
 
 export function getRoleIcon(id: string): string {
@@ -20,7 +23,7 @@ export function getTokenIcon2(id: number): string {
 }
 
 export function getRegionIcon(id: string): string {
-  if(id==='Les Îles Obscures'){
+  if (id === "Les Îles Obscures") {
     return "/images/icons/regions/iles_obscures.png";
   }
   return "/images/icons/regions/" + id + ".png";
@@ -46,6 +49,10 @@ export function getChampionCentered(id: string): string {
 /*Summoner icons*/
 export function getSummonerIcon(id: number): string {
   return "/images/profile-icons/" + id + ".png";
+}
+
+export function getCDragonSummonerIcon(id: number) {
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${id}.jpg`;
 }
 
 export function getSummonerDefaultProfileIcon(): string {
@@ -81,6 +88,29 @@ export function getChestIcon2(isOwned: boolean): string {
 }
 
 // Lee prediction
-export function leePredictionImage():string{
+export function leePredictionImage(): string {
   return "/images/lee-prediction.png";
+}
+
+export function getRankedIcon(rank: string) {
+  const url =
+    "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/images/";
+
+  return `${url}${rank.toLowerCase()}.png`;
+}
+
+export function getUnrankedIcon() {
+  return "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-mini-crests/unranked.png";
+}
+
+export function getChampionTileById(id: number) {
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/${id}/${id}000.jpg`;
+}
+
+export function getSummonerSpell(id: number) {
+  return getSumSpell(id).iconPath;
+}
+
+export function getPerkSrc(id: number) {
+  return getPerk(id).icon;
 }

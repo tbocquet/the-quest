@@ -1,0 +1,10 @@
+.matchup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  .lane {
+    height: 2em;
+    width: 2em;
+  }
+}

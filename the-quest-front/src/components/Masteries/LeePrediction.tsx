@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import { useMasteriesFilters } from "../../context/MasteriesFilterContext";
-import { useSummonerMasteries } from "../../context/SummonerMasteries";
 import {
   getChampionCentered,
   getLaneIcon,

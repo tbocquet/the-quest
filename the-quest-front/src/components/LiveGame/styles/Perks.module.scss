@@ -1,0 +1,32 @@
+.perks {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .mainPerk {
+    height: 4em;
+    img {
+      height: 100%;
+    }
+  }
+  .runes {
+    display: flex;
+    flex-flow: row nowrap;
+    div {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    .perkStyle {
+      width: 2em;
+    }
+    .perkSubStyle {
+      width: 2em;
+    }
+    .perkStatModes {
+      width: 1.5em;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
