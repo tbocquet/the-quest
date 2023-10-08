@@ -1,20 +1,26 @@
 import { LiveGameParticipant } from "@/models/liveGame";
 import style from "./styles/LiveGameParticipant.module.scss";
 import { getCDragonSummonerIcon } from "@/services/imageGetter";
-import { numberAbrevier } from "@/utils/textDataTransformer";
+import {
+  numberAbrevier,
+  rendreNombreLisible,
+} from "@/utils/textDataTransformer";
 import { League } from "./League";
 import { ChampionTile } from "./ChampionTile";
 import { Perks } from "./Perks";
 import ChampionStats from "./ChampionStats";
 import { SummonerTags } from "./SummonerTags";
+import Tooltip from "./Tooltip";
 
 type Props = {
   sum: LiveGameParticipant;
+  team: "blue" | "red";
 };
-export function GameParticipant({ sum }: Props) {
+export function GameParticipant({ sum, team }: Props) {
+  const getSideStyle = team === "blue" ? style.blueSide : style.redSide;
   return (
     <div className={style.gameParticipant}>
-      <div className={style.summonerRow}>
+      <div className={style.summonerRow + " " + getSideStyle}>
         {/* Invocateur */}
         <div className={style.summonerInfo}>
           {/* Invocateur Icon */}
@@ -23,21 +29,42 @@ export function GameParticipant({ sum }: Props) {
               alt="summoner icon"
               src={getCDragonSummonerIcon(sum.profileIconId)}
             />
-            {sum.porofessorStats && <span>{sum.porofessorStats?.level}</span>}
+            {sum.porofessorStats && (
+              <Tooltip
+                content={`Niveau de l'invocateur : ${sum.porofessorStats.level}`}
+                direction="bottom"
+              >
+                <span className={style.summonerLevel}>
+                  {sum.porofessorStats?.level}
+                </span>
+              </Tooltip>
+            )}
           </div>
           {/* Pseudo et masteries  */}
           <div className={style.pseudoAndMasteries}>
             <span className={style.summonerName}>{sum.summonerName}</span>
 
             {sum.masteries && (
-              <span className={style.theQuestProgression}>
-                {sum.masteries.progression} %
-              </span>
+              <Tooltip
+                content={`Progression dans la quête : ${sum.masteries.progression}%`}
+                direction="bottom"
+              >
+                <span className={style.theQuestProgression}>
+                  {sum.masteries.progression} %
+                </span>
+              </Tooltip>
             )}
             {sum.masteries && (
-              <span className={style.totalMasteryPoint}>
-                {numberAbrevier(sum.masteries.totalPoint)} points
-              </span>
+              <Tooltip
+                content={`Nombre de points de maitrise : ${rendreNombreLisible(
+                  sum.masteries.totalPoint
+                )}`}
+                direction="bottom"
+              >
+                <span className={style.totalMasteryPoint}>
+                  {numberAbrevier(sum.masteries.totalPoint)} points
+                </span>
+              </Tooltip>
             )}
           </div>
         </div>

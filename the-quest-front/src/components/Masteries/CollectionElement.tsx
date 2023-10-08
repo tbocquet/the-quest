@@ -5,7 +5,6 @@ import {
   getChampionSmallTile,
   getChestIcon,
   getMasteryIcon,
-  getTokenIcon,
   getTokenIcon2,
 } from "@/services/imageGetter";
 

@@ -2,6 +2,7 @@ import { LolAPISummonerLeague } from "@/models/liveGame";
 import style from "./styles/League.module.scss";
 import { getRankedIcon, getUnrankedIcon } from "@/services/imageGetter";
 import { firstLetterUpperCase } from "@/utils/textDataTransformer";
+import Tooltip from "./Tooltip";
 
 type Props = {
   league: LolAPISummonerLeague | null;
@@ -43,10 +44,17 @@ export function League({ league }: Props) {
             )}
           <span>{league.leaguePoints} LP</span>
         </div>
-        <div>
-          <span>{winrate}%</span>
-          <span>({league.wins + league.losses} jouées)</span>
-        </div>
+        <Tooltip
+          content={`${league.wins} victoire${league.wins > 1 && "s"} ${
+            league.losses
+          } defaite${league.losses > 1 && "s"}`}
+          direction="bottom"
+        >
+          <div>
+            <span>{winrate}%</span>
+            <span>({league.wins + league.losses} jouées)</span>
+          </div>
+        </Tooltip>
       </div>
     </div>
   );

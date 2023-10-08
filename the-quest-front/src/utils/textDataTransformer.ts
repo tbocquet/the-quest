@@ -44,3 +44,18 @@ export function firstLetterUpperCase(phrase: string): string {
 
   return premiereLettreMajuscule + resteDeLaPhrase;
 }
+
+export function rendreNombreLisible(n: number | string): string {
+  if (typeof n === "number") {
+    n = n.toString();
+  }
+
+  const parts = n.split(".");
+  const integerPart = parts[0];
+  const decimalPart = parts.length > 1 ? `.${parts[1]}` : "";
+
+  const regex = /\B(?=(\d{3})+(?!\d))/g;
+  const formattedIntegerPart = integerPart.replace(regex, " ");
+
+  return formattedIntegerPart + decimalPart;
+}

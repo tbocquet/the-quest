@@ -1,5 +1,5 @@
 import { GameParticipant } from "@/components/LiveGame/LiveGameParticipant";
-import { getLaneIcon } from "@/services/imageGetter";
+import { getChampionTileById, getLaneIcon } from "@/services/imageGetter";
 
 import { getPersistantLiveGame } from "@/services/liveGame";
 import style from "./styles/LiveGame.module.scss";
@@ -24,17 +24,50 @@ export function LiveGame() {
     { blue: data.participants[4], red: data.participants[9], lane: "support" },
   ];
 
+  const blueTeamBans = data.bannedChampions.filter((ban) => ban.teamId === 100);
+  const redTeamBans = data.bannedChampions.filter((ban) => ban.teamId === 200);
+
   return (
     <>
+      {/* Timer Refresh et File */}
+      {/* Bans */}
+      {blueTeamBans && redTeamBans && (
+        <div className={style.bansSection}>
+          <div className={style.blueBans}>
+            {blueTeamBans.map((ban, index) => (
+              <div className={style.iconContainer} key={index}>
+                <img
+                  alt=""
+                  className={style.bannedChampionIcon}
+                  src={getChampionTileById(ban.championId)}
+                />
+              </div>
+            ))}
+          </div>
+          <div className={style.redBans}>
+            {redTeamBans.map((ban, index) => (
+              <div className={style.iconContainer} key={index}>
+                <img
+                  alt=""
+                  className={style.bannedChampionIcon}
+                  src={getChampionTileById(ban.championId)}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Joueurs */}
       {matchupArray.map((matchup, index) => (
         <div className={style.matchup} key={index}>
-          <GameParticipant sum={matchup.blue} />
+          <GameParticipant sum={matchup.blue} team="blue" />
           <img
             className={style.lane}
             alt="lane"
             src={getLaneIcon(matchup.lane)}
           />
-          <GameParticipant sum={matchup.red} />
+          <GameParticipant sum={matchup.red} team="red" />
         </div>
       ))}
     </>

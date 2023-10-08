@@ -4,7 +4,48 @@
   justify-content: center;
   align-items: center;
   .lane {
+    margin: 1em;
+    padding-bottom: 2em;
     height: 2em;
     width: 2em;
+  }
+}
+
+.bansSection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  .blueBans {
+    margin-right: 2em;
+  }
+
+  .redBans {
+    margin-left: 2em;
+  }
+
+  .iconContainer {
+    height: 3em;
+    width: 3em;
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgb(174, 115, 57);
+    border-radius: 4px;
+    margin: 0.3em;
+    overflow: hidden;
+    .bannedChampionIcon {
+      height: 100%;
+    }
+  }
+
+  .iconContainer::before {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Épaisseur de la diagonale */
+    background-color: rgb(174, 115, 57);
+    transform: skewY(-45deg); /* Inclinaison de la diagonale */
   }
 }
