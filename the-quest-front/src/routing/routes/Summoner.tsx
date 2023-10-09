@@ -26,7 +26,7 @@ export function Summoner() {
         summonerData={summonerData}
         summonerMasteries={summonerMasteries}
       />
-      <SummonerNavBar />
+      <SummonerNavBar currentUser={summonerData.name} />
       <Outlet />
     </>
   );

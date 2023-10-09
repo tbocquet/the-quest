@@ -1,3 +1,16 @@
+.timerAndQueue {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .gameTimer {
+    margin: 1em;
+  }
+  .queue {
+    margin: 1em;
+  }
+}
+
 .matchup {
   display: flex;
   flex-flow: row wrap;

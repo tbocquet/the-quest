@@ -11,6 +11,7 @@ import { Perks } from "./Perks";
 import ChampionStats from "./ChampionStats";
 import { SummonerTags } from "./SummonerTags";
 import Tooltip from "./Tooltip";
+import { Link } from "react-router-dom";
 
 type Props = {
   sum: LiveGameParticipant;
@@ -24,22 +25,24 @@ export function GameParticipant({ sum, team }: Props) {
         {/* Invocateur */}
         <div className={style.summonerInfo}>
           {/* Invocateur Icon */}
-          <div className={style.profileIconContainer}>
-            <img
-              alt="summoner icon"
-              src={getCDragonSummonerIcon(sum.profileIconId)}
-            />
-            {sum.porofessorStats && (
-              <Tooltip
-                content={`Niveau de l'invocateur : ${sum.porofessorStats.level}`}
-                direction="bottom"
-              >
-                <span className={style.summonerLevel}>
-                  {sum.porofessorStats?.level}
-                </span>
-              </Tooltip>
-            )}
-          </div>
+          <Link to={`/invocateur/${sum.summonerName}`}>
+            <div className={style.profileIconContainer}>
+              <img
+                alt="summoner icon"
+                src={getCDragonSummonerIcon(sum.profileIconId)}
+              />
+              {sum.porofessorStats && (
+                <Tooltip
+                  content={`Niveau de l'invocateur : ${sum.porofessorStats.level}`}
+                  direction="bottom"
+                >
+                  <span className={style.summonerLevel}>
+                    {sum.porofessorStats?.level}
+                  </span>
+                </Tooltip>
+              )}
+            </div>
+          </Link>
           {/* Pseudo et masteries  */}
           <div className={style.pseudoAndMasteries}>
             <span className={style.summonerName}>{sum.summonerName}</span>

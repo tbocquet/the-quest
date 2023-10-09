@@ -8,7 +8,17 @@ import { SummonerNotFound } from "../components/SummonerNotFound";
 import { SummonerSuccess } from "./routes/SummonerSuccess";
 import { Error } from "./routes/Error";
 import { Champions } from "./routes/champions";
-import { LiveGamePage } from "./routes/liveGame";
+import { LiveGamePage } from "./routes/LiveGame";
+
+// function liveGameLoader({ params }: any) {
+//   const summonerData = (await getSummonerDataByName(
+//     params.summonerName
+//   )) as SummonerData;
+//   const summonerMasteries = (await getSummonerChampionMasteries(
+//     summonerData.id
+//   )) as ChampionMastery[];
+//   return { summonerData, summonerMasteries };
+// }
 
 export function Router() {
   const router = createBrowserRouter([
@@ -21,12 +31,12 @@ export function Router() {
           path: "/",
           element: <Home />,
         },
+        // {
+        //   path: "/champions",
+        //   element: <Champions />,
+        // },
         {
-          path: "/champions",
-          element: <Champions />,
-        },
-        {
-          path: "/liveGame",
+          path: "/liveGame/:summonerName",
           element: <LiveGamePage />,
         },
         {

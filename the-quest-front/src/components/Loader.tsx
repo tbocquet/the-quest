@@ -1,9 +1,10 @@
 /*Composant à afficher pendant les chargements*/
+
 export function Loader() {
   return (
     <div className="lq-loader" style={{ margin: "2em" }}>
       <img
-        src={require("/gifs/kled.gif")}
+        src={"/gifs/kled.gif"}
         style={{ height: "15em" }}
         alt="loader-animated-gif"
       ></img>

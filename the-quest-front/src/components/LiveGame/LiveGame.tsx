@@ -1,20 +1,37 @@
 import { GameParticipant } from "@/components/LiveGame/LiveGameParticipant";
 import { getChampionTileById, getLaneIcon } from "@/services/imageGetter";
 
-import { getPersistantLiveGame } from "@/services/liveGame";
+import {
+  getLiveGameBySummonerName,
+  getPersistantLiveGame,
+} from "@/services/liveGame";
 import style from "./styles/LiveGame.module.scss";
 
 import useSWR from "swr";
+import { GameTimer } from "./GameTimer";
+import { getQueue } from "@/utils/Queue";
+import { Loader } from "../Loader";
 
-export function LiveGame() {
+type Props = { summonerName: string; persistant?: boolean };
+export function LiveGame({ summonerName, persistant = false }: Props) {
   const { data, error, isLoading } = useSWR(
-    "Jean Prank",
-    getPersistantLiveGame
+    summonerName,
+    persistant ? getPersistantLiveGame : getLiveGameBySummonerName
   );
 
+  if (isLoading)
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
+
   if (error || data === null || data === undefined)
-    return <div>échec du chargement</div>;
-  if (isLoading) return <div>chargement...</div>;
+    return (
+      <div style={{ color: "white", margin: "3em" }}>
+        {summonerName} n'est pas en jeu.
+      </div>
+    );
 
   const matchupArray = [
     { blue: data.participants[0], red: data.participants[5], lane: "top" },
@@ -29,7 +46,14 @@ export function LiveGame() {
 
   return (
     <>
-      {/* Timer Refresh et File */}
+      {/* Timer et Queue */}
+      <div className={style.timerAndQueue}>
+        {getQueue(data.gameQueueConfigId)?.shortName}
+        <span className={style.queue}>
+          {data.gameStartTime && <GameTimer startTime={data.gameStartTime} />}
+        </span>
+      </div>
+
       {/* Bans */}
       {blueTeamBans && redTeamBans && (
         <div className={style.bansSection}>

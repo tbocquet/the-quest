@@ -5,7 +5,6 @@ type Props = {
   tags: PoroTag[];
 };
 export function SummonerTags({ tags }: Props) {
-  console.log(tags);
   return (
     <div className={style.summonerTags}>
       {tags.map((tag, index) => {

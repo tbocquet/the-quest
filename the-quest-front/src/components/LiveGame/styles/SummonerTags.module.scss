@@ -1,10 +1,11 @@
 .summonerTags {
   display: flex;
   flex-flow: row wrap;
+  color: white;
 
   .tag {
     display: block;
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin: 0 0.4em 0 0;
     padding: 0.4em 0.4em 0.2em 0.4em;
     border-radius: 0 0 5px 5px;
@@ -18,7 +19,6 @@
       rgb(70, 143, 221) 0%,
       rgb(37, 81, 152) 100%
     );
-    color: black;
   }
   .bad {
     background-color: rgb(148, 34, 116);
@@ -27,7 +27,6 @@
       rgb(221, 70, 70) 0%,
       rgb(143, 38, 38) 100%
     );
-    color: black;
   }
   .neutral {
     background-color: rgb(198, 156, 59);
@@ -36,6 +35,5 @@
       rgb(221, 143, 70) 0%,
       rgb(120, 75, 26) 100%
     );
-    color: black;
   }
 }
