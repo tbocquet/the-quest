@@ -28,9 +28,9 @@ export function SummonerNavBar({ currentUser }: Props) {
           <li className={onglet === 2 ? "selected" : ""}>Partie en cours</li>
         </Link>
       </ul>
-      <div className="animations-toggle-switch">
+      {/* <div className="animations-toggle-switch">
         <ToggleSwitch />
-      </div>
+      </div> */}
     </nav>
   );
 }

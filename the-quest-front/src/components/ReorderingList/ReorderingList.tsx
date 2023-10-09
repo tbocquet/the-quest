@@ -1,8 +1,6 @@
-import { ChampionMastery } from "@/models/type";
 import { useTransition, animated } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import "./ReorderingList.scss";
-import { Mastery } from "../Masteries/Mastery";
 
 type Props<A> = {
   elementWidth?: number;
@@ -35,7 +33,7 @@ export function ReorderingList<A>({
     setHeight(
       Math.floor(items.length / rowMaxLength) * elementHeight + elementHeight
     );
-  }, [items.length, rowMaxLength]);
+  }, [elementHeight, items.length, renderChampionAmount, rowMaxLength]);
 
   const transitions = useTransition(
     items.map((data, index) => {
@@ -49,10 +47,10 @@ export function ReorderingList<A>({
       };
     }),
     {
-      key: (item: any) => item.name,
+      key: (item: any) => item.championKey,
       from: { opacity: 0 },
       leave: { opacity: 0 },
-      config: { duration: 500 },
+      config: { duration: 5000 },
       enter: ({ x, y }) => ({ x, y, opacity: 1 }),
       update: ({ x, y }) => ({ x, y }),
     }
@@ -73,7 +71,7 @@ export function ReorderingList<A>({
           className={"card"}
           style={{ zIndex: items.length - index, ...style }}
         >
-          <ItemsRenderFC key={index} {...item} />
+          <ItemsRenderFC {...item} />
         </animated.div>
       ))}
     </div>

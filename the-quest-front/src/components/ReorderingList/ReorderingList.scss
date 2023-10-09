@@ -1,9 +1,9 @@
 #reordering-list {
   position: relative;
-  transition-property: height;
+  // transition-property: height;
 
   .card {
     position: absolute;
-    will-change: transform, opacity;
+    // will-change: transform,opacity;
   }
 }

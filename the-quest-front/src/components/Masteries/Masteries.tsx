@@ -122,7 +122,7 @@ export function Masteries({ masteries }: Props) {
   return (
     <>
       <FiltersSection />
-      {isEnable ? (
+      {/* {isEnable ? (
         <div className="lq-collection">
           <ReorderingList
             items={championMasteries.map(
@@ -139,13 +139,13 @@ export function Masteries({ masteries }: Props) {
             // )}
           />
         </div>
-      ) : (
-        <div className="lq-collection">
-          {championMasteries.map((champMast, index) => (
-            <Mastery key={index} championMastery={champMast} />
-          ))}
-        </div>
-      )}
+      ) : ( */}
+      <div className="lq-collection">
+        {championMasteries.map((champMast, index) => (
+          <Mastery key={index} championMastery={champMast} />
+        ))}
+      </div>
+      {/* )} */}
     </>
   );
 }
