@@ -1,12 +1,11 @@
 import { useTransition, animated } from "@react-spring/web";
 import { useEffect, useState } from "react";
-import "./ReorderingList.scss";
 
 type Props<A> = {
   elementWidth?: number;
   elementHeight?: number;
   maxWidth: number;
-  items: A[];
+  items: A[]; //Prérequis : les items doivent avoir un attribut 'id' qui servira de clef
   itemsRenderFunction: React.FC<A>;
 };
 export function ReorderingList<A>({
@@ -47,10 +46,10 @@ export function ReorderingList<A>({
       };
     }),
     {
-      key: (item: any) => item.championKey,
+      key: (item: any) => item.id,
       from: { opacity: 0 },
       leave: { opacity: 0 },
-      config: { duration: 5000 },
+      config: { duration: 500 },
       enter: ({ x, y }) => ({ x, y, opacity: 1 }),
       update: ({ x, y }) => ({ x, y }),
     }
@@ -58,22 +57,27 @@ export function ReorderingList<A>({
 
   return (
     <div
-      id="reordering-list"
       style={{
+        position: "relative",
         width: maxWidth,
         height: height,
         transitionDelay: isHeightAnimation ? "500ms" : "0s",
         transitionDuration: isHeightAnimation ? "1s" : "0s",
       }}
     >
-      {transitions((style, item, t, index) => (
-        <animated.div
-          className={"card"}
-          style={{ zIndex: items.length - index, ...style }}
-        >
-          <ItemsRenderFC {...item} />
-        </animated.div>
-      ))}
+      {transitions((style, item, t, index) => {
+        return (
+          <animated.div
+            style={{
+              position: "absolute",
+              ...style,
+              zIndex: items.length - index,
+            }}
+          >
+            <ItemsRenderFC {...item} />
+          </animated.div>
+        );
+      })}
     </div>
   );
 }
