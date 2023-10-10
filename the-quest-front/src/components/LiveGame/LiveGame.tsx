@@ -9,8 +9,8 @@ import style from "./styles/LiveGame.module.scss";
 
 import useSWR from "swr";
 import { GameTimer } from "./GameTimer";
-import { getQueue } from "@/utils/Queue";
 import { Loader } from "../Loader";
+import { getQueue } from "@/utils/queue";
 
 type Props = { summonerName: string; persistant?: boolean };
 export function LiveGame({ summonerName, persistant = false }: Props) {

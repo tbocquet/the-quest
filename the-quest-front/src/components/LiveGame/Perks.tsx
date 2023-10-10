@@ -1,4 +1,4 @@
-import { Perks as Runes } from "@/models/liveGame";
+import { Perks as Runes } from "@/models/LiveGame";
 import { getPerkSrc } from "@/services/imageGetter";
 import style from "./styles/Perks.module.scss";
 type Props = { perks: Runes };

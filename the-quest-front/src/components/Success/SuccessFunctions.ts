@@ -1,6 +1,6 @@
 import success from "../../assets/success.json";
 import allChampions from "../../assets/champion.json";
-import { ChampionMastery, Champion } from "@/models/type";
+import { ChampionMastery, Champion } from "@/models/ChampionMastery";
 import { Success } from "./type";
 
 //Renvoit les success généraux

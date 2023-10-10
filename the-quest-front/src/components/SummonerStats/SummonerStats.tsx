@@ -1,10 +1,10 @@
 /*View contenant toutes les informations sur un Invocateur*/
 /*Effectue tous les calls API necessaires pour ses enfants */
 
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import { ProfileBox } from "./ProfileBox";
 import { QuestStatistics } from "./QuestStatistics";
-import { SummonerData } from "@/models/type";
+import { SummonerData } from "@/models/Summoner";
 import "./Styles/SummonerStats.scss";
 
 type Props = {

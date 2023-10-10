@@ -3,9 +3,23 @@
   display: flex;
   flex-flow: row wrap;
   margin: 1em;
-  .summoner-icon {
+  .summoner-icon-container {
+    position: relative;
+    height: 10em;
     border: 2px solid #7e633b;
-    width: 10em;
+    .summoner-icon {
+      height: 100%;
+    }
+    .summoner-level {
+      position: absolute;
+      color: white;
+      bottom: 0;
+      right: 0;
+      padding: 0.2em 0.2em 0.1em 0.3em;
+      background-color: black;
+      border-radius: 4px 0 0 0;
+      font-size: 1.1em;
+    }
   }
   .summoner-rank-infos {
     display: flex;
@@ -14,21 +28,12 @@
     align-items: flex-start;
     text-align: left;
     margin-left: 1em;
-
-    h4 {
-      color: #dbae6a;
-      margin: 0.5em;
-    }
-    p {
-      margin-left: 1em;
-      text-align: left;
-      color: #c4b998;
-    }
   }
 
   .summoner-name {
     font-size: 1.4em;
     letter-spacing: 1px;
     color: rgb(240, 240, 240);
+    margin-bottom: 0.3em;
   }
 }

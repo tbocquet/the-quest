@@ -1,4 +1,4 @@
-import { PoroTag } from "@/models/porofessor";
+import { PoroTag } from "@/models/Porofessor";
 import style from "./styles/SummonerTags.module.scss";
 
 type Props = {

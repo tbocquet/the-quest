@@ -1,4 +1,4 @@
-import { PoroSummoner } from "./porofessor";
+import { PoroSummoner } from "@/models/porofessor";
 
 export type LiveGame = {
   gameId: string;

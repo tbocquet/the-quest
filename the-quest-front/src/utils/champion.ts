@@ -1,4 +1,4 @@
-import { Champion } from "../models/type";
+import { Champion } from "../models/ChampionMastery";
 import championData from "../assets/champion.json";
 
 const allChampions: Champion[] = championData;

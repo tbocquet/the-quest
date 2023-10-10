@@ -1,11 +1,11 @@
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import "./Styles/Masteries.scss";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useMasteriesFilters } from "@/context/MasteriesFilterContext";
 import { FiltersSection } from "./FiltersSection";
-import { ReorderingList } from "../ReorderingList/ReorderingList";
 import { useIsAnimationEnable } from "@/context/EnableAnimationsContext";
-import { Mastery, MasteryProps } from "./Mastery";
+import { Mastery } from "./Mastery";
+import { ReorderingList } from "../ReorderingList";
 
 type Props = {
   masteries: ChampionMastery[];

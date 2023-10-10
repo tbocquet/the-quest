@@ -1,4 +1,4 @@
-import { LolAPISummonerLeague } from "@/models/liveGame";
+import { LolAPISummonerLeague } from "@/models/LiveGame";
 import style from "./styles/League.module.scss";
 import { getRankedIcon, getUnrankedIcon } from "@/services/imageGetter";
 import { firstLetterUpperCase } from "@/utils/textDataTransformer";

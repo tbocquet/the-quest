@@ -7,7 +7,7 @@ import {
   getRoleIcon,
   leePredictionImage,
 } from "@/services/imageGetter";
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import "./Styles/LeePrediction.scss";
 import { useRouteLoaderData } from "react-router-dom";
 

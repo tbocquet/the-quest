@@ -1,6 +1,6 @@
 /*Fonctions permettant le calcul de l'avancement de la quête*/
 
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 
 export function getChampionProgression(champ: ChampionMastery) {
   switch (champ.level) {

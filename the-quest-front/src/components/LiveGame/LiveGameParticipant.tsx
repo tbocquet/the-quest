@@ -1,4 +1,4 @@
-import { LiveGameParticipant } from "@/models/liveGame";
+import { LiveGameParticipant } from "@/models/LiveGame";
 import style from "./styles/LiveGameParticipant.module.scss";
 import { getCDragonSummonerIcon } from "@/services/imageGetter";
 import {

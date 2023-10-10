@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { MasteriesFiltersProvider } from "./context/MasteriesFilterContext";
 import { SumListProvider } from "./context/SumListContext";
 import "./index.css";
-import { Router } from "./routing/Router";
+import { Router } from "./Router";
 import { EnableAnimationProvider } from "./context/EnableAnimationsContext";
 
 const app = document.getElementById("root") as HTMLElement;

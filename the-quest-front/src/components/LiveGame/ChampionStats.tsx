@@ -1,4 +1,4 @@
-import { PoroChampionStats, PoroSummoner } from "@/models/porofessor";
+import { PoroChampionStats, PoroSummoner } from "@/models/Porofessor";
 import style from "./styles/ChampionStats.module.scss";
 import { getSummonerSpell } from "@/services/imageGetter";
 

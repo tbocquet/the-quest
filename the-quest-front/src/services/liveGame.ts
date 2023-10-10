@@ -1,4 +1,4 @@
-import { LiveGame } from "@/models/liveGame";
+import { LiveGame } from "@/models/LiveGame";
 import ky from "ky";
 const SERVER_URL = import.meta.env.VITE_APP_BACKEND_URL;
 

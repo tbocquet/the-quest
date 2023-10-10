@@ -1,4 +1,4 @@
-import { LolAPISummonerLeague } from "@/models/liveGame";
+import { LolAPISummonerLeague } from "@/models/LiveGame";
 
 export function getFlexQDataFromLeagueTable(T: LolAPISummonerLeague[]) {
   return T.find((league) => league.queueType === "RANKED_FLEX_SR");
