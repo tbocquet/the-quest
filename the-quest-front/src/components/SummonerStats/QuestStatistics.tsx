@@ -3,7 +3,7 @@
 import React from "react";
 import * as calc from "./StatisticsFunctions";
 import { getMasteryIcon } from "@/services/imageGetter";
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import "./Styles/QuestStatistics.scss";
 
 type Props = { masteries: ChampionMastery[] };

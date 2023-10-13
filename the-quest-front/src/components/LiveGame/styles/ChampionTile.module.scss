@@ -1,0 +1,103 @@
+.championTile {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 6em;
+  height: 6em;
+  border: 2px solid black;
+  margin-left: 2em;
+
+  .championImgContainer {
+    position: relative;
+    width: 100%;
+    height: 83%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+    img {
+      max-width: 100%;
+    }
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   // border: 1px solid red;
+    //   background: rgb(0, 0, 0);
+    //   background: linear-gradient(
+    //       90deg,
+    //       rgba(0, 0, 0, 0.8) 0%,
+    //       rgba(168, 168, 168, 0) 20%,
+    //       rgba(177, 177, 177, 0) 100%
+    //     ),
+    //     linear-gradient(
+    //       0deg,
+    //       rgba(0, 0, 0, 1) 0%,
+    //       rgba(168, 168, 168, 0) 22%,
+    //       rgba(177, 177, 177, 0) 100%
+    //     );
+    //   //z-index: 2;
+    // }
+  }
+
+  .masteryPointContainer {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    width: 100%;
+    height: 17%;
+    left: 0em;
+    bottom: 0em;
+    padding: 1px;
+
+    .masteryPoint {
+      height: 99%;
+      position: relative;
+      //padding: 0.3em;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px black;
+      color: rgb(231, 231, 231);
+    }
+  }
+
+  .masteryIcon {
+    position: absolute;
+    z-index: 1;
+    top: -0.8em;
+    left: -1.35em;
+    width: 2.7em;
+  }
+
+  .chestIconContainer {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    overflow: hidden;
+    .chestIcon {
+      //position: absolute;
+      position: relative;
+      z-index: 1;
+      top: -0.2em;
+      right: -0.3em;
+      width: 1.7em;
+    }
+  }
+
+  .tokenContainer {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 1.8em;
+    top: 1.6em;
+    left: -0.4em;
+    .tokenMastery {
+      padding: 0.1em;
+      width: 0.7em;
+    }
+  }
+}

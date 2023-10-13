@@ -1,7 +1,7 @@
 /*Context contenant les niveau de masteries de l'invocateur recherché*/
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 
 type SummonerMasteriesContext = {
   readonly sumMasteryList: ChampionMastery[];

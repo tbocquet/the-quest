@@ -1,6 +1,6 @@
 import "./Styles/Mastery.scss";
 import "./Styles/Mastery-gradient.scss";
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import {
   getChampionTile,
   getChestIcon2,
@@ -8,10 +8,10 @@ import {
   getMasteryToken,
 } from "@/services/imageGetter";
 
-type Props = {
+export type MasteryProps = {
   championMastery: ChampionMastery;
 };
-export function Mastery({ championMastery }: Props) {
+export function Mastery({ championMastery }: MasteryProps) {
   function getBooleanMap(M: ChampionMastery) {
     if (M.level === 6) {
       let j = 0;

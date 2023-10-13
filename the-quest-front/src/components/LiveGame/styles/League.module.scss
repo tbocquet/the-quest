@@ -1,0 +1,18 @@
+.leagueInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 13em;
+  .tierIcon {
+    height: 3em;
+  }
+  .textInfo {
+    div {
+      display: flex;
+    }
+    span {
+      margin: 0.2em;
+    }
+  }
+}

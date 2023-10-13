@@ -1,17 +1,23 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { MasteriesFiltersProvider } from "./context/MasteriesFilterContext";
 import { SumListProvider } from "./context/SumListContext";
 import "./index.css";
-import { Router } from "./routing/Router";
+import { Router } from "./Router";
+import { EnableAnimationProvider } from "./context/EnableAnimationsContext";
 
-ReactDOM.render(
+const app = document.getElementById("root") as HTMLElement;
+
+const root = createRoot(app);
+
+root.render(
   <React.StrictMode>
     <SumListProvider>
       <MasteriesFiltersProvider>
-        <Router />
+        <EnableAnimationProvider>
+          <Router />
+        </EnableAnimationProvider>
       </MasteriesFiltersProvider>
     </SumListProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

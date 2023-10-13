@@ -55,12 +55,13 @@
           }
         }
       }
-    }
-    .sumName {
-      color: white;
-      font-size: 0.8em;
-      width: 100%;
-      overflow: hidden;
+      .sumName {
+        color: white;
+        font-size: 0.8em;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 }

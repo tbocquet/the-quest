@@ -1,11 +1,10 @@
 import "./Styles/CollectionElement.scss";
-import { ChampionMastery } from "@/models/type";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import {
   getChampionTile,
   getChampionSmallTile,
   getChestIcon,
   getMasteryIcon,
-  getTokenIcon,
   getTokenIcon2,
 } from "@/services/imageGetter";
 

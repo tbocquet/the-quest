@@ -1,0 +1,19 @@
+.summoner-rank-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .summoner-rank-icon {
+    width: 4.5em;
+  }
+  h4 {
+    color: #dbae6a;
+    margin: 0.5em;
+  }
+  p {
+    margin-left: 1em;
+    text-align: left;
+    color: #c4b998;
+  }
+}

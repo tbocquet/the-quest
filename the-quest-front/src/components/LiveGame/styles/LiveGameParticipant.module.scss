@@ -1,0 +1,105 @@
+.gameParticipant {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  // margin: 0.5em 0 0.5em 0;
+  a {
+    all: unset;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .summonerRow {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 7em;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    font-size: 0.95em;
+  }
+  .blueSide {
+    background-color: rgb(31, 45, 75);
+    background: linear-gradient(
+      200deg,
+      rgb(11, 10, 41) 0%,
+      rgb(31, 45, 75) 35%,
+      rgb(81, 202, 226) 100%
+    );
+  }
+  .redSide {
+    background-color: rgb(91, 37, 37);
+    background: linear-gradient(
+      200deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(121, 9, 42, 1) 45%,
+      rgb(216, 61, 108) 100%
+    );
+  }
+  .tagsContainer {
+    height: 1.6em;
+  }
+}
+
+.summonerInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .profileIconContainer {
+    position: relative;
+    width: 5.5em;
+    height: 5.5em;
+    border: 2px solid #a87d3d;
+    border-radius: 2px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+    & .summonerLevel {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 2px 2px 4px;
+      background-color: black;
+      border-radius: 4px 0 0 0;
+    }
+  }
+  .pseudoAndMasteries {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    width: 8.5em;
+    padding: 0.5em;
+
+    .summonerName {
+      text-align: left;
+      width: 100%;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 0.4em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .theQuestProgression {
+      display: block;
+      margin-bottom: 0.4em;
+    }
+    .totalMasteryPoint {
+    }
+  }
+}

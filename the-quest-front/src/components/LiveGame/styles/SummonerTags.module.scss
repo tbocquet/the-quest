@@ -1,0 +1,39 @@
+.summonerTags {
+  display: flex;
+  flex-flow: row wrap;
+  color: white;
+
+  .tag {
+    display: block;
+    font-size: 0.6em;
+    margin: 0 0.4em 0 0;
+    padding: 0.4em 0.4em 0.2em 0.4em;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 2px 2px 3px rgb(0, 0, 0);
+    font-weight: 600;
+  }
+  .good {
+    //background-color: rgb(39, 124, 167);
+    background: linear-gradient(
+      70deg,
+      rgb(70, 143, 221) 0%,
+      rgb(37, 81, 152) 100%
+    );
+  }
+  .bad {
+    background-color: rgb(148, 34, 116);
+    background: linear-gradient(
+      70deg,
+      rgb(221, 70, 70) 0%,
+      rgb(143, 38, 38) 100%
+    );
+  }
+  .neutral {
+    background-color: rgb(198, 156, 59);
+    background: linear-gradient(
+      70deg,
+      rgb(221, 143, 70) 0%,
+      rgb(120, 75, 26) 100%
+    );
+  }
+}
