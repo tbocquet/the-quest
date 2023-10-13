@@ -6,7 +6,7 @@ export function LiveGamePage() {
   const { summonerName } = useParams();
 
   return summonerName ? (
-    <LiveGame summonerName={summonerName} persistant={true} />
+    <LiveGame summonerName={summonerName} persistant={false} />
   ) : (
     <div>Error : need to specifie a summoner name</div>
   );
