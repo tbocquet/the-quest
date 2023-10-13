@@ -1,7 +1,8 @@
-const express = require("express");
-const router = express.Router();
+import express from "express";
+import { Router } from "express";
+import * as lolCtrl from "../controllers/lolOld";
 
-const lolCtrl = require("../controllers/lol");
+const router: Router = express.Router();
 
 router.get("/masteriesBySummonerId/:id", lolCtrl.getMasteriesBySummonerId);
 router.get(
@@ -11,4 +12,4 @@ router.get(
 router.get("/summonerById/:id", lolCtrl.getSummonerById);
 router.get("/summonerByName/:name", lolCtrl.getSummonerByName);
 
-module.exports = router;
+export default router;
