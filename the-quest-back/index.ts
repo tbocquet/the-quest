@@ -22,7 +22,7 @@ const interval = setInterval(() => deleteAllGame(), 1000 * 60 * 60 * 24);
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
+  res.send("The Quest : Express + TypeScript Server ");
 });
 
 app.use("/api/lol", lolRoutes);
