@@ -1,4 +1,3 @@
-import { LiveGameParticipant } from "@/models/LiveGame";
 import style from "./styles/LiveGameParticipant.module.scss";
 import { getCDragonSummonerIcon } from "@/services/imageGetter";
 import {
@@ -12,6 +11,7 @@ import ChampionStats from "./ChampionStats";
 import { SummonerTags } from "./SummonerTags";
 import Tooltip from "./Tooltip";
 import { Link } from "react-router-dom";
+import { LiveGameParticipant } from "@/models/LiveGame";
 
 type Props = {
   sum: LiveGameParticipant;

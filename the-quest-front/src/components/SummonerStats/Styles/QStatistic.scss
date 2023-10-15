@@ -8,8 +8,15 @@
     width: 4.5em;
   }
   h4 {
-    color: #dbae6a;
-    margin: 0.5em;
+    font-size: 1.1em;
+
+    color: #c4b998;
+    margin-bottom: 0.5em;
+    margin-left: 0.3em;
+    strong {
+      color: #dbae6a;
+      font-weight: 600;
+    }
   }
   p {
     margin-left: 1em;

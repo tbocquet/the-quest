@@ -6,6 +6,8 @@
     height: 4em;
     img {
       height: 100%;
+      -webkit-filter: drop-shadow(3px 3px 3px #000000);
+      filter: drop-shadow(3px 3px 3px #000000);
     }
   }
   .runes {
@@ -31,6 +33,8 @@
     img {
       width: 100%;
       margin: 0.1em;
+      -webkit-filter: drop-shadow(3px 3px 3px #000000);
+      filter: drop-shadow(3px 3px 3px #000000);
     }
   }
 }

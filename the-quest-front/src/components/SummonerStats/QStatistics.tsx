@@ -23,7 +23,10 @@ export function QStatistics({ league }: Props) {
         />
         <div>
           <h4>
-            {league.tier} {league.rank} {league.leaguePoints} LP
+            <strong>
+              {league.tier} {league.rank}
+            </strong>{" "}
+            {league.leaguePoints} LP
             {league.queueType === "RANKED_SOLO_5x5" ? " (Solo/Duo)" : " (Flex)"}
           </h4>
           <Tooltip

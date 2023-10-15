@@ -6,6 +6,8 @@
   width: 13em;
   .tierIcon {
     height: 3em;
+    -webkit-filter: drop-shadow(3px 3px 3px #000000);
+    filter: drop-shadow(3px 3px 3px #000000);
   }
   .textInfo {
     div {

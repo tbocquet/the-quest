@@ -10,10 +10,13 @@ import style from "./styles/LiveGame.module.scss";
 import useSWR from "swr";
 import { GameTimer } from "./GameTimer";
 import { Loader } from "../Loader";
-import { getQueue } from "@/utils/queue";
+import { getQueue } from "@/utils/Queue";
+import { LiveGameParticipant } from "@/models/LiveGame";
 
 type Props = { summonerName: string; persistant?: boolean };
 export function LiveGame({ summonerName, persistant = false }: Props) {
+  const roles = ["top", "jungler", "mid", "adc", "support"];
+  const lanes = ["top", "jungle", "mid", "adc", "support"];
   const { data, error, isLoading } = useSWR(
     summonerName,
     persistant ? getPersistantLiveGame : getLiveGameBySummonerName
@@ -33,13 +36,46 @@ export function LiveGame({ summonerName, persistant = false }: Props) {
       </div>
     );
 
-  const matchupArray = [
-    { blue: data.participants[0], red: data.participants[5], lane: "top" },
-    { blue: data.participants[1], red: data.participants[6], lane: "jungle" },
-    { blue: data.participants[2], red: data.participants[7], lane: "mid" },
-    { blue: data.participants[3], red: data.participants[8], lane: "adc" },
-    { blue: data.participants[4], red: data.participants[9], lane: "support" },
-  ];
+  const blueTeam = data.participants.slice(0, 5);
+  const redTeam = data.participants.slice(5, 10);
+
+  function getParticipantByRole(
+    role: string,
+    participants: LiveGameParticipant[]
+  ) {
+    return participants.find(
+      (P) =>
+        P.porofessorStats && (P.porofessorStats.role.role as String) === role
+    );
+  }
+
+  function getRoleSortedParticipants() {
+    return roles.map((role, index) => {
+      const blue = getParticipantByRole(role, blueTeam);
+      const red = getParticipantByRole(role, redTeam);
+
+      if (blue === undefined || red === undefined) return null;
+      return {
+        blue: blue,
+        red: red,
+        lane: lanes[index],
+      };
+    });
+  }
+
+  const sortedParticipants = getRoleSortedParticipants();
+
+  const matchupArray = sortedParticipants.some((p) => p === null)
+    ? lanes.map((lane, index) => ({
+        blue: blueTeam[index],
+        red: redTeam[index],
+        lane: lane,
+      }))
+    : (sortedParticipants as {
+        blue: LiveGameParticipant;
+        red: LiveGameParticipant;
+        lane: string;
+      }[]);
 
   const blueTeamBans = data.bannedChampions.filter((ban) => ban.teamId === 100);
   const redTeamBans = data.bannedChampions.filter((ban) => ban.teamId === 200);
