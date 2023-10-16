@@ -47,16 +47,13 @@ export function getChampionCentered(id: string): string {
 }
 
 /*Summoner icons*/
-export function getSummonerIcon(id: number): string {
-  return "/images/profile-icons/" + id + ".png";
-}
 
 export function getCDragonSummonerIcon(id: number) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${id}.jpg`;
 }
 
 export function getSummonerDefaultProfileIcon(): string {
-  return "/images/profile-icons/default.png";
+  return "/images/blitz_question.png";
 }
 
 /*Success*/
@@ -105,6 +102,7 @@ export function getUnrankedIcon() {
 
 export function getChampionTileById(id: number) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/${id}/${id}000.jpg`;
+  // return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${id}.png`;
 }
 
 export function getSummonerSpell(id: number) {

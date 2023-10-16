@@ -1,6 +1,7 @@
 import { PoroChampionStats, PoroSummoner } from "@/models/Porofessor";
 import style from "./styles/ChampionStats.module.scss";
 import { getSummonerSpell } from "@/services/imageGetter";
+import Tooltip from "./Tooltip";
 
 type Props = {
   championStats: PoroChampionStats | null;
@@ -15,32 +16,40 @@ export default function ChampionStats({
 }: Props) {
   return (
     <div className={style.championStats}>
-      {/* KDA */}
-      <div className={style.kda}>
+      <div className={style.stats}>
+        {/* KDA */}
+        <div className={style.kda}>
+          <Tooltip direction="bottom" content={"kills / deaths / assists"}>
+            {championStats && championStats.kills ? (
+              <>
+                <span className={style.kills}>{championStats.kills}</span>
+                {` / `}
+                <span className={style.deaths}>{championStats.deaths}</span>
+                {` / `}
+                <span className={style.assists}>{championStats.assists}</span>
+              </>
+            ) : (
+              <span>- / - / -</span>
+            )}
+          </Tooltip>
+        </div>
+
+        {/* Winrate du champion */}
         {championStats && championStats.kills ? (
-          <span>
-            {`${championStats.kills} / ${championStats.deaths} / ${championStats.assists}`}
-          </span>
+          <div className={style.games}>
+            <span className={style.winrate}>{championStats.winrate}%</span>
+            <span className={style.gameAmount}>
+              ({championStats.gameAmount}{" "}
+              {championStats.gameAmount > 1 ? "jouées" : "jouée"})
+            </span>
+          </div>
         ) : (
-          <span>- / - / -</span>
+          <div className={style.games}>
+            <span className={style.winrate}> - </span>
+            <span className={style.gameAmount}>(0 jouée)</span>
+          </div>
         )}
       </div>
-
-      {/* Winrate du champion */}
-      {championStats && championStats.kills ? (
-        <div className={style.games}>
-          <span className={style.winrate}>{championStats.winrate}%</span>
-          <span className={style.gameAmount}>
-            ({championStats.gameAmount}{" "}
-            {championStats.gameAmount > 1 ? "jouées" : "jouée"})
-          </span>
-        </div>
-      ) : (
-        <div className={style.games}>
-          <span className={style.winrate}> - </span>
-          <span className={style.gameAmount}>(0 jouée)</span>
-        </div>
-      )}
       {/* Summoner Spells */}
       <div className={style.summonerSpells}>
         <img alt="" src={getSummonerSpell(idSumSpell1)} />

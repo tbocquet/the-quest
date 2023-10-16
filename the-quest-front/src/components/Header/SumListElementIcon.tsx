@@ -2,7 +2,7 @@
 /* Css du parent*/
 
 import {
-  getSummonerIcon,
+  getCDragonSummonerIcon,
   getSummonerDefaultProfileIcon,
 } from "@/services/imageGetter";
 import { useState } from "react";
@@ -14,7 +14,7 @@ export function SumListElementIcon({ iconId }: Props) {
   const [imgError, setImgError] = useState(false);
   return !imgError ? (
     <img
-      src={getSummonerIcon(iconId)}
+      src={getCDragonSummonerIcon(iconId)}
       onError={() => setImgError(true)}
       alt=""
       className="sumIcon"

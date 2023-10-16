@@ -3,7 +3,7 @@
 import "./Styles/ProfileBox.scss";
 import { QStatistics } from "./QStatistics";
 import {
-  getSummonerIcon,
+  getCDragonSummonerIcon,
   getSummonerDefaultProfileIcon,
 } from "@/services/imageGetter";
 import { SummonerData } from "@/models/Summoner";
@@ -23,7 +23,7 @@ export function ProfileBox({ sumData }: Props) {
     <div className="summoner-info-block">
       <div className="summoner-icon-container">
         <img
-          src={getSummonerIcon(sumData.profileIconId)}
+          src={getCDragonSummonerIcon(sumData.profileIconId)}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null; // prevents looping
             currentTarget.src = getSummonerDefaultProfileIcon();

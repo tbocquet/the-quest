@@ -3,17 +3,39 @@
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding-left: 0.4em;
+  padding-left: 0.5em;
   height: 100%;
-  width: 8em;
+  width: 7.5em;
 
-  .kda {
-  }
-  .games {
-    .winrate {
-      margin-right: 0.3em;
+  .stats {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    .kda {
+      margin-bottom: 0.3em;
+      .kills {
+        color: rgb(103, 234, 86);
+      }
+      .deaths {
+        color: rgb(234, 86, 86);
+      }
+      .assists {
+        color: rgb(234, 192, 86);
+      }
     }
-    .gameAmount {
+    .games {
+      margin-left: 0.3em;
+      font-size: 0.9em;
+      color: #edba4d;
+      .winrate {
+        margin-right: 0.3em;
+        font-weight: 600;
+      }
+      .gameAmount {
+        font-size: 0.9em;
+      }
     }
   }
 }

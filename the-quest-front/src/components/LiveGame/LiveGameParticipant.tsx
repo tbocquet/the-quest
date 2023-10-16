@@ -48,10 +48,7 @@ export function GameParticipant({ sum, team }: Props) {
             <span className={style.summonerName}>{sum.summonerName}</span>
 
             {sum.masteries && (
-              <Tooltip
-                content={`Progression dans la quête : ${sum.masteries.progression}%`}
-                direction="bottom"
-              >
+              <Tooltip content={`Progression dans la quête`} direction="bottom">
                 <span className={style.theQuestProgression}>
                   {sum.masteries.progression} %
                 </span>
@@ -73,9 +70,13 @@ export function GameParticipant({ sum, team }: Props) {
         </div>
         {/* League */}
 
-        <div>
-          <League league={sum.leagues ? sum.leagues[0] : null} />
-          <League league={sum.leagues ? sum.leagues[1] : null} />
+        <div className={style.leagueStats}>
+          <Tooltip content={"Classement Solo/Duo"} direction={"left"}>
+            <League league={sum.leagues ? sum.leagues[0] : null} />
+          </Tooltip>
+          <Tooltip content={"Classsement Flex"} direction={"left"}>
+            <League league={sum.leagues ? sum.leagues[1] : null} />
+          </Tooltip>
         </div>
 
         {/* Champion */}

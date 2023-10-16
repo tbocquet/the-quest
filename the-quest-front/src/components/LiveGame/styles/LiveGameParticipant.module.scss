@@ -22,6 +22,11 @@
     padding-right: 0.3em;
     padding-top: 0.1em;
     font-size: 0.95em;
+    .leagueStats {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 13.5em;
+    }
   }
   .blueSide {
     background-color: rgb(31, 45, 75);
@@ -90,16 +95,23 @@
       width: 100%;
       font-size: 1.1em;
       font-weight: bold;
-      margin-bottom: 0.4em;
+      margin-bottom: 0.6em;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-shadow: 2px 2px 2px black;
     }
 
     .theQuestProgression {
       display: block;
       margin-bottom: 0.4em;
+      margin-left: 0.2em;
+      color: #ffc851;
+      font-weight: 600;
     }
     .totalMasteryPoint {
+      margin-left: 0.3em;
+      color: #ffc851;
+      font-size: 0.9em;
     }
   }
 }
