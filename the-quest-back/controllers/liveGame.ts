@@ -51,8 +51,7 @@ export const getLiveGameInfoByName = (
   res: Response,
   next: NextFunction
 ) => {
-  let addToMongo = false;
-  const sumName = encodeURI(req.params.name);
+  const sumName = decodeURI(req.params.name);
   getSummonerDataByName(sumName).then((sumData) => {
     if (!sumData) return res.status(404).json("Summoner not found");
     const summonerId = sumData.id;

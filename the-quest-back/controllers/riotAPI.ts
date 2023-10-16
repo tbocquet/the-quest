@@ -24,7 +24,7 @@ export const getSummonerDatabyName = (
   res: Response,
   next: NextFunction
 ) => {
-  const summonerName = encodeURI(req.params.name);
+  const summonerName = decodeURI(req.params.name);
   getSummonerDataByName(summonerName).then((data) => {
     if (!data) return res.status(500).json("Error getting summoner data");
     return res.status(200).json(data);
@@ -48,7 +48,7 @@ export const getMasteriesBySummonerName = (
   res: Response,
   next: NextFunction
 ) => {
-  const summonerName = encodeURI(req.params.name);
+  const summonerName = decodeURI(req.params.name);
   getSummonerDataByName(summonerName).then((data) => {
     if (!data) return res.status(500).json("Error getting summoner data");
 
@@ -73,7 +73,7 @@ export const getLeaguesBySummonerName = (
   res: Response,
   next: NextFunction
 ) => {
-  const summonerName = encodeURI(req.params.name);
+  const summonerName = decodeURI(req.params.name);
   getSummonerDataByName(summonerName).then((data) => {
     if (!data) return res.status(500).json("Error getting summoner data");
 
@@ -103,7 +103,7 @@ export const getSpectateByName = (
   res: Response,
   next: NextFunction
 ) => {
-  const summonerName = encodeURI(req.params.name);
+  const summonerName = decodeURI(req.params.name);
   getSummonerDataByName(summonerName).then((data) => {
     if (!data) return res.status(500).json("Error getting summoner data");
 
