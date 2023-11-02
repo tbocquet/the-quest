@@ -1,8 +1,15 @@
-export function getFirstFloatFromString(str: String): number | null {
-  const regexMatches = str.match(/\d+/);
-  if (regexMatches == null) return null;
-  const res = parseFloat(regexMatches[0]);
-  return res;
+export function getFirstFloatFromString(str: string): number | null {
+  console.log("--");
+  console.log(str);
+  const regexMatches = str.match(/[-+]?\d*\.?\d+/);
+
+  if (regexMatches === null) {
+    return null;
+  }
+
+  const res = parseFloat(regexMatches[0].replace(",", "."));
+  console.log(res);
+  return isNaN(res) ? null : res;
 }
 
 export function extractNthWord(inputString: string, n: number): string | null {
