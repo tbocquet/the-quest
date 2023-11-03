@@ -5,6 +5,7 @@ import { SumListProvider } from "./context/SumListContext";
 import "./index.css";
 import { Router } from "./Router";
 import { EnableAnimationProvider } from "./context/EnableAnimationsContext";
+import { ChampionsFiltersProvider } from "./context/ChampionsFilterContext";
 
 const app = document.getElementById("root") as HTMLElement;
 
@@ -14,9 +15,11 @@ root.render(
   <React.StrictMode>
     <SumListProvider>
       <MasteriesFiltersProvider>
-        <EnableAnimationProvider>
-          <Router />
-        </EnableAnimationProvider>
+        <ChampionsFiltersProvider>
+          <EnableAnimationProvider>
+            <Router />
+          </EnableAnimationProvider>
+        </ChampionsFiltersProvider>
       </MasteriesFiltersProvider>
     </SumListProvider>
   </React.StrictMode>

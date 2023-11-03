@@ -30,7 +30,7 @@ export function Masteries({ masteries }: Props) {
     return size;
   }
 
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
 
   //Fonction de tri
   function compareMastery(a: ChampionMastery, b: ChampionMastery) {

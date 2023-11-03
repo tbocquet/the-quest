@@ -4,12 +4,8 @@
     "key": "266",
     "name": "Aatrox",
     "url": "Aatrox_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "combattant"
-    ],
+    "lane": ["top"],
+    "tags": ["combattant"],
     "region": []
   },
   {
@@ -17,61 +13,35 @@
     "key": "103",
     "name": "Ahri",
     "url": "Ahri_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage",
-      "assassin"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage", "assassin"],
+    "region": ["Ionia"]
   },
   {
     "id": "Akali",
     "key": "84",
     "name": "Akali",
     "url": "Akali_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "assassin",
-      "ninja"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["assassin", "ninja"],
+    "region": ["Ionia"]
   },
   {
     "id": "Akshan",
     "key": "166",
     "name": "Akshan",
     "url": "Akshan_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["mid"],
+    "tags": ["tireur"],
+    "region": ["Shurima"]
   },
   {
     "id": "Alistar",
     "key": "12",
     "name": "Alistar",
     "url": "Alistar_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "tank",
-      "support"
-    ],
+    "lane": ["support"],
+    "tags": ["tank", "support"],
     "region": []
   },
   {
@@ -79,45 +49,26 @@
     "key": "32",
     "name": "Amumu",
     "url": "Amumu_0.jpg",
-    "lane": [
-      "jungle",
-      "support",
-      "top"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["jungle", "support", "top"],
+    "tags": ["tank"],
+    "region": ["Shurima"]
   },
   {
     "id": "Anivia",
     "key": "34",
     "name": "Anivia",
     "url": "Anivia_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage"],
+    "region": ["Freljord"]
   },
   {
     "id": "Annie",
     "key": "1",
     "name": "Annie",
     "url": "Annie_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
     "region": []
   },
   {
@@ -125,73 +76,44 @@
     "key": "523",
     "name": "Aphelios",
     "url": "Aphelios_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Targon"]
   },
   {
     "id": "Ashe",
     "key": "22",
     "name": "Ashe",
     "url": "Ashe_0.jpg",
-    "lane": [
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["adc", "support"],
+    "tags": ["tireur"],
+    "region": ["Freljord"]
   },
   {
     "id": "AurelionSol",
     "key": "136",
     "name": "Aurelion Sol",
     "url": "AurelionSol_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage"],
+    "region": ["Targon"]
   },
   {
     "id": "Azir",
     "key": "268",
     "name": "Azir",
     "url": "Azir_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage"],
+    "region": ["Shurima"]
   },
   {
     "id": "Bard",
     "key": "432",
     "name": "Bard",
     "url": "Bard_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "support"
-    ],
+    "lane": ["support"],
+    "tags": ["support"],
     "region": []
   },
   {
@@ -199,48 +121,26 @@
     "key": "200",
     "name": "Bel'Veth",
     "url": "Belveth_0.jpg",
-    "lane": [
-      "jungle",
-      "top"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["jungle", "top"],
+    "tags": ["combattant"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Blitzcrank",
     "key": "53",
     "name": "Blitzcrank",
     "url": "Blitzcrank_0.jpg",
-    "lane": [
-      "jungle",
-      "mid",
-      "support",
-      "top"
-    ],
-    "tags": [
-      "support"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["jungle", "mid", "support", "top"],
+    "tags": ["support"],
+    "region": ["Zaun"]
   },
   {
     "id": "Brand",
     "key": "63",
     "name": "Brand",
     "url": "Brand_0.jpg",
-    "lane": [
-      "mid",
-      "support",
-      "jungle"
-    ],
-    "tags": [
-      "mage"
-    ],
+    "lane": ["mid", "support", "jungle"],
+    "tags": ["mage"],
     "region": []
   },
   {
@@ -248,522 +148,296 @@
     "key": "201",
     "name": "Braum",
     "url": "Braum_0.jpg",
-    "lane": [
-      "support",
-      "top"
-    ],
-    "tags": [
-      "support",
-      "tank"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["support", "top"],
+    "tags": ["support", "tank"],
+    "region": ["Freljord"]
+  },
+  {
+    "id": "Briar",
+    "key": "233",
+    "name": "Briar",
+    "url": "Briar_0.jpg",
+    "lane": ["jungle", "top"],
+    "tags": ["assassin", "combattant"],
+    "region": ["Noxus"]
   },
   {
     "id": "Caitlyn",
     "key": "51",
     "name": "Caitlyn",
     "url": "Caitlyn_0.jpg",
-    "lane": [
-      "adc",
-      "mid"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["adc", "mid"],
+    "tags": ["tireur"],
+    "region": ["Piltover"]
   },
   {
     "id": "Camille",
     "key": "164",
     "name": "Camille",
     "url": "Camille_0.jpg",
-    "lane": [
-      "jungle",
-      "top"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["jungle", "top"],
+    "tags": ["combattant"],
+    "region": ["Piltover"]
   },
   {
     "id": "Cassiopeia",
     "key": "69",
     "name": "Cassiopeia",
     "url": "Cassiopeia_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["top", "mid", "adc"],
+    "tags": ["mage"],
+    "region": ["Noxus"]
   },
   {
     "id": "Chogath",
     "key": "31",
     "name": "Cho'Gath",
     "url": "Chogath_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["tank"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Corki",
     "key": "42",
     "name": "Corki",
     "url": "Corki_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle",
-      "Piltover"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage"],
+    "region": ["Bandle", "Piltover"]
   },
   {
     "id": "Darius",
     "key": "122",
     "name": "Darius",
     "url": "Darius_0.jpg",
-    "lane": [
-      "jungle",
-      "top"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["jungle", "top"],
+    "tags": ["colosse"],
+    "region": ["Noxus"]
   },
   {
     "id": "Diana",
     "key": "131",
     "name": "Diana",
     "url": "Diana_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["assassin"],
+    "region": ["Targon"]
   },
   {
     "id": "Draven",
     "key": "119",
     "name": "Draven",
     "url": "Draven_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["top", "mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Noxus"]
   },
   {
     "id": "DrMundo",
     "key": "36",
     "name": "Dr. Mundo",
     "url": "DrMundo_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant",
-      "tank"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant", "tank"],
+    "region": ["Zaun"]
   },
   {
     "id": "Ekko",
     "key": "245",
     "name": "Ekko",
     "url": "Ekko_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["jungle", "mid"],
+    "tags": ["assassin"],
+    "region": ["Zaun"]
   },
   {
     "id": "Elise",
     "key": "60",
     "name": "Elise",
     "url": "Elise_0.jpg",
-    "lane": [
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "assassin",
-      "mage"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["jungle", "support"],
+    "tags": ["assassin", "mage"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Evelynn",
     "key": "28",
     "name": "Evelynn",
     "url": "Evelynn_0.jpg",
-    "lane": [
-      "jungle"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["jungle"],
+    "tags": ["assassin"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Ezreal",
     "key": "81",
     "name": "Ezreal",
     "url": "Ezreal_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Piltover"]
   },
   {
     "id": "Fiddlesticks",
     "key": "9",
     "name": "Fiddlesticks",
     "url": "Fiddlesticks_0.jpg",
-    "lane": [
-      "jungle"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["jungle"],
+    "tags": ["mage"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Fiora",
     "key": "114",
     "name": "Fiora",
     "url": "Fiora_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top"],
+    "tags": ["combattant"],
+    "region": ["Demacia"]
   },
   {
     "id": "Fizz",
     "key": "105",
     "name": "Fizz",
     "url": "Fizz_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Bandle",
-      "Bilgewater"
-    ]
+    "lane": ["mid"],
+    "tags": ["assassin"],
+    "region": ["Bandle", "Bilgewater"]
   },
   {
     "id": "Galio",
     "key": "3",
     "name": "Galio",
     "url": "Galio_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["tank"],
+    "region": ["Demacia"]
   },
   {
     "id": "Gangplank",
     "key": "41",
     "name": "Gangplank",
     "url": "Gangplank_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["combattant"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Garen",
     "key": "86",
     "name": "Garen",
     "url": "Garen_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["colosse"],
+    "region": ["Demacia"]
   },
   {
     "id": "Gnar",
     "key": "150",
     "name": "Gnar",
     "url": "Gnar_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Bandle",
-      "Freljord"
-    ]
+    "lane": ["top"],
+    "tags": ["combattant"],
+    "region": ["Bandle", "Freljord"]
   },
   {
     "id": "Gragas",
     "key": "79",
     "name": "Gragas",
     "url": "Gragas_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank",
-      "mage"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["tank", "mage"],
+    "region": ["Freljord"]
   },
   {
     "id": "Graves",
     "key": "104",
     "name": "Graves",
     "url": "Graves_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["combattant"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Gwen",
     "key": "887",
     "name": "Gwen",
     "url": "Gwen_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Hecarim",
     "key": "120",
     "name": "Hecarim",
     "url": "Hecarim_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Heimerdinger",
     "key": "74",
     "name": "Heimerdinger",
     "url": "Heimerdinger_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle",
-      "Piltover"
-    ]
+    "lane": ["top", "mid", "adc", "support"],
+    "tags": ["mage"],
+    "region": ["Bandle", "Piltover"]
   },
   {
     "id": "Illaoi",
     "key": "420",
     "name": "Illaoi",
     "url": "Illaoi_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["top"],
+    "tags": ["colosse"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Irelia",
     "key": "39",
     "name": "Irelia",
     "url": "Irelia_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["combattant"],
+    "region": ["Ionia"]
   },
   {
     "id": "Ivern",
     "key": "427",
     "name": "Ivern",
     "url": "Ivern_0.jpg",
-    "lane": [
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "support"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["jungle", "support"],
+    "tags": ["support"],
+    "region": ["Ionia"]
   },
   {
     "id": "Janna",
     "key": "40",
     "name": "Janna",
     "url": "Janna_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["support"],
+    "tags": ["support", "enchanteur"],
+    "region": ["Zaun"]
   },
   {
     "id": "JarvanIV",
     "key": "59",
     "name": "Jarvan IV",
     "url": "JarvanIV_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["combattant"],
+    "region": ["Demacia"]
   },
   {
     "id": "Jax",
     "key": "24",
     "name": "Jax",
     "url": "Jax_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
     "region": []
   },
   {
@@ -771,223 +445,125 @@
     "key": "126",
     "name": "Jayce",
     "url": "Jayce_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["combattant"],
+    "region": ["Piltover"]
   },
   {
     "id": "Jhin",
     "key": "202",
     "name": "Jhin",
     "url": "Jhin_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Ionia"]
   },
   {
     "id": "Jinx",
     "key": "222",
     "name": "Jinx",
     "url": "Jinx_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Zaun"]
   },
   {
     "id": "Kaisa",
     "key": "145",
     "name": "Kai'Sa",
     "url": "Kaisa_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Kalista",
     "key": "429",
     "name": "Kalista",
     "url": "Kalista_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Karma",
     "key": "43",
     "name": "Karma",
     "url": "Karma_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "mid", "support"],
+    "tags": ["mage", "support"],
+    "region": ["Ionia"]
   },
   {
     "id": "Karthus",
     "key": "30",
     "name": "Karthus",
     "url": "Karthus_0.jpg",
-    "lane": [
-      "jungle",
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["jungle", "mid", "adc"],
+    "tags": ["mage"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Kassadin",
     "key": "38",
     "name": "Kassadin",
     "url": "Kassadin_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin",
-      "mage"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["jungle", "mid"],
+    "tags": ["assassin", "mage"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Katarina",
     "key": "55",
     "name": "Katarina",
     "url": "Katarina_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["mid"],
+    "tags": ["assassin"],
+    "region": ["Noxus"]
   },
   {
     "id": "Kayle",
     "key": "10",
     "name": "Kayle",
     "url": "Kayle_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["combattant"],
+    "region": ["Demacia"]
   },
   {
     "id": "Kayn",
     "key": "141",
     "name": "Kayn",
     "url": "Kayn_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "combattant",
-      "assassin"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["combattant", "assassin"],
+    "region": ["Ionia"]
   },
   {
     "id": "Kennen",
     "key": "85",
     "name": "Kennen",
     "url": "Kennen_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "mage",
-      "ninja"
-    ],
-    "region": [
-      "Bandle",
-      "Ionia"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["mage", "ninja"],
+    "region": ["Bandle", "Ionia"]
   },
   {
     "id": "Khazix",
     "key": "121",
     "name": "Kha'Zix",
     "url": "Khazix_0.jpg",
-    "lane": [
-      "jungle"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["jungle"],
+    "tags": ["assassin"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Kindred",
     "key": "203",
     "name": "Kindred",
     "url": "Kindred_0.jpg",
-    "lane": [
-      "jungle"
-    ],
-    "tags": [
-      "tireur"
-    ],
+    "lane": ["jungle"],
+    "tags": ["tireur"],
     "region": []
   },
   {
@@ -995,47 +571,26 @@
     "key": "240",
     "name": "Kled",
     "url": "Kled_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Bandle",
-      "Noxus"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["combattant"],
+    "region": ["Bandle", "Noxus"]
   },
   {
     "id": "KogMaw",
     "key": "96",
     "name": "Kog'Maw",
     "url": "KogMaw_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Le Néant"]
   },
   {
     "id": "KSante",
     "key": "897",
     "name": "K'Sante",
     "url": "KogMaw_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "tank",
-      "combattant"
-    ],
+    "lane": ["top"],
+    "tags": ["tank", "combattant"],
     "region": []
   },
   {
@@ -1043,267 +598,143 @@
     "key": "7",
     "name": "LeBlanc",
     "url": "Leblanc_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "assassin",
-      "mage"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["mid"],
+    "tags": ["assassin", "mage"],
+    "region": ["Noxus"]
   },
   {
     "id": "LeeSin",
     "key": "64",
     "name": "Lee Sin",
     "url": "LeeSin_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["combattant"],
+    "region": ["Ionia"]
   },
   {
     "id": "Leona",
     "key": "89",
     "name": "Leona",
     "url": "Leona_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "tank",
-      "support"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["top", "jungle", "support"],
+    "tags": ["tank", "support"],
+    "region": ["Targon"]
   },
   {
     "id": "Lillia",
     "key": "876",
     "name": "Lillia",
     "url": "Lillia_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["mage"],
+    "region": ["Ionia"]
   },
   {
     "id": "Lissandra",
     "key": "127",
     "name": "Lissandra",
     "url": "Lissandra_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
+    "region": ["Freljord"]
   },
   {
     "id": "Lucian",
     "key": "236",
     "name": "Lucian",
     "url": "Lucian_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Demacia"]
   },
   {
     "id": "Lulu",
     "key": "117",
     "name": "Lulu",
     "url": "Lulu_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["support", "enchanteur"],
+    "region": ["Bandle"]
   },
   {
     "id": "Lux",
     "key": "99",
     "name": "Lux",
     "url": "Lux_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["mage", "support", "enchanteur"],
+    "region": ["Demacia"]
   },
   {
     "id": "Malphite",
     "key": "54",
     "name": "Malphite",
     "url": "Malphite_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["tank"],
+    "region": ["Ixtal"]
   },
   {
     "id": "Malzahar",
     "key": "90",
     "name": "Malzahar",
     "url": "Malzahar_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["mage"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Maokai",
     "key": "57",
     "name": "Maokai",
     "url": "Maokai_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["tank"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "MasterYi",
     "key": "11",
     "name": "Master Yi",
     "url": "MasterYi_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["assassin"],
+    "region": ["Ionia"]
   },
   {
     "id": "Milio",
     "key": "902",
     "name": "Milio",
     "url": "Milio_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "enchanteur"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["support"],
+    "tags": ["enchanteur"],
+    "region": ["Ixtal"]
   },
   {
     "id": "MissFortune",
     "key": "21",
     "name": "Miss Fortune",
     "url": "MissFortune_0.jpg",
-    "lane": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["mid", "adc", "support"],
+    "tags": ["tireur"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "MonkeyKing",
     "key": "62",
     "name": "Wukong",
     "url": "MonkeyKing_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["combattant"],
+    "region": ["Ionia"]
   },
   {
     "id": "Mordekaiser",
     "key": "82",
     "name": "Mordekaiser",
     "url": "Mordekaiser_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "colosse"
-    ],
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["colosse"],
     "region": []
   },
   {
@@ -1311,31 +742,17 @@
     "key": "25",
     "name": "Morgana",
     "url": "Morgana_0.jpg",
-    "lane": [
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["jungle", "mid", "support"],
+    "tags": ["mage", "support"],
+    "region": ["Demacia"]
   },
   {
     "id": "Naafiri",
     "key": "950",
     "name": "Naafiri",
     "url": "Naafiri_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
+    "lane": ["jungle", "mid"],
+    "tags": ["assassin"],
     "region": []
   },
   {
@@ -1343,14 +760,8 @@
     "key": "267",
     "name": "Nami",
     "url": "Nami_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "support",
-      "enchanteur"
-    ],
+    "lane": ["mid", "support"],
+    "tags": ["support", "enchanteur"],
     "region": []
   },
   {
@@ -1358,80 +769,44 @@
     "key": "75",
     "name": "Nasus",
     "url": "Nasus_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["top", "jungle", "support"],
+    "tags": ["colosse"],
+    "region": ["Shurima"]
   },
   {
     "id": "Nautilus",
     "key": "111",
     "name": "Nautilus",
     "url": "Nautilus_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "tank",
-      "support"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["support"],
+    "tags": ["tank", "support"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Neeko",
     "key": "518",
     "name": "Neeko",
     "url": "Neeko_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["top", "mid", "adc", "support"],
+    "tags": ["mage", "support"],
+    "region": ["Ixtal"]
   },
   {
     "id": "Nidalee",
     "key": "76",
     "name": "Nidalee",
     "url": "Nidalee_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["jungle", "mid"],
+    "tags": ["mage"],
+    "region": ["Ixtal"]
   },
   {
     "id": "Nilah",
     "key": "895",
     "name": "Nilah",
     "url": "Nilah_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
+    "lane": ["adc"],
+    "tags": ["tireur"],
     "region": []
   },
   {
@@ -1439,14 +814,8 @@
     "key": "56",
     "name": "Nocturne",
     "url": "Nocturne_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["assassin"],
     "region": []
   },
   {
@@ -1454,309 +823,170 @@
     "key": "20",
     "name": "Nunu & Willump",
     "url": "Nunu_0.jpg",
-    "lane": [
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["jungle", "mid", "support"],
+    "tags": ["tank"],
+    "region": ["Freljord"]
   },
   {
     "id": "Olaf",
     "key": "2",
     "name": "Olaf",
     "url": "Olaf_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Freljord"]
   },
   {
     "id": "Orianna",
     "key": "61",
     "name": "Orianna",
     "url": "Orianna_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage"],
+    "region": ["Piltover"]
   },
   {
     "id": "Ornn",
     "key": "516",
     "name": "Ornn",
     "url": "Ornn_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top"],
+    "tags": ["tank"],
+    "region": ["Freljord"]
   },
   {
     "id": "Pantheon",
     "key": "80",
     "name": "Pantheon",
     "url": "Pantheon_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["top", "jungle", "mid", "adc", "support"],
+    "tags": ["assassin"],
+    "region": ["Targon"]
   },
   {
     "id": "Poppy",
     "key": "78",
     "name": "Poppy",
     "url": "Poppy_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Bandle",
-      "Demacia"
-    ]
+    "lane": ["top", "jungle", "support"],
+    "tags": ["tank"],
+    "region": ["Bandle", "Demacia"]
   },
   {
     "id": "Pyke",
     "key": "555",
     "name": "Pyke",
     "url": "Pyke_0.jpg",
-    "lane": [
-      "mid",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "support",
-      "assassin"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["mid", "jungle", "support"],
+    "tags": ["support", "assassin"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Qiyana",
     "key": "246",
     "name": "Qiyana",
     "url": "Qiyana_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["jungle", "mid"],
+    "tags": ["assassin"],
+    "region": ["Ixtal"]
   },
   {
     "id": "Quinn",
     "key": "133",
     "name": "Quinn",
     "url": "Quinn_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top"],
+    "tags": ["tireur"],
+    "region": ["Demacia"]
   },
   {
     "id": "Rakan",
     "key": "497",
     "name": "Rakan",
     "url": "Rakan_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "support"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["support"],
+    "region": ["Ionia"]
   },
   {
     "id": "Rammus",
     "key": "33",
     "name": "Rammus",
     "url": "Rammus_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["tank"],
+    "region": ["Shurima"]
   },
   {
     "id": "RekSai",
     "key": "421",
     "name": "Rek'Sai",
     "url": "RekSai_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Rell",
     "key": "526",
     "name": "Rell",
     "url": "Rell_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "tank",
-      "support"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["support"],
+    "tags": ["tank", "support"],
+    "region": ["Noxus"]
   },
   {
     "id": "Renata",
     "key": "888",
     "name": "Renata Glasc",
     "url": "Renata_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "support"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["support"],
+    "tags": ["support"],
+    "region": ["Zaun"]
   },
   {
     "id": "Renekton",
     "key": "58",
     "name": "Renekton",
     "url": "Renekton_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["combattant"],
+    "region": ["Shurima"]
   },
   {
     "id": "Rengar",
     "key": "107",
     "name": "Rengar",
     "url": "Rengar_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["top", "jungle", "adc", "support"],
+    "tags": ["assassin"],
+    "region": ["Ixtal"]
   },
   {
     "id": "Riven",
     "key": "92",
     "name": "Riven",
     "url": "Riven_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["combattant"],
+    "region": ["Noxus"]
   },
   {
     "id": "Rumble",
     "key": "68",
     "name": "Rumble",
     "url": "Rumble_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["mage"],
+    "region": ["Bandle"]
   },
   {
     "id": "Ryze",
     "key": "13",
     "name": "Ryze",
     "url": "Ryze_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
+    "lane": ["top", "mid"],
+    "tags": ["mage"],
     "region": []
   },
   {
@@ -1764,100 +994,53 @@
     "key": "360",
     "name": "Samira",
     "url": "Samira_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Noxus"]
   },
   {
     "id": "Sejuani",
     "key": "113",
     "name": "Sejuani",
     "url": "Sejuani_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["tank"],
+    "region": ["Freljord"]
   },
   {
     "id": "Senna",
     "key": "235",
     "name": "Senna",
     "url": "Senna_0.jpg",
-    "lane": [
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "tireur",
-      "support"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["adc", "support"],
+    "tags": ["tireur", "support"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Seraphine",
     "key": "147",
     "name": "Seraphine",
     "url": "Seraphine_0.jpg",
-    "lane": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["mid", "adc", "support"],
+    "tags": ["mage", "support", "enchanteur"],
+    "region": ["Piltover"]
   },
   {
     "id": "Sett",
     "key": "875",
     "name": "Sett",
     "url": "Sett_0.jpg",
-    "lane": [
-      "top",
-      "support"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "support"],
+    "tags": ["combattant"],
+    "region": ["Ionia"]
   },
   {
     "id": "Shaco",
     "key": "35",
     "name": "Shaco",
     "url": "Shaco_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "assassin"
-    ],
+    "lane": ["top", "jungle", "support"],
+    "tags": ["assassin"],
     "region": []
   },
   {
@@ -1865,814 +1048,440 @@
     "key": "98",
     "name": "Shen",
     "url": "Shen_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "tank",
-      "support",
-      "ninja"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "jungle", "support"],
+    "tags": ["tank", "support", "ninja"],
+    "region": ["Ionia"]
   },
   {
     "id": "Shyvana",
     "key": "102",
     "name": "Shyvana",
     "url": "Shyvana_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant",
-      "mage"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant", "mage"],
+    "region": ["Demacia"]
   },
   {
     "id": "Singed",
     "key": "27",
     "name": "Singed",
     "url": "Singed_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["combattant"],
+    "region": ["Zaun"]
   },
   {
     "id": "Sion",
     "key": "14",
     "name": "Sion",
     "url": "Sion_0.jpg",
-    "lane": [
-      "top",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["top", "support"],
+    "tags": ["tank"],
+    "region": ["Noxus"]
   },
   {
     "id": "Sivir",
     "key": "15",
     "name": "Sivir",
     "url": "Sivir_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Shurima"]
   },
   {
     "id": "Skarner",
     "key": "72",
     "name": "Skarner",
     "url": "Skarner_0.jpg",
-    "lane": [
-      "jungle"
-    ],
-    "tags": [
-      "Skarner",
-      "colosse"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["jungle"],
+    "tags": ["colosse"],
+    "region": ["Shurima"]
   },
   {
     "id": "Sona",
     "key": "37",
     "name": "Sona",
     "url": "Sona_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["support"],
+    "tags": ["support", "enchanteur"],
+    "region": ["Demacia"]
   },
   {
     "id": "Soraka",
     "key": "16",
     "name": "Soraka",
     "url": "Soraka_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["top", "mid", "support"],
+    "tags": ["support", "enchanteur"],
+    "region": ["Targon"]
   },
   {
     "id": "Swain",
     "key": "50",
     "name": "Swain",
     "url": "Swain_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["top", "mid", "adc", "support"],
+    "tags": ["mage", "support"],
+    "region": ["Noxus"]
   },
   {
     "id": "Sylas",
     "key": "517",
     "name": "Sylas",
     "url": "Sylas_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "mage",
-      "combattant",
-      "assassin"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["mage", "combattant", "assassin"],
+    "region": ["Demacia"]
   },
   {
     "id": "Syndra",
     "key": "134",
     "name": "Syndra",
     "url": "Syndra_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["mage"],
+    "region": ["Ionia"]
   },
   {
     "id": "TahmKench",
     "key": "223",
     "name": "Tahm Kench",
     "url": "TahmKench_0.jpg",
-    "lane": [
-      "top",
-      "support"
-    ],
-    "tags": [
-      "support",
-      "tank"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["top", "support"],
+    "tags": ["support", "tank"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Taliyah",
     "key": "163",
     "name": "Taliyah",
     "url": "Taliyah_0.jpg",
-    "lane": [
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["jungle", "mid", "support"],
+    "tags": ["mage"],
+    "region": ["Shurima"]
   },
   {
     "id": "Talon",
     "key": "91",
     "name": "Talon",
     "url": "Talon_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["jungle", "mid"],
+    "tags": ["assassin"],
+    "region": ["Noxus"]
   },
   {
     "id": "Taric",
     "key": "44",
     "name": "Taric",
     "url": "Taric_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "support"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["top", "jungle", "support"],
+    "tags": ["support"],
+    "region": ["Targon"]
   },
   {
     "id": "Teemo",
     "key": "17",
     "name": "Teemo",
     "url": "Teemo_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["top", "jungle", "mid", "adc", "support"],
+    "tags": ["mage"],
+    "region": ["Bandle"]
   },
   {
     "id": "Thresh",
     "key": "412",
     "name": "Thresh",
     "url": "Thresh_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "support"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["support"],
+    "tags": ["support"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Tristana",
     "key": "18",
     "name": "Tristana",
     "url": "Tristana_0.jpg",
-    "lane": [
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["mid", "adc"],
+    "tags": ["tireur"],
+    "region": ["Bandle"]
   },
   {
     "id": "Trundle",
     "key": "48",
     "name": "Trundle",
     "url": "Trundle_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle", "support"],
+    "tags": ["combattant"],
+    "region": ["Freljord"]
   },
   {
     "id": "Tryndamere",
     "key": "23",
     "name": "Tryndamere",
     "url": "Tryndamere_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Freljord"]
   },
   {
     "id": "TwistedFate",
     "key": "4",
     "name": "Twisted Fate",
     "url": "TwistedFate_0.jpg",
-    "lane": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bilgewater"
-    ]
+    "lane": ["mid", "adc", "support"],
+    "tags": ["mage"],
+    "region": ["Bilgewater"]
   },
   {
     "id": "Twitch",
     "key": "29",
     "name": "Twitch",
     "url": "Twitch_0.jpg",
-    "lane": [
-      "jungle",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["jungle", "adc", "support"],
+    "tags": ["tireur"],
+    "region": ["Zaun"]
   },
   {
     "id": "Udyr",
     "key": "77",
     "name": "Udyr",
     "url": "Udyr_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["colosse"],
+    "region": ["Freljord"]
   },
   {
     "id": "Urgot",
     "key": "6",
     "name": "Urgot",
     "url": "Urgot_0.jpg",
-    "lane": [
-      "top"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["top"],
+    "tags": ["colosse"],
+    "region": ["Zaun"]
   },
   {
     "id": "Varus",
     "key": "110",
     "name": "Varus",
     "url": "Varus_0.jpg",
-    "lane": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["mid", "adc", "support"],
+    "tags": ["tireur"],
+    "region": ["Ionia"]
   },
   {
     "id": "Vayne",
     "key": "67",
     "name": "Vayne",
     "url": "Vayne_0.jpg",
-    "lane": [
-      "top",
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "adc"],
+    "tags": ["tireur"],
+    "region": ["Demacia"]
   },
   {
     "id": "Veigar",
     "key": "45",
     "name": "Veigar",
     "url": "Veigar_0.jpg",
-    "lane": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["mid", "adc", "support"],
+    "tags": ["mage"],
+    "region": ["Bandle"]
   },
   {
     "id": "Velkoz",
     "key": "161",
     "name": "Vel'Koz",
     "url": "Velkoz_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Le Néant"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
+    "region": ["Le Néant"]
   },
   {
     "id": "Vex",
     "key": "711",
     "name": "Vex",
     "url": "Vex_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
+    "region": ["Bandle"]
   },
   {
     "id": "Vi",
     "key": "254",
     "name": "Vi",
     "url": "Vi_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Piltover"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Piltover"]
   },
   {
     "id": "Viego",
     "key": "234",
     "name": "Viego",
     "url": "Viego_0.jpg",
-    "lane": [
-      "jungle"
-    ],
-    "tags": [
-      "assassin",
-      "combattant"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["jungle"],
+    "tags": ["assassin", "combattant"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Viktor",
     "key": "112",
     "name": "Viktor",
     "url": "Viktor_0.jpg",
-    "lane": [
-      "mid"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["mid"],
+    "tags": ["mage"],
+    "region": ["Zaun"]
   },
   {
     "id": "Vladimir",
     "key": "8",
     "name": "Vladimir",
     "url": "Vladimir_0.jpg",
-    "lane": [
-      "top",
-      "mid"
-    ],
-    "tags": [
-      "mage",
-      "combattant"
-    ],
-    "region": [
-      "Noxus"
-    ]
+    "lane": ["top", "mid"],
+    "tags": ["mage", "combattant"],
+    "region": ["Noxus"]
   },
   {
     "id": "Volibear",
     "key": "106",
     "name": "Volibear",
     "url": "Volibear_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Freljord"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Freljord"]
   },
   {
     "id": "Warwick",
     "key": "19",
     "name": "Warwick",
     "url": "Warwick_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["combattant"],
+    "region": ["Zaun"]
   },
   {
     "id": "Xayah",
     "key": "498",
     "name": "Xayah",
     "url": "Xayah_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Ionia"]
   },
   {
     "id": "Xerath",
     "key": "101",
     "name": "Xerath",
     "url": "Xerath_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
+    "region": ["Shurima"]
   },
   {
     "id": "XinZhao",
     "key": "5",
     "name": "Xin Zhao",
     "url": "XinZhao_0.jpg",
-    "lane": [
-      "top",
-      "jungle"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Demacia"
-    ]
+    "lane": ["top", "jungle"],
+    "tags": ["combattant"],
+    "region": ["Demacia"]
   },
   {
     "id": "Yasuo",
     "key": "157",
     "name": "Yasuo",
     "url": "Yasuo_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "mid", "adc"],
+    "tags": ["combattant"],
+    "region": ["Ionia"]
   },
   {
     "id": "Yone",
     "key": "777",
     "name": "Yone",
     "url": "Yone_0.jpg",
-    "lane": [
-      "top",
-      "mid",
-      "adc"
-    ],
-    "tags": [
-      "combattant"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["top", "mid", "adc"],
+    "tags": ["combattant"],
+    "region": ["Ionia"]
   },
   {
     "id": "Yorick",
     "key": "83",
     "name": "Yorick",
     "url": "Yorick_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "colosse"
-    ],
-    "region": [
-      "Les Îles Obscures"
-    ]
+    "lane": ["top", "jungle", "mid"],
+    "tags": ["colosse"],
+    "region": ["Les Îles Obscures"]
   },
   {
     "id": "Yuumi",
     "key": "350",
     "name": "Yuumi",
     "url": "Yuumi_0.jpg",
-    "lane": [
-      "support"
-    ],
-    "tags": [
-      "support",
-      "enchanteur"
-    ],
-    "region": [
-      "Bandle"
-    ]
+    "lane": ["support"],
+    "tags": ["support", "enchanteur"],
+    "region": ["Bandle"]
   },
   {
     "id": "Zac",
     "key": "154",
     "name": "Zac",
     "url": "Zac_0.jpg",
-    "lane": [
-      "top",
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "tank"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["top", "jungle", "mid", "support"],
+    "tags": ["tank"],
+    "region": ["Zaun"]
   },
   {
     "id": "Zed",
     "key": "238",
     "name": "Zed",
     "url": "Zed_0.jpg",
-    "lane": [
-      "jungle",
-      "mid"
-    ],
-    "tags": [
-      "assassin",
-      "ninja"
-    ],
-    "region": [
-      "Ionia"
-    ]
+    "lane": ["jungle", "mid"],
+    "tags": ["assassin", "ninja"],
+    "region": ["Ionia"]
   },
   {
     "id": "Zeri",
     "key": "221",
     "name": "Zeri",
     "url": "Zeri_0.jpg",
-    "lane": [
-      "adc"
-    ],
-    "tags": [
-      "tireur"
-    ],
-    "region": [
-      "Zaun"
-    ]
+    "lane": ["adc"],
+    "tags": ["tireur"],
+    "region": ["Zaun"]
   },
   {
     "id": "Ziggs",
     "key": "115",
     "name": "Ziggs",
     "url": "Ziggs_0.jpg",
-    "lane": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Bandle",
-      "Zaun"
-    ]
+    "lane": ["mid", "adc", "support"],
+    "tags": ["mage"],
+    "region": ["Bandle", "Zaun"]
   },
   {
     "id": "Zilean",
     "key": "26",
     "name": "Zilean",
     "url": "Zilean_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "support",
-      "mage"
-    ],
-    "region": [
-      "Shurima"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["support", "mage"],
+    "region": ["Shurima"]
   },
   {
     "id": "Zoe",
     "key": "142",
     "name": "Zoe",
     "url": "Zoe_0.jpg",
-    "lane": [
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage"
-    ],
-    "region": [
-      "Targon"
-    ]
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
+    "region": ["Targon"]
   },
   {
     "id": "Zyra",
     "key": "143",
     "name": "Zyra",
     "url": "Zyra_0.jpg",
-    "lane": [
-      "jungle",
-      "mid",
-      "support"
-    ],
-    "tags": [
-      "mage",
-      "support"
-    ],
-    "region": [
-      "Ixtal"
-    ]
+    "lane": ["jungle", "mid", "support"],
+    "tags": ["mage", "support"],
+    "region": ["Ixtal"]
   }
 ]

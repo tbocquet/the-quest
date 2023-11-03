@@ -6,9 +6,19 @@ import { Link } from "react-router-dom";
 export function Header() {
   return (
     <div className="header">
-      <Link to="/">
-        <h2>La quête</h2>
-      </Link>
+      <div className="header-nav">
+        <Link to="/">
+          <h2>La quête</h2>
+        </Link>
+        <div className="nav-bloc">
+          <Link to="/champions">
+            <img
+              alt="champions-icon"
+              src="/images/icons/others/champions-icon.jpg"
+            ></img>
+          </Link>
+        </div>
+      </div>
       <SumList />
       <SearchBar />
     </div>

@@ -24,7 +24,7 @@ export function SummonerNavBar({ currentUser }: Props) {
         <Link to="accomplissements">
           <li className={onglet === 1 ? "selected" : ""}>Succès</li>
         </Link>
-        <Link to={`/liveGame/${currentUser}`}>
+        <Link to={`/liveGame/${encodeURI(currentUser)}`}>
           <li className={onglet === 2 ? "selected" : ""}>Partie en cours</li>
         </Link>
       </ul>

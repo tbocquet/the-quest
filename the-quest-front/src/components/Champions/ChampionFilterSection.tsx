@@ -1,43 +1,21 @@
-//Section contenant les differents filtres applicables aux masteries
+//Section contenant les differents filtres applicables aux champions
 
-import { MasteryCheckBox } from "../Filters/MasteryCheckBox";
 import { SearchBar } from "../Filters/SearchBar";
 import { RoleCheckBox } from "../Filters/RoleCheckBox";
-import { ChestCheckBox } from "../Filters/ChestCheckBox";
-import { SelectFilter } from "../Filters/SelectFilter";
-import { LeePrediction } from "../Filters/LeePrediction";
 import { LaneCheckBox } from "../Filters/LaneCheckBox";
 import { RegionCheckBox } from "../Filters/RegionCheckBox";
-import { useMasteriesFilters } from "@/context/MasteriesFilterContext";
+import "./styles/ChampionFilterSection.scss";
+
 import { allLane, allRegions, allRole } from "../Filters/FiltersValues";
+import { useChampionsFilters } from "@/context/ChampionsFilterContext";
 
 export function FiltersSection() {
-  const fContext = useMasteriesFilters();
-
-  const allMastery = [7, 6, 5, 4, 3, 2, 1, 0];
-  const allSortingOptions = [
-    "Points de maîtrise",
-    "Niveau de maîtrise",
-    "Nom de champion",
-  ];
+  const fContext = useChampionsFilters();
 
   return (
-    <>
-      <div className="lq-filter">
-        <SearchBar
-          search={fContext.championFilter}
-          setSearch={fContext.setChampionFilter}
-          suggestions={[]}
-        />
-        <div className="sorting-selection">
-          <p>Trier par</p>
-          <SelectFilter
-            values={allSortingOptions}
-            setSelected={fContext.setSortingOption}
-            current={fContext.sortingOption}
-          />
-        </div>
-
+    <div className="lq-champions-filters">
+      <div>
+        <h3>Voie :</h3>
         <ul className="lane-filter-list">
           {allLane.map((l) => (
             <li key={l}>
@@ -55,28 +33,10 @@ export function FiltersSection() {
             </li>
           ))}
         </ul>
+      </div>
 
-        <ul className="mastery-filter-list">
-          {allMastery.map((m) => (
-            <li key={m}>
-              <MasteryCheckBox
-                lvl={m}
-                isSelected={fContext.masteriesLevelFilter.includes(m)}
-                onCheckboxChange={() => {
-                  fContext.masteriesLevelFilter.includes(m)
-                    ? fContext.setMasteriesLevelFilter(
-                        fContext.masteriesLevelFilter.filter((t) => t !== m)
-                      )
-                    : fContext.setMasteriesLevelFilter([
-                        ...fContext.masteriesLevelFilter,
-                        m,
-                      ]);
-                }}
-              />
-            </li>
-          ))}
-        </ul>
-
+      <div>
+        <h3>Rôle :</h3>
         <ul className="role-filter-list">
           {allRole.map((tag) => (
             <li key={tag}>
@@ -94,7 +54,9 @@ export function FiltersSection() {
             </li>
           ))}
         </ul>
-
+      </div>
+      <div>
+        <h3>Région :</h3>
         <ul className="region-filter-list">
           {allRegions.map((tag) => (
             <li key={tag}>
@@ -112,16 +74,15 @@ export function FiltersSection() {
             </li>
           ))}
         </ul>
-        <ChestCheckBox
-          isSelected={fContext.chestFilter}
-          onCheckboxChange={() =>
-            fContext.chestFilter
-              ? fContext.setChestFilter(false)
-              : fContext.setChestFilter(true)
-          }
-        />
-        <LeePrediction />
       </div>
-    </>
+
+      <div>
+        <SearchBar
+          search={fContext.championFilter}
+          setSearch={fContext.setChampionFilter}
+          suggestions={[]}
+        />
+      </div>
+    </div>
   );
 }

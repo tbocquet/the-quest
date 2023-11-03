@@ -45,7 +45,12 @@ export function GameParticipant({ sum, team }: Props) {
           </Link>
           {/* Pseudo et masteries  */}
           <div className={style.pseudoAndMasteries}>
-            <span className={style.summonerName}>{sum.summonerName}</span>
+            <Link
+              className={style.summonerName}
+              to={`/invocateur/${sum.summonerName}`}
+            >
+              {sum.summonerName}
+            </Link>
 
             {sum.masteries && (
               <Tooltip content={`Progression dans la quête`} direction="bottom">

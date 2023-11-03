@@ -1,7 +1,8 @@
 import success from "../../assets/success.json";
 import allChampions from "../../assets/champion.json";
-import { ChampionMastery, Champion } from "@/models/ChampionMastery";
+import { ChampionMastery } from "@/models/ChampionMastery";
 import { Success } from "./type";
+import { Champion } from "@/models/Champion";
 
 //Renvoit les success généraux
 export function getGeneralSuccess(sumMasteries: ChampionMastery[]): Success[] {

@@ -105,6 +105,10 @@ export function getChampionTileById(id: number) {
   // return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${id}.png`;
 }
 
+export function getChampionSplashesById(id: number) {
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${id}/${id}000.jpg`;
+}
+
 export function getSummonerSpell(id: number) {
   return getSumSpell(id).iconPath;
 }

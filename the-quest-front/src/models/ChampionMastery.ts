@@ -13,16 +13,6 @@ export type ChampionMastery = {
   region: string[];
 };
 
-export type Champion = {
-  id: string;
-  key: string;
-  name: string;
-  url: string;
-  lane: string[];
-  tags: string[];
-  region: string[];
-};
-
 export type Mastery = {
   championId: number;
   championLevel: number;
