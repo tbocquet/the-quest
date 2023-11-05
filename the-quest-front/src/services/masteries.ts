@@ -37,3 +37,9 @@ export function getSummonerMasteriesById(summonerId: string) {
     .get(`${SERVER_URL}api/lol/masteriesBySummonerId/${summonerId}`)
     .then((res) => addChampWithNoMastery(res.data));
 }
+
+export function getChampionNameFromId(id: number) {
+  const champion = championData.find((champ) => champ.key === id.toString());
+  if (!champion) return "";
+  else return champion.name;
+}

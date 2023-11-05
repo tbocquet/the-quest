@@ -25,7 +25,7 @@ export function LeePrediction() {
   }
 
   function getPrediction(): ChampionMastery | null {
-    let MList = getSelectedChampionList(summonerMasteries);
+    const MList = getSelectedChampionList(summonerMasteries);
     return MList.length > 0 ? MList[getRandomInt(MList.length)] : null;
   }
 

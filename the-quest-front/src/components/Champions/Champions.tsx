@@ -1,6 +1,6 @@
 import ChampionTile from "@/components/Champions/ChampionTile";
-import allChampions from "../assets/champion.json";
-import "./Champions.scss";
+import allChampions from "../../assets/champion.json";
+import "./styles/Champions.scss";
 import { FiltersSection } from "@/components/Champions/ChampionFilterSection";
 import { useChampionsFilters } from "@/context/ChampionsFilterContext";
 import { useEffect, useState } from "react";
@@ -45,7 +45,7 @@ export default function Champions() {
   };
 
   useEffect(() => {
-    let T = applyContextFilter(allChampions);
+    const T = applyContextFilter(allChampions);
     setChampions(T);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
@@ -61,8 +61,8 @@ export default function Champions() {
     <div className="champions-component">
       <FiltersSection />
 
-      {champions.map((champion) => (
-        <ChampionTile data={champion} />
+      {champions.map((champion, index) => (
+        <ChampionTile data={champion} key={index} />
       ))}
     </div>
   );

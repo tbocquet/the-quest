@@ -7,6 +7,7 @@ import {
 import style from "./styles/ChampionTile.module.scss";
 import "../Masteries/Styles/Mastery-gradient.scss";
 import { numberAbrevier } from "@/utils/textDataTransformer";
+import { getChampionNameFromId } from "@/services/masteries";
 
 type Props = {
   championId: number;
@@ -53,52 +54,63 @@ export function ChampionTile({
   }
 
   return (
-    <div className={style.championTile}>
-      {/*Image champion */}
-      <div className={style.championImgContainer}>
-        <img alt="" src={getChampionTileById(championId)}></img>
-      </div>
+    <a
+      className={style.championTile}
+      rel="noopener noreferrer"
+      target="_blank"
+      href={`https://leagueoflegends.fandom.com/wiki/${getChampionNameFromId(
+        championId
+      ).replace(" ", "_")}/LoL`}
+    >
+      <div className={style.championTile}>
+        {/*Image champion */}
+        <div className={style.championImgContainer}>
+          <img alt="" src={getChampionTileById(championId)}></img>
+        </div>
 
-      {/*Icon Mastery */}
-      <img
-        alt=""
-        className={style.masteryIcon}
-        src={getMasteryIcon(masteryLvl)}
-      ></img>
-
-      {/*Icon Coffre*/}
-
-      <div className={style.chestIconContainer}>
+        {/*Icon Mastery */}
         <img
           alt=""
-          className={style.chestIcon}
-          src={getChestIcon2(chestGranted)}
+          className={style.masteryIcon}
+          src={getMasteryIcon(masteryLvl)}
         ></img>
-      </div>
 
-      {/* Mastery point */}
-      <div
-        className={`gradient-M${masteryLvl}-back ${style.masteryPointContainer}`}
-      >
-        <div className={`gradient-M${masteryLvl}-front ${style.masteryPoint}`}>
-          {numberAbrevier(masteryPoint)} points
+        {/*Icon Coffre*/}
+
+        <div className={style.chestIconContainer}>
+          <img
+            alt=""
+            className={style.chestIcon}
+            src={getChestIcon2(chestGranted)}
+          ></img>
         </div>
-      </div>
 
-      {/*Token */}
-
-      {(masteryLvl === 5 || masteryLvl === 6) && (
-        <div className={style.tokenContainer}>
-          {getBooleanMap(masteryLvl, tokens).map((mybool, index) => (
-            <img
-              alt=""
-              className={style.tokenMastery}
-              key={index}
-              src={getMasteryToken(masteryLvl + 1, mybool)}
-            />
-          ))}
+        {/* Mastery point */}
+        <div
+          className={`gradient-M${masteryLvl}-back ${style.masteryPointContainer}`}
+        >
+          <div
+            className={`gradient-M${masteryLvl}-front ${style.masteryPoint}`}
+          >
+            {numberAbrevier(masteryPoint)} points
+          </div>
         </div>
-      )}
-    </div>
+
+        {/*Token */}
+
+        {(masteryLvl === 5 || masteryLvl === 6) && (
+          <div className={style.tokenContainer}>
+            {getBooleanMap(masteryLvl, tokens).map((mybool, index) => (
+              <img
+                alt=""
+                className={style.tokenMastery}
+                key={index}
+                src={getMasteryToken(masteryLvl + 1, mybool)}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </a>
   );
 }

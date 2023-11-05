@@ -14,7 +14,7 @@ export function Header() {
           <Link to="/champions">
             <img
               alt="champions-icon"
-              src="/images/icons/others/champions-icon.jpg"
+              src="/images/icons/others/runterra.webp"
             ></img>
           </Link>
         </div>

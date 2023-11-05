@@ -45,7 +45,7 @@ export function LiveGame({ summonerName, persistant = false }: Props) {
   ) {
     return participants.find(
       (P) =>
-        P.porofessorStats && (P.porofessorStats.role.role as String) === role
+        P.porofessorStats && (P.porofessorStats.role.role as string) === role
     );
   }
 

@@ -8,7 +8,7 @@ import { SummonerNotFound } from "@/components/SummonerNotFound";
 import { SummonerSuccess } from "./routes/SummonerSuccess";
 import { Error } from "./routes/Error";
 import { LiveGamePage } from "./routes/LiveGame";
-import Champions from "./routes/Champions";
+import { ChampionsPage } from "./routes/ChampionsPage";
 
 export function Router() {
   const router = createBrowserRouter([
@@ -21,7 +21,7 @@ export function Router() {
           path: "/",
           element: <Home />,
         },
-        { path: "/champions", element: <Champions /> },
+        { path: "/champions", element: <ChampionsPage /> },
         {
           path: "/liveGame/:summonerName",
           element: <LiveGamePage />,

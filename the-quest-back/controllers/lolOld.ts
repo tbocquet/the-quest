@@ -20,7 +20,6 @@ export const getMasteriesBySummonerName = (
     `/lol/summoner/v4/summoners/by-name/${SUM_NAME}`,
     function (err: any, data: any) {
       if (data.id) {
-        console.log(data.id);
         riotRequest.request(
           "euw1",
           "champion-mastery",

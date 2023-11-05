@@ -109,6 +109,20 @@ export function getChampionSplashesById(id: number) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${id}/${id}000.jpg`;
 }
 
+export function getFullChampionSpashesById(id: string) {
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/${id}/${id}000.jpg`;
+}
+export function getFullChampionSkinSpashesById(id: string, skinId: string) {
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/${id}/${skinId}.jpg`;
+}
+
+export function getSpellIcon(spellId: string) {
+  return `https://ddragon.leagueoflegends.com/cdn/13.21.1/img/spell/${spellId}`;
+}
+export function getPassiveIcon(spellId: string) {
+  return `https://ddragon.leagueoflegends.com/cdn/13.21.1/img/passive/${spellId}`;
+}
+
 export function getSummonerSpell(id: number) {
   return getSumSpell(id).iconPath;
 }

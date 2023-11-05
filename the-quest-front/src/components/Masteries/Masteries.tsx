@@ -92,7 +92,7 @@ export function Masteries({ masteries }: Props) {
   //Filtrage et des masteries
   useEffect(() => {
     //Filtrage
-    let T = getFilteredChampionMasteries(masteries);
+    const T = getFilteredChampionMasteries(masteries);
 
     //Tri
     switch (filters.sortingOption) {

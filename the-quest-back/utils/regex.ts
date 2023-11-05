@@ -1,6 +1,4 @@
 export function getFirstFloatFromString(str: string): number | null {
-  console.log("--");
-  console.log(str);
   const regexMatches = str.match(/[-+]?\d*\.?\d+/);
 
   if (regexMatches === null) {
@@ -8,7 +6,6 @@ export function getFirstFloatFromString(str: string): number | null {
   }
 
   const res = parseFloat(regexMatches[0].replace(",", "."));
-  console.log(res);
   return isNaN(res) ? null : res;
 }
 

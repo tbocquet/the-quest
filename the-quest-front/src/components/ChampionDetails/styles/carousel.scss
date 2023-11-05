@@ -1,0 +1,15 @@
+.carousel-component {
+  .skin-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .carousel-tile {
+      width: 6em;
+      margin: 0.5em;
+    }
+    .selected {
+      width: 6.5em;
+    }
+  }
+}
