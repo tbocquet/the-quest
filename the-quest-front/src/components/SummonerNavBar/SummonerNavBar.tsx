@@ -3,8 +3,9 @@ import "./SummonerNavBar.scss";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { ToggleSwitch } from "../ToggleSwitch/ToggleSwitch";
+import { RiotId } from "@/models/RiotId";
 
-type Props = { currentUser: string };
+type Props = { currentUser: RiotId };
 export function SummonerNavBar({ currentUser }: Props) {
   const [onglet, setOnglet] = useState(0);
   const location = useLocation();
@@ -24,7 +25,11 @@ export function SummonerNavBar({ currentUser }: Props) {
         <Link to="accomplissements">
           <li className={onglet === 1 ? "selected" : ""}>Succès</li>
         </Link>
-        <Link to={`/liveGame/${encodeURI(currentUser)}`}>
+        <Link
+          to={`/liveGame/${encodeURI(currentUser.gameName)}/${encodeURI(
+            currentUser.tagLine
+          )}`}
+        >
           <li className={onglet === 2 ? "selected" : ""}>Partie en cours</li>
         </Link>
       </ul>

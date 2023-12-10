@@ -1,11 +1,12 @@
 import { LiveGame } from "@/models/LiveGame";
+import { RiotId } from "@/models/RiotId";
 import ky from "ky";
 const SERVER_URL = import.meta.env.VITE_APP_BACKEND_URL;
 
-export async function getLiveGame(
-  summonerId: string
+export async function getLiveGameByRiotId(
+  riotId: RiotId
 ): Promise<null | LiveGame> {
-  const url = `${SERVER_URL}livegame/${summonerId}`;
+  const url = `${SERVER_URL}liveGameByRiotId/${riotId.gameName}/${riotId.tagLine}`;
   try {
     const data: any = await ky.get(url).json();
     return data as LiveGame;

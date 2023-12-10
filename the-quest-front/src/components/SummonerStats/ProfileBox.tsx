@@ -11,10 +11,11 @@ import useSWR from "swr";
 import { getSummonerLeagues } from "@/services/summonerRankedStats";
 import { SummonerLeague } from "@/models/SummonerLeague";
 import Tooltip from "../LiveGame/Tooltip";
+import { SummonerAccount } from "@/models/SummonerAccount";
 
-type Props = { sumData: SummonerData };
+type Props = { summonerAccount: SummonerAccount; sumData: SummonerData };
 
-export function ProfileBox({ sumData }: Props) {
+export function ProfileBox({ summonerAccount, sumData }: Props) {
   const { data, error, isLoading } = useSWR(sumData.id, getSummonerLeagues);
   const leagueData = data as SummonerLeague[];
 
@@ -37,7 +38,10 @@ export function ProfileBox({ sumData }: Props) {
       </div>
 
       <div className="summoner-rank-infos">
-        <div className="summoner-name">{sumData.name}</div>
+        <div className="summoner-name">
+          {summonerAccount.gameName}
+          <span>#{summonerAccount.tagLine} </span>{" "}
+        </div>
         {!isLoading &&
           !error &&
           leagueData.map((league, index) => (

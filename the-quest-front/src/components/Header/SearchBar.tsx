@@ -15,17 +15,24 @@ export function SearchBar() {
     setStateSearch(v);
   }
 
+  const onValidateSearch = () => {
+    const splitSearch = searchState.split("#");
+    const gameName = splitSearch[0];
+    const tagLine = splitSearch[1];
+    navigate(`/invocateur/${gameName}/${tagLine}`);
+  };
+
   /*Lancer la recherche quand on appuie sur "entrer"*/
   function handleKeyPress(key: string) {
     if (key === "Enter" && searchState !== "") {
-      navigate(`/invocateur/${searchState}`);
+      onValidateSearch();
     }
   }
 
   /*Lancer la recherche quand on clique sur l'icon de loupe*/
   function onClickSearch() {
     if (searchState !== "") {
-      navigate(`/invocateur/${searchState}`);
+      onValidateSearch();
     }
   }
 

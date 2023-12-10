@@ -23,22 +23,22 @@ export function Router() {
         },
         { path: "/champions", element: <ChampionsPage /> },
         {
-          path: "/liveGame/:summonerName",
+          path: "/liveGame/:gameName/:tagLine",
           element: <LiveGamePage />,
         },
         {
-          path: "/invocateur/:summonerName",
+          path: "/invocateur/:gameName/:tagLine",
           element: <Summoner />,
           id: "summoner",
           loader: loader,
           errorElement: <SummonerNotFound />,
           children: [
             {
-              path: "/invocateur/:summonerName",
+              path: "/invocateur/:gameName/:tagLine",
               element: <SummonerMasteries />,
             },
             {
-              path: "/invocateur/:summonerName/accomplissements",
+              path: "/invocateur/:gameName/:tagLine/accomplissements",
               element: <SummonerSuccess />,
             },
           ],

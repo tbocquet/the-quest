@@ -29,17 +29,23 @@ export function League({ league }: Props) {
   );
   return (
     <div className={style.leagueInfo}>
-      <img
-        alt="league icon"
-        className={style.tierIcon}
-        src={getRankedIcon(league.tier)}
-      />
+      {league.tier && (
+        <img
+          alt="league icon"
+          className={style.tierIcon}
+          src={getRankedIcon(league.tier)}
+        />
+      )}
       <div className={style.textInfo}>
         <div className={style.rankDiv}>
-          <span className={style.rank}>
-            {firstLetterUpperCase(league.tier.toLowerCase())}
-          </span>
-          {league.tier.toLowerCase() !== "master" &&
+          {league.tier && (
+            <span className={style.rank}>
+              {firstLetterUpperCase(league.tier.toLowerCase())}
+            </span>
+          )}
+
+          {league.tier &&
+            league.tier.toLowerCase() !== "master" &&
             league.tier.toLowerCase() !== "grandmaster" &&
             league.tier.toLowerCase() !== "challenger" && (
               <span className={style.division}>{league.rank}</span>

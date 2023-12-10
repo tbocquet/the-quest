@@ -25,7 +25,7 @@ export function GameParticipant({ sum, team }: Props) {
         {/* Invocateur */}
         <div className={style.summonerInfo}>
           {/* Invocateur Icon */}
-          <Link to={`/invocateur/${sum.summonerName}`}>
+          <Link to={`/invocateur/${sum.gameName}/${sum.tagLine}`}>
             <div className={style.profileIconContainer}>
               <img
                 alt="summoner icon"
@@ -47,9 +47,9 @@ export function GameParticipant({ sum, team }: Props) {
           <div className={style.pseudoAndMasteries}>
             <Link
               className={style.summonerName}
-              to={`/invocateur/${sum.summonerName}`}
+              to={`/invocateur/${sum.gameName}/${sum.tagLine}`}
             >
-              {sum.summonerName}
+              {sum.gameName} <span className={style.tag}>#{sum.tagLine}</span>
             </Link>
 
             {sum.masteries && (

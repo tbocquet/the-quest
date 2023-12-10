@@ -12,7 +12,10 @@ export function SumList() {
   return (
     <div className="lq-sumList">
       {sumList.map((sumElt) => (
-        <Link to={`/invocateur/${sumElt.name}`} key={sumElt.id}>
+        <Link
+          to={`/invocateur/${sumElt.gameName}/${sumElt.tagLine}`}
+          key={sumElt.summonerId}
+        >
           <div className="lq-sumList-elt">
             <div className="sumIcon-container">
               <div
@@ -26,7 +29,7 @@ export function SumList() {
               </div>
               <SumListElementIcon iconId={sumElt.profileIconId} />
             </div>
-            <div className="sumName">{sumElt.name}</div>
+            <div className="sumName">{sumElt.gameName}</div>
           </div>
         </Link>
       ))}

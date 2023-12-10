@@ -1,12 +1,12 @@
 /*Context de gestion de la liste des Invocateurs déjà recherchés*/
 
+import { SummonerAccount } from "@/models/SummonerAccount";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { SummonerData } from "@/models/ChampionMastery";
 
 type SumListContext = {
-  readonly sumList: SummonerData[];
-  readonly setSumList: (sumElt: SummonerData) => void;
-  readonly deleteSumEltFromList: (sumElt: SummonerData) => void;
+  readonly sumList: SummonerAccount[];
+  readonly setSumList: (sumElt: SummonerAccount) => void;
+  readonly deleteSumEltFromList: (sumElt: SummonerAccount) => void;
 };
 
 const SumListContext = createContext<SumListContext | undefined>(undefined);
@@ -15,7 +15,7 @@ export const SumListProvider: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
   const savedSumList = localStorage.getItem("summonerHistoryList");
-  const [sumList, setSumList] = useState<SummonerData[]>(
+  const [sumList, setSumList] = useState<SummonerAccount[]>(
     savedSumList ? JSON.parse(savedSumList) : []
   );
 
@@ -24,10 +24,10 @@ export const SumListProvider: React.FC<{ children?: React.ReactNode }> = ({
     //console.log(sumList);
   }, [sumList]);
 
-  function mySetSumList(elt: SummonerData): void {
-    if (elt.id !== undefined) {
+  function mySetSumList(elt: SummonerAccount): void {
+    if (elt.summonerId !== undefined) {
       //on ajoute le nouvel élément à la fin de la liste
-      if (!sumList.some((sumElt) => sumElt.id === elt.id)) {
+      if (!sumList.some((sumElt) => sumElt.summonerId === elt.summonerId)) {
         if (sumList.length < 10) {
           setSumList([...sumList, elt]);
         }
@@ -35,15 +35,17 @@ export const SumListProvider: React.FC<{ children?: React.ReactNode }> = ({
       //on met à jour les données de l'élément existant
       else {
         setSumList(
-          sumList.map((sumElt) => (sumElt.id === elt.id ? elt : sumElt))
+          sumList.map((sumElt) =>
+            sumElt.summonerId === elt.summonerId ? elt : sumElt
+          )
         );
       }
     }
   }
 
-  function deleteSumElt(elt: SummonerData): void {
+  function deleteSumElt(elt: SummonerAccount): void {
     const listWithoutTheEltement = sumList.filter(
-      (currentElt) => currentElt.id !== elt.id
+      (currentElt) => currentElt.summonerId !== elt.summonerId
     );
     setSumList(listWithoutTheEltement);
   }

@@ -12,6 +12,7 @@
   }
   .summonerRow {
     display: flex;
+
     align-items: center;
     color: white;
     height: 7em;
@@ -28,6 +29,7 @@
       width: 13.5em;
     }
   }
+
   .blueSide {
     background-color: rgb(31, 45, 75);
     background: linear-gradient(
@@ -38,12 +40,13 @@
     );
   }
   .redSide {
+    flex-direction: row-reverse;
     background-color: rgb(91, 37, 37);
     background: linear-gradient(
       200deg,
-      rgba(2, 0, 36, 1) 0%,
+      rgb(216, 61, 108) 0%,
       rgba(121, 9, 42, 1) 45%,
-      rgb(216, 61, 108) 100%
+      rgba(2, 0, 36, 1) 100%
     );
   }
   .tagsContainer {
@@ -99,6 +102,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
       text-shadow: 2px 2px 2px black;
+      .tag {
+        font-size: 0.7em;
+        color: #ba7e23;
+      }
     }
 
     .theQuestProgression {

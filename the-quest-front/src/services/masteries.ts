@@ -26,15 +26,21 @@ function addChampWithNoMastery(masteries: Mastery[]): Mastery[] {
   return masteriesWithAllChamp;
 }
 
-export function getSummonerMasteriesByName(summonerName: string) {
-  return axios
-    .get(`${SERVER_URL}api/lol/masteriesBySummonerName/${summonerName}`)
-    .then((res) => addChampWithNoMastery(res.data));
-}
+// export function getSummonerMasteriesByName(summonerName: string) {
+//   return axios
+//     .get(`${SERVER_URL}api/lol/masteriesBySummonerName/${summonerName}`)
+//     .then((res) => addChampWithNoMastery(res.data));
+// }
 
-export function getSummonerMasteriesById(summonerId: string) {
+// export function getSummonerMasteriesById(summonerId: string) {
+//   return axios
+//     .get(`${SERVER_URL}api/lol/masteriesBySummonerId/${summonerId}`)
+//     .then((res) => addChampWithNoMastery(res.data));
+// }
+
+export function getSummonerMateriesByPuuid(puuid: string) {
   return axios
-    .get(`${SERVER_URL}api/lol/masteriesBySummonerId/${summonerId}`)
+    .get(`${SERVER_URL}riot/masteriesByPuuid/${puuid}`)
     .then((res) => addChampWithNoMastery(res.data));
 }
 

@@ -14,6 +14,9 @@ export type LiveGame = {
 };
 
 export type LiveGameParticipant = {
+  puuid: string;
+  gameName: string;
+  tagLine: string;
   championId: number;
   perks: Perks;
   profileIconId: number;

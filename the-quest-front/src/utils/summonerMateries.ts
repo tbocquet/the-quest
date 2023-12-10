@@ -1,8 +1,14 @@
-import { getSummonerMasteriesById } from "../services/masteries";
-import { Champion, ChampionMastery, Mastery } from "../models/ChampionMastery";
+import { getSummonerMateriesByPuuid } from "../services/masteries";
+import { ChampionMastery, Mastery } from "../models/ChampionMastery";
 import championData from "../assets/champion.json";
-import { getSummonerDataByName } from "@/services/summoner";
+import {
+  getSummonerAccountByRiotId,
+  getSummonerDataByRiotId,
+} from "@/services/summoner";
 import { SummonerData } from "@/models/Summoner";
+import { RiotId } from "@/models/RiotId";
+import { Champion } from "@/models/Champion";
+import { SummonerAccount } from "@/models/SummonerAccount";
 
 //Agrège les Masteries et les Champions en un unique object
 function aggregateMasteriesData(
@@ -37,11 +43,11 @@ function aggregateMasteriesData(
 }
 
 export const getSummonerChampionMasteries = async (
-  summonerId: string
+  puuid: string
 ): Promise<ChampionMastery[]> => {
   const allChampions: Champion[] = championData;
   try {
-    const sumMasteriesData = await getSummonerMasteriesById(summonerId);
+    const sumMasteriesData = await getSummonerMateriesByPuuid(puuid);
     const M = sumMasteriesData.sort((a: Mastery, b: Mastery) =>
       a.championPoints > b.championPoints ? -1 : 1
     );
@@ -57,11 +63,26 @@ export const getSummonerChampionMasteries = async (
 };
 
 export async function summonerDataLoader({ params }: any) {
-  const summonerData = (await getSummonerDataByName(
-    params.summonerName
-  )) as SummonerData;
+  const riotId: RiotId = { gameName: params.gameName, tagLine: params.tagLine };
+  const accountData = await getSummonerAccountByRiotId(
+    riotId.gameName,
+    riotId.tagLine
+  );
+  const summonerData = (await getSummonerDataByRiotId(riotId)) as SummonerData;
   const summonerMasteries = (await getSummonerChampionMasteries(
-    summonerData.id
+    accountData.puuid
   )) as ChampionMastery[];
-  return { summonerData, summonerMasteries };
+
+  const summonerAccount: SummonerAccount = {
+    gameName: accountData.gameName,
+    tagLine: accountData.tagLine,
+    puuid: accountData.puuid,
+    summonerId: summonerData.id,
+    profileIconId: summonerData.profileIconId,
+  };
+  return {
+    summonerData,
+    summonerMasteries,
+    summonerAccount,
+  };
 }

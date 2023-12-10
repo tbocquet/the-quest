@@ -25,9 +25,9 @@ export const SummonerMasteriesProvider: React.FC<{
     localStorage.setItem("SummonerMasteries", JSON.stringify(sumMasteryList));
   }, [sumMasteryList]);
 
-  function mySetSumList(list: ChampionMastery[]): void {
-    setSumMasteryList(list);
-  }
+  // function mySetSumList(list: ChampionMastery[]): void {
+  //   setSumMasteryList(list);
+  // }
 
   function getSumMastery(championId: string): ChampionMastery | undefined {
     return sumMasteryList.find((elt) => elt.id === championId);

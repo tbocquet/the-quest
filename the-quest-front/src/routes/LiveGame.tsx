@@ -3,11 +3,11 @@ import { LiveGame } from "@/components/LiveGame/LiveGame";
 import { useParams } from "react-router-dom";
 
 export function LiveGamePage() {
-  const { summonerName } = useParams();
+  const { gameName, tagLine } = useParams();
 
-  return summonerName ? (
-    <LiveGame summonerName={summonerName} persistant={false} />
+  return gameName && tagLine ? (
+    <LiveGame riotId={{ gameName, tagLine }} persistant={false} />
   ) : (
-    <div>Error : need to specifie a summoner name</div>
+    <div>Error : need to specifie a summoner name and tag</div>
   );
 }

@@ -11,6 +11,9 @@ export function SummonerNotFound() {
     <div>
       <Img src="/images/blitz_question.png" alt="" />
       <Msg>Invocateur introuvable</Msg>
+      <Msg>
+        Avez vous pensé à mettre le #TAG du riot id dans votre recherche ?
+      </Msg>
     </div>
   );
 }

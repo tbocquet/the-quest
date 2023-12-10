@@ -2,7 +2,7 @@ import { GameParticipant } from "@/components/LiveGame/LiveGameParticipant";
 import { getChampionTileById, getLaneIcon } from "@/services/imageGetter";
 
 import {
-  getLiveGameBySummonerName,
+  getLiveGameByRiotId,
   getPersistantLiveGame,
 } from "@/services/liveGame";
 import style from "./styles/LiveGame.module.scss";
@@ -12,14 +12,15 @@ import { GameTimer } from "./GameTimer";
 import { Loader } from "../Loader";
 import { getQueue } from "@/utils/Queue";
 import { LiveGameParticipant } from "@/models/LiveGame";
+import { RiotId } from "@/models/RiotId";
 
-type Props = { summonerName: string; persistant?: boolean };
-export function LiveGame({ summonerName, persistant = false }: Props) {
+type Props = { riotId: RiotId; persistant?: boolean };
+export function LiveGame({ riotId, persistant = false }: Props) {
   const roles = ["top", "jungler", "mid", "adc", "support"];
   const lanes = ["top", "jungle", "mid", "adc", "support"];
   const { data, error, isLoading } = useSWR(
-    summonerName,
-    persistant ? getPersistantLiveGame : getLiveGameBySummonerName
+    riotId,
+    persistant ? getPersistantLiveGame : getLiveGameByRiotId
   );
 
   if (isLoading)
@@ -32,7 +33,7 @@ export function LiveGame({ summonerName, persistant = false }: Props) {
   if (error || data === null || data === undefined)
     return (
       <div style={{ color: "white", margin: "3em" }}>
-        {summonerName} n'est pas en jeu.
+        {riotId.gameName}#{riotId.tagLine} n'est pas en jeu.
       </div>
     );
 
