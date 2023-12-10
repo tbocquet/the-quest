@@ -15,6 +15,11 @@ export type LiveGame = {
 };
 
 export type LiveGameParticipant = {
+  //RiotId
+  gameName: string;
+  tagLine: string;
+  puuid: string;
+
   championId: number;
   perks: Perks;
   profileIconId: number;

@@ -1,3 +1,9 @@
+export type LolAPIAccountData = {
+  puuid: string;
+  gameName: string;
+  tagLine: string;
+};
+
 export type LolAPISummonerData = {
   id: string;
   accountId: string;

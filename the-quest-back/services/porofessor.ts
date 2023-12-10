@@ -24,6 +24,7 @@ import {
 } from "../utils/regex";
 import { Role } from "../models/Role";
 import { Rank } from "../models/Rank";
+import { kill } from "process";
 
 dotenv.config();
 
@@ -31,10 +32,11 @@ const PORO_USER_AGENT = process.env.PORO_USER_AGENT;
 const PORO_BASE_URL = "https://porofessor.gg/partial/fr/live-partial/euw/";
 
 export async function getPorofessorLiveGameData(
-  summonerName: string
+  gameName: string,
+  tagLine: string
 ): Promise<PoroLiveGameData | null> {
-  const encodedSummonerName = encodeURI(summonerName);
-  const url = `${PORO_BASE_URL}${encodedSummonerName}`;
+  const encodedRiotId = encodeURI(`${gameName}-${tagLine}`);
+  const url = `${PORO_BASE_URL}${encodedRiotId}`;
   const htmlString = await request(url);
 
   const summonersData = parseSummonersInfos(htmlString);
@@ -289,6 +291,8 @@ const getPoroChampionStats = (node: Element): PoroChampionStats | null => {
   const kills = getChampionKills(node);
   const deaths = getChampionDeaths(node);
   const assists = getChampionAssists(node);
+  // console.log("here");
+  // console.log(kills, deaths, assists);
 
   return { name, winrate, gameAmount, kills, deaths, assists };
 };

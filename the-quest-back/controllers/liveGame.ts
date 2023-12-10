@@ -1,8 +1,12 @@
 import { Request, Response, NextFunction } from "express";
 import {
   getCurrentGameInfo,
+  getSummonerAccountByPuuid,
+  getSummonerAccountByRiotId,
   getSummonerChampionsMasteries,
+  getSummonerDataById,
   getSummonerDataByName,
+  getSummonerDataByPuuid,
   getSummonerLeagues,
 } from "../services/riotAPI";
 import { getPorofessorLiveGameData } from "../services/porofessor";
@@ -23,19 +27,23 @@ import {
 } from "../utils/masteries";
 import { persistantLiveGame } from "../persistantLiveGame";
 import * as mongoPersistence from "../services/mongoDb";
+import { getSummonerData } from "./riotAPI";
 
 export const getPorofessorLiveGame = (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const sumName = encodeURI(req.params.name);
-  getPorofessorLiveGameData(sumName).then(async (poroLiveGameInfo) => {
-    if (!poroLiveGameInfo)
-      return res.status(500).json("Error getting porofessor live game");
+  const gameName = encodeURI(req.params.gameName);
+  const tagLine = encodeURI(req.params.tagLine);
+  getPorofessorLiveGameData(gameName, tagLine).then(
+    async (poroLiveGameInfo) => {
+      if (!poroLiveGameInfo)
+        return res.status(500).json("Error getting porofessor live game");
 
-    return res.status(200).json(poroLiveGameInfo);
-  });
+      return res.status(200).json(poroLiveGameInfo);
+    }
+  );
 };
 
 export const getPersistantLiveGame = (
@@ -46,73 +54,100 @@ export const getPersistantLiveGame = (
   return res.status(200).json(persistantLiveGame);
 };
 
-export const getLiveGameInfoByName = (
+export const getLiveGameInfoByRiotId = (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const sumName = decodeURI(req.params.name);
-  getSummonerDataByName(sumName).then((sumData) => {
-    if (!sumData) return res.status(404).json("Summoner not found");
-    const summonerId = sumData.id;
-    getCurrentGameInfo(summonerId).then((lolAPIliveGameInfo) => {
-      if (!lolAPIliveGameInfo)
-        return res.status(500).json("Error getting currentGame (lolApi)");
+  const gameName = decodeURI(req.params.gameName);
+  const tagLine = decodeURI(req.params.tagLine);
+  getSummonerAccountByRiotId(gameName, tagLine).then((accountData) => {
+    if (!accountData) return res.status(404).json("Summoner account not found");
+    const puuid = accountData.puuid;
 
-      //Si la game existe coté mongo
-      const liveGameId = lolAPIliveGameInfo.gameId;
-      mongoPersistence.getLiveGame(liveGameId).then((game) => {
-        //Si stoquée coté mongo on renvoit la game
-        if (game !== null) return res.status(200).json(game);
+    getSummonerDataByPuuid(puuid).then((sumData) => {
+      if (!sumData) return res.status(404).json("Summoner not found");
+      const summonerId = sumData.id;
+      getCurrentGameInfo(summonerId).then((lolAPIliveGameInfo) => {
+        if (!lolAPIliveGameInfo)
+          return res.status(500).json("Error getting currentGame (lolApi)");
 
-        //Sinon on récupère les donées de la partie et on la stoque coté mongo
-        getPorofessorLiveGameData(sumName).then(async (poroLiveGameInfo) => {
-          if (!poroLiveGameInfo)
-            console.log("Error getting currentGame (poro)");
+        //Si la game existe coté mongo
+        const liveGameId = lolAPIliveGameInfo.gameId;
+        mongoPersistence.getLiveGame(liveGameId).then((game) => {
+          //Si stoquée coté mongo on renvoit la game
+          if (game !== null) return res.status(200).json(game);
 
-          const lolApiParticipant = lolAPIliveGameInfo.participants;
-          const gameParticipants = lolApiParticipant.map(
-            async (elt: CurrentGameParticipant) => {
-              const summonerPoroStats = poroLiveGameInfo
-                ? findPoroStatsBySummonerName(
-                    poroLiveGameInfo,
-                    elt.summonerName
-                  )
-                : null;
-              const masteries = await getMasteries(
-                elt.summonerId,
-                elt.championId
+          //Sinon on récupère les donées de la partie et on la stoque coté mongo
+          getPorofessorLiveGameData(gameName, tagLine).then(
+            async (poroLiveGameInfo) => {
+              if (!poroLiveGameInfo)
+                console.log("Error getting currentGame (poro)");
+
+              const lolApiParticipant = lolAPIliveGameInfo.participants;
+
+              const gameParticipants = lolApiParticipant.map(
+                async (
+                  elt: CurrentGameParticipant
+                ): Promise<LiveGameParticipant> => {
+                  //Récupération riot account data
+                  const sumData = await getSummonerDataById(elt.summonerId);
+                  if (!sumData?.puuid)
+                    throw Error("Error getting summoner account data");
+                  const summonerAccountData = await getSummonerAccountByPuuid(
+                    sumData.puuid
+                  );
+                  if (!summonerAccountData)
+                    throw Error("Error getting summoner account data");
+
+                  const summonerPoroStats = poroLiveGameInfo
+                    ? findPoroStatsBySummonerName(
+                        poroLiveGameInfo,
+                        `${summonerAccountData.gameName}#${summonerAccountData.tagLine}`
+                      )
+                    : null;
+
+                  const masteries = await getMasteries(
+                    elt.summonerId,
+                    elt.championId
+                  );
+                  const leagues = await getSummonerLeagues(elt.summonerId);
+                  return {
+                    gameName: summonerAccountData.gameName,
+                    tagLine: summonerAccountData.tagLine,
+                    puuid: puuid,
+                    ...elt,
+                    porofessorStats: summonerPoroStats,
+                    masteries,
+                    leagues,
+                  };
+                }
               );
-              const leagues = await getSummonerLeagues(elt.summonerId);
-              return {
-                ...elt,
-                porofessorStats: summonerPoroStats,
-                masteries,
-                leagues,
-              } as LiveGameParticipant;
+              Promise.all(gameParticipants).then((participants) => {
+                if (!participants || participants.length === 0)
+                  return res
+                    .status(500)
+                    .json("Error getting game participants");
+                const liveGame: LiveGame = {
+                  gameId: lolAPIliveGameInfo.gameId,
+                  gameType: lolAPIliveGameInfo.gameType,
+                  gameStartTime: lolAPIliveGameInfo.gameStartTime,
+                  mapId: lolAPIliveGameInfo.mapId,
+                  gameLength: lolAPIliveGameInfo.gameLength,
+                  platformId: lolAPIliveGameInfo.platformId,
+                  gameMode: lolAPIliveGameInfo.gameMode,
+                  bannedChampions: lolAPIliveGameInfo.bannedChampions,
+                  gameQueueConfigId: lolAPIliveGameInfo.gameQueueConfigId,
+                  participants,
+                };
+
+                //Game persistence
+                mongoPersistence.addLiveGame(liveGame);
+
+                return res.status(200).json(liveGame);
+              });
             }
           );
-          Promise.all(gameParticipants).then((participants) => {
-            if (!participants || participants.length === 0)
-              return res.status(500).json("Error getting game participants");
-            const liveGame: LiveGame = {
-              gameId: lolAPIliveGameInfo.gameId,
-              gameType: lolAPIliveGameInfo.gameType,
-              gameStartTime: lolAPIliveGameInfo.gameStartTime,
-              mapId: lolAPIliveGameInfo.mapId,
-              gameLength: lolAPIliveGameInfo.gameLength,
-              platformId: lolAPIliveGameInfo.platformId,
-              gameMode: lolAPIliveGameInfo.gameMode,
-              bannedChampions: lolAPIliveGameInfo.bannedChampions,
-              gameQueueConfigId: lolAPIliveGameInfo.gameQueueConfigId,
-              participants,
-            };
-
-            //Game persistence
-            mongoPersistence.addLiveGame(liveGame);
-
-            return res.status(200).json(liveGame);
-          });
         });
       });
     });

@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
-import { requestLolAPI } from "../utils/riotApiFetch";
+import { requestLolAPI, requestRiotAPI } from "../utils/riotApiFetch";
 import {
   BannedChampion,
   CurrentGameParticipant,
+  LolAPIAccountData,
   LolAPIChampionMastery,
   LolAPICurrentGameInfo,
   LolAPISummonerData,
@@ -53,6 +54,43 @@ export async function getSummonerDataByName(
   return res as LolAPISummonerData;
 }
 
+export async function getSummonerDataByPuuid(
+  puuid: string
+): Promise<LolAPISummonerData | null> {
+  const encodedPuuid = encodeURI(puuid);
+  const data = await requestLolAPI(
+    `/lol/summoner/v4/summoners/by-puuid/${encodedPuuid}`
+  );
+  if (data === null) return null;
+
+  return data as LolAPISummonerData;
+}
+
+export async function getSummonerAccountByRiotId(
+  gameName: string,
+  tagLine: string
+): Promise<LolAPIAccountData | null> {
+  const encodedGameName = encodeURI(gameName);
+  const encodedTagLine = encodeURI(tagLine);
+  const data = await requestRiotAPI(
+    `/riot/account/v1/accounts/by-riot-id/${encodedGameName}/${encodedTagLine}`
+  );
+  if (data === null) return null;
+  return data as LolAPIAccountData;
+}
+
+export async function getSummonerAccountByPuuid(
+  puuid: string
+): Promise<LolAPIAccountData | null> {
+  const encodePuuid = encodeURI(puuid);
+
+  const data = await requestRiotAPI(
+    `/riot/account/v1/accounts/by-puuid/${encodePuuid}`
+  );
+  if (data === null) return null;
+  return data as LolAPIAccountData;
+}
+
 export async function getSummonerChampionsMasteries(
   summonerId: string
 ): Promise<LolAPIChampionMastery[] | null> {
@@ -73,6 +111,17 @@ export async function getSummonerChampionsMasteries(
     summonerId: elt.summonerId,
   }));
   return res as LolAPIChampionMastery[];
+}
+
+export async function getSummonerChampionsMasteriesByPuuid(
+  puuid: string
+): Promise<LolAPIChampionMastery[] | null> {
+  const data = await requestLolAPI(
+    `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`
+  );
+  if (data === null) return null;
+
+  return data as LolAPIChampionMastery[];
 }
 
 export async function getSummonerLeagues(
