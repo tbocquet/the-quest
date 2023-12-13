@@ -4,6 +4,7 @@ import {
   getSummonerAccountByPuuid,
   getSummonerAccountByRiotId,
   getSummonerChampionsMasteries,
+  getSummonerChampionsMasteriesByPuuid,
   getSummonerDataById,
   getSummonerDataByName,
   getSummonerDataByPuuid,
@@ -108,9 +109,10 @@ export const getLiveGameInfoByRiotId = (
                     : null;
 
                   const masteries = await getMasteries(
-                    elt.summonerId,
+                    sumData.puuid,
                     elt.championId
                   );
+
                   const leagues = await getSummonerLeagues(elt.summonerId);
                   return {
                     gameName: summonerAccountData.gameName,
@@ -168,10 +170,10 @@ function findPoroStatsBySummonerName(
 }
 
 async function getMasteries(
-  summonerId: string,
+  puuid: string,
   championId: number
 ): Promise<MasteriesInfos | null> {
-  const lolApiMasteries = await getSummonerChampionsMasteries(summonerId);
+  const lolApiMasteries = await getSummonerChampionsMasteriesByPuuid(puuid);
   if (!lolApiMasteries) return null;
   const totalChamp = await getChampionAmount();
 

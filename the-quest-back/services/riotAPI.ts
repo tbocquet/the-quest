@@ -131,6 +131,9 @@ export async function getSummonerLeagues(
     `/lol/league/v4/entries/by-summoner/${summonerId}`
   );
   if (data === null) return null;
+  // console.log("#########################");
+  // console.log(data);
+  // console.log("#########################");
   const res = data.map((elt: any) => ({
     leagueId: elt.leagueId,
     summonerId: elt.summonerId,
