@@ -15,6 +15,12 @@ type Props = {
 };
 export function GameParticipant({ sum, team }: Props) {
   const getSideStyle = team === "blue" ? style.blueSide : style.redSide;
+  const soloQ = sum.leagues?.find(
+    (league) => league.queueType === "RANKED_SOLO_5x5"
+  );
+  const flexQ = sum.leagues?.find(
+    (league) => league.queueType === "RANKED_FLEX_SR"
+  );
   return (
     <div className={style.gameParticipant}>
       <div className={style.summonerRow + " " + getSideStyle}>
@@ -25,11 +31,11 @@ export function GameParticipant({ sum, team }: Props) {
 
         <div className={style.leagueStats}>
           <Tooltip content={"Classement Solo/Duo"} direction={"left"}>
-            <League league={sum.leagues ? sum.leagues[0] : null} />
+            <League league={sum.leagues && soloQ ? soloQ : null} />
           </Tooltip>
           <div className={style.flex}>
             <Tooltip content={"Classsement Flex"} direction={"left"}>
-              <League league={sum.leagues ? sum.leagues[1] : null} />
+              <League league={sum.leagues && flexQ ? flexQ : null} />
             </Tooltip>
           </div>
         </div>

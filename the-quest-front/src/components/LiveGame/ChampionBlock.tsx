@@ -1,7 +1,6 @@
 import { PoroChampionStats } from "@/models/porofessor";
 import { ChampionTile } from "./ChampionTile";
 import ChampionStats from "./ChampionStats";
-import { getSummonerSpell } from "@/services/imageGetter";
 import style from "./styles/ChampionBlock.module.scss";
 
 type Props = {
