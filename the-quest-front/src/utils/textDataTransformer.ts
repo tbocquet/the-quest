@@ -2,7 +2,7 @@ export function numberAbrevier(nombre: number): string {
   if (nombre < 1000) {
     return nombre.toString();
   } else if (nombre < 1000000) {
-    return (nombre / 1000).toFixed(1) + "K";
+    return (nombre / 1000).toFixed(1) + "k";
   } else if (nombre < 1000000000) {
     return (nombre / 1000000).toFixed(1) + "M";
   } else {

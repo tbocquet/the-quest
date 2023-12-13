@@ -1,23 +1,33 @@
 .summonerTags {
   display: flex;
   flex-flow: row wrap;
-  color: white;
+  justify-content: center;
+  align-items: center;
+  color: rgb(211, 211, 211);
 
   .tag {
     display: block;
     font-size: 0.6em;
-    margin: 0 0.4em 0 0;
+    margin: 0 0.4em 0.4em 0;
     padding: 0.4em 0.4em 0.2em 0.4em;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     box-shadow: 2px 2px 3px rgb(0, 0, 0);
     font-weight: 600;
   }
+  // .good {
+  //   //background-color: rgb(39, 124, 167);
+  //   background: linear-gradient(
+  //     70deg,
+  //     rgb(68, 137, 74) 0%,
+  //     rgb(46, 71, 37) 100%
+  //   );
+  // }
   .good {
     //background-color: rgb(39, 124, 167);
     background: linear-gradient(
       70deg,
-      rgb(70, 143, 221) 0%,
-      rgb(37, 81, 152) 100%
+      rgb(66, 139, 128) 0%,
+      rgb(46, 71, 37) 100%
     );
   }
   .bad {
@@ -32,8 +42,8 @@
     background-color: rgb(198, 156, 59);
     background: linear-gradient(
       70deg,
-      rgb(221, 143, 70) 0%,
-      rgb(120, 75, 26) 100%
+      rgb(140, 91, 45) 0%,
+      rgb(84, 55, 24) 100%
     );
   }
 }

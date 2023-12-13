@@ -5,44 +5,68 @@
   align-items: flex-start;
   padding-left: 0.5em;
   height: 100%;
-  width: 7.5em;
 
-  .stats {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-
-    .kda {
-      margin-bottom: 0.3em;
-      .kills {
-        color: rgb(103, 234, 86);
-      }
-      .deaths {
-        color: rgb(234, 86, 86);
-      }
-      .assists {
-        color: rgb(234, 192, 86);
-      }
+  .kda {
+    margin-bottom: 0.3em;
+    margin-left: 0.2em;
+    .kills {
+      color: rgb(103, 234, 86);
     }
-    .games {
-      margin-left: 0.3em;
+    .deaths {
+      color: rgb(234, 86, 86);
+    }
+    .assists {
+      color: rgb(234, 192, 86);
+    }
+  }
+  .games {
+    margin-left: 0.3em;
+    font-size: 0.9em;
+    color: #edba4d;
+    .winrate {
+      margin-right: 0.3em;
+      font-weight: 600;
+    }
+    .gameAmount {
       font-size: 0.9em;
-      color: #edba4d;
-      .winrate {
-        margin-right: 0.3em;
-        font-weight: 600;
-      }
-      .gameAmount {
-        font-size: 0.9em;
-      }
     }
   }
 }
 
-.summonerSpells {
-  img {
-    height: 2em;
-    margin: 0.2em;
+.PointAndTokenContainer {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+  border-radius: 3px;
+  margin-bottom: 0.2em;
+
+  .PointAndTokenGradient {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    border-radius: 3px;
+
+    .MPoint {
+      font-weight: bold;
+      text-shadow: 1px 1px 3px black;
+      color: rgb(231, 231, 231);
+      font-size: 0.8em;
+      margin-right: 0.5em;
+    }
+    .tokenContainer {
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+
+      .tokenMastery {
+        padding: 0.1em;
+        width: 0.7em;
+        height: 0.7em;
+
+        -webkit-filter: drop-shadow(2px 2px 2px #000000);
+        filter: drop-shadow(2px 2px 2px #000000);
+      }
+    }
   }
 }

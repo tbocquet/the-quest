@@ -13,22 +13,23 @@ export function Perks({ perks }: Props) {
       <div className={style.mainPerk}>
         <img alt="" src={getPerkSrc(mainPerk)} />
       </div>
-      <div className={style.runes}>
+      <div className={style.perksThree}>
         <div className={style.perkStyle}>
           {perkStyle.map((id) => (
             <img alt="" key={id} src={getPerkSrc(id)} />
           ))}
         </div>
+
         <div className={style.perkSubStyle}>
           {perkSubstyle.map((id) => (
             <img alt="" key={id} src={getPerkSrc(id)} />
           ))}
         </div>
-        <div className={style.perkStatModes}>
-          {perkStatModes.map((id, index) => (
-            <img alt="" key={`${id}_${index}`} src={getPerkSrc(id)} />
-          ))}
-        </div>
+      </div>
+      <div className={style.perkStatModes}>
+        {perkStatModes.map((id, index) => (
+          <img alt="" key={`${id}_${index}`} src={getPerkSrc(id)} />
+        ))}
       </div>
     </div>
   );

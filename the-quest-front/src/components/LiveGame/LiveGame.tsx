@@ -82,7 +82,7 @@ export function LiveGame({ riotId, persistant = false }: Props) {
   const redTeamBans = data.bannedChampions.filter((ban) => ban.teamId === 200);
 
   return (
-    <>
+    <div className={style.liveGame}>
       {/* Timer et Queue */}
       <div className={style.timerAndQueue}>
         {getQueue(data.gameQueueConfigId)?.shortName}
@@ -120,17 +120,19 @@ export function LiveGame({ riotId, persistant = false }: Props) {
       )}
 
       {/* Joueurs */}
-      {matchupArray.map((matchup, index) => (
-        <div className={style.matchup} key={index}>
-          <GameParticipant sum={matchup.blue} team="blue" />
-          <img
-            className={style.lane}
-            alt="lane"
-            src={getLaneIcon(matchup.lane)}
-          />
-          <GameParticipant sum={matchup.red} team="red" />
-        </div>
-      ))}
-    </>
+      <div className={style.players}>
+        {matchupArray.map((matchup, index) => (
+          <div className={style.matchup} key={index}>
+            <GameParticipant sum={matchup.blue} team="blue" />
+            <img
+              className={style.lane}
+              alt="lane"
+              src={getLaneIcon(matchup.lane)}
+            />
+            <GameParticipant sum={matchup.red} team="red" />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

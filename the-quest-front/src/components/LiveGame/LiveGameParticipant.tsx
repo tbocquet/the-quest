@@ -1,17 +1,13 @@
 import style from "./styles/LiveGameParticipant.module.scss";
-import { getCDragonSummonerIcon } from "@/services/imageGetter";
-import {
-  numberAbrevier,
-  rendreNombreLisible,
-} from "@/utils/textDataTransformer";
+
 import { League } from "./League";
-import { ChampionTile } from "./ChampionTile";
-import { Perks } from "./Perks";
-import ChampionStats from "./ChampionStats";
 import { SummonerTags } from "./SummonerTags";
 import Tooltip from "./Tooltip";
-import { Link } from "react-router-dom";
 import { LiveGameParticipant } from "@/models/LiveGame";
+import Invocateur from "./Invocateur";
+import ChampionBlock from "./ChampionBlock";
+import { Perks } from "./Perks";
+import { getSummonerSpell } from "@/services/imageGetter";
 
 type Props = {
   sum: LiveGameParticipant;
@@ -23,69 +19,26 @@ export function GameParticipant({ sum, team }: Props) {
     <div className={style.gameParticipant}>
       <div className={style.summonerRow + " " + getSideStyle}>
         {/* Invocateur */}
-        <div className={style.summonerInfo}>
-          {/* Invocateur Icon */}
-          <Link to={`/invocateur/${sum.gameName}/${sum.tagLine}`}>
-            <div className={style.profileIconContainer}>
-              <img
-                alt="summoner icon"
-                src={getCDragonSummonerIcon(sum.profileIconId)}
-              />
-              {sum.porofessorStats && (
-                <Tooltip
-                  content={`Niveau de l'invocateur : ${sum.porofessorStats.level}`}
-                  direction="bottom"
-                >
-                  <span className={style.summonerLevel}>
-                    {sum.porofessorStats?.level}
-                  </span>
-                </Tooltip>
-              )}
-            </div>
-          </Link>
-          {/* Pseudo et masteries  */}
-          <div className={style.pseudoAndMasteries}>
-            <Link
-              className={style.summonerName}
-              to={`/invocateur/${sum.gameName}/${sum.tagLine}`}
-            >
-              {sum.gameName} <span className={style.tag}>#{sum.tagLine}</span>
-            </Link>
+        <Invocateur sum={sum} />
 
-            {sum.masteries && (
-              <Tooltip content={`Progression dans la quête`} direction="bottom">
-                <span className={style.theQuestProgression}>
-                  {sum.masteries.progression} %
-                </span>
-              </Tooltip>
-            )}
-            {sum.masteries && (
-              <Tooltip
-                content={`Nombre de points de maitrise : ${rendreNombreLisible(
-                  sum.masteries.totalPoint
-                )}`}
-                direction="bottom"
-              >
-                <span className={style.totalMasteryPoint}>
-                  {numberAbrevier(sum.masteries.totalPoint)} points
-                </span>
-              </Tooltip>
-            )}
-          </div>
-        </div>
         {/* League */}
 
         <div className={style.leagueStats}>
           <Tooltip content={"Classement Solo/Duo"} direction={"left"}>
             <League league={sum.leagues ? sum.leagues[0] : null} />
           </Tooltip>
-          <Tooltip content={"Classsement Flex"} direction={"left"}>
-            <League league={sum.leagues ? sum.leagues[1] : null} />
-          </Tooltip>
+          <div className={style.flex}>
+            <Tooltip content={"Classsement Flex"} direction={"left"}>
+              <League league={sum.leagues ? sum.leagues[1] : null} />
+            </Tooltip>
+          </div>
         </div>
 
         {/* Champion */}
-        <ChampionTile
+        <ChampionBlock
+          championStats={
+            sum.porofessorStats ? sum.porofessorStats.championStats : null
+          }
           championId={sum.championId}
           masteryLvl={sum.masteries ? sum.masteries.championLevel : 0}
           masteryPoint={sum.masteries ? sum.masteries.championPoint : 0}
@@ -93,25 +46,24 @@ export function GameParticipant({ sum, team }: Props) {
           chestGranted={sum.masteries ? sum.masteries.chestGranded : true}
         />
 
-        {/* Champion Stats */}
-        <ChampionStats
-          championStats={
-            sum.porofessorStats ? sum.porofessorStats.championStats : null
-          }
-          idSumSpell1={sum.spell1Id}
-          idSumSpell2={sum.spell2Id}
-        />
-
         {/* Runes */}
-        <div className={style.perksInfo}>
+        <div className={style.PerksAndSummoners}>
+          {/* Summoner Spells */}
+
           <Perks perks={sum.perks} />
+          <div className={style.summonerSpells}>
+            <img alt="" src={getSummonerSpell(sum.spell1Id)} />
+
+            <img alt="" src={getSummonerSpell(sum.spell2Id)} />
+          </div>
         </div>
-      </div>
-      {/* Tags */}
-      <div className={style.tagsContainer}>
-        {sum.porofessorStats && (
-          <SummonerTags tags={sum.porofessorStats?.tags} />
-        )}
+
+        {/* Tags */}
+        <div className={style.tagsContainer}>
+          {sum.porofessorStats && (
+            <SummonerTags tags={sum.porofessorStats?.tags} />
+          )}
+        </div>
       </div>
     </div>
   );

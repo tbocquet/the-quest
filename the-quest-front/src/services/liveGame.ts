@@ -31,8 +31,10 @@ export async function getLiveGameBySummonerName(
 
 export async function getPersistantLiveGame(): Promise<null | LiveGame> {
   const url = `${SERVER_URL}persistantLiveGame`;
+  console.log(url);
   try {
     const data: any = await ky.get(url).json();
+    console.log(data);
     return data as LiveGame;
   } catch (e) {
     console.log(e);
