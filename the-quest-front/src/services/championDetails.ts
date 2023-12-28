@@ -1,5 +1,7 @@
 import { ChampionDetails } from "@/models/ChampionDetails";
+import allChampions from "../assets/champion.json";
 import ky from "ky";
+import { toInteger } from "lodash";
 
 export async function getChampionDetails(
   championId: string
@@ -14,4 +16,9 @@ export async function getChampionDetails(
     console.log(e);
     return null;
   }
+}
+
+export function getChampionKeyFromChampionId(championId:string):number{
+  const res = allChampions.find(C => C.id === championId)?.key
+  return res ? toInteger(res) : 0
 }

@@ -20,7 +20,8 @@ export function LiveGame({ riotId, persistant = false }: Props) {
   const lanes = ["top", "jungle", "mid", "adc", "support"];
   const { data, error, isLoading } = useSWR(
     riotId,
-    persistant ? getPersistantLiveGame : getLiveGameByRiotId
+    persistant ? getPersistantLiveGame : getLiveGameByRiotId,
+    { revalidateOnFocus: false }
   );
 
   if (isLoading)
