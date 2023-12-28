@@ -33,19 +33,6 @@ export function getChestIcon(): string {
   return "/images/icons/others/chest_icon2.png";
 }
 
-/*Champions*/
-export function getChampionTile(id: string): string {
-  return "/images/champions/tile/" + id + "_0.jpg";
-}
-
-export function getChampionSmallTile(id: string): string {
-  return "/images/champions/tile/" + id + ".png";
-}
-
-export function getChampionCentered(id: string): string {
-  return "/images/champions/centered/" + id + "_0.jpg";
-}
-
 /*Summoner icons*/
 
 export function getCDragonSummonerIcon(id: number) {
@@ -100,6 +87,7 @@ export function getUnrankedIcon() {
   return "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-mini-crests/unranked.png";
 }
 
+/*Champions*/
 export function getChampionTileById(id: number) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/${id}/${id}000.jpg`;
   // return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${id}.png`;
@@ -116,6 +104,7 @@ export function getFullChampionSkinSpashesById(id: string, skinId: string) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/${id}/${skinId}.jpg`;
 }
 
+// Spells
 export function getSpellIcon(spellId: string) {
   return `https://ddragon.leagueoflegends.com/cdn/13.21.1/img/spell/${spellId}`;
 }

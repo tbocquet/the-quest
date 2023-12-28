@@ -387,6 +387,15 @@
     "region": ["Bandle", "Piltover"]
   },
   {
+    "id": "Hwei",
+    "key": "910",
+    "name": "Hwei",
+    "url": "Hwei_0.jpg",
+    "lane": ["mid", "support"],
+    "tags": ["mage"],
+    "region": ["Ionia"]
+  },
+  {
     "id": "Illaoi",
     "key": "420",
     "name": "Illaoi",

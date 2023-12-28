@@ -2,7 +2,7 @@ import "./Styles/Mastery.scss";
 import "./Styles/Mastery-gradient.scss";
 import { ChampionMastery } from "@/models/ChampionMastery";
 import {
-  getChampionTile,
+  getChampionTileById,
   getChestIcon2,
   getMasteryIcon,
   getMasteryToken,
@@ -49,7 +49,7 @@ export function Mastery({ championMastery }: MasteryProps) {
         <img
           className="champion-img"
           alt=""
-          src={getChampionTile(championMastery.id)}
+          src={getChampionTileById(championMastery.championKey)}
         ></img>
       </div>
 

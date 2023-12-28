@@ -1,11 +1,10 @@
 import "./Styles/CollectionElement.scss";
 import { ChampionMastery } from "@/models/ChampionMastery";
 import {
-  getChampionTile,
-  getChampionSmallTile,
   getChestIcon,
   getMasteryIcon,
   getTokenIcon2,
+  getChampionTileById,
 } from "@/services/imageGetter";
 
 type Props = {
@@ -17,7 +16,7 @@ export function CollectionElement({ championMastery }: Props) {
       <img
         className="champion-img"
         alt=""
-        src={getChampionTile(championMastery.id)}
+        src={getChampionTileById(championMastery.championKey)}
       ></img>
 
       <div className="info-container">
@@ -65,7 +64,7 @@ export function CollectionElement({ championMastery }: Props) {
               <img
                 className="champion-img"
                 alt=""
-                src={getChampionSmallTile(championMastery.id)}
+                src={getChampionTileById(championMastery.championKey)}
               ></img>
               <div className="token-amount">{championMastery.tokensEarned}</div>
             </div>
