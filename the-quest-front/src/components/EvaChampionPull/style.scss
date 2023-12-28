@@ -1,0 +1,47 @@
+.evaChampionPull {
+  .list-elt {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1em;
+
+    ul {
+      display: flex;
+    }
+    li {
+      font-size: 0.7em;
+    }
+    h4 {
+      font-size: 1.3em;
+      color: #dda835;
+      padding-left: 1em;
+      padding-right: 0.5em;
+    }
+    .tile {
+      position: relative;
+      box-shadow: 2px 2px 10px black;
+      width: 10em;
+      height: 10em;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0.5em;
+
+      h3 {
+        position: absolute;
+        font-size: 1.3em;
+        z-index: 2;
+        bottom: 15%;
+        left: 0;
+        color: #dda835;
+        font-weight: 700;
+        text-shadow: 2px 2px black;
+        text-align: center;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

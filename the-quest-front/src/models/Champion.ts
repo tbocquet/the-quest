@@ -1,3 +1,5 @@
+import championData from "../assets/champion.json";
+
 export type Champion = {
   id: string;
   key: string;
@@ -7,3 +9,8 @@ export type Champion = {
   tags: string[];
   region: string[];
 };
+
+export function getChampionDataFromJson(championId:string) :Champion | undefined{
+  const champion = championData.find((champ) => champ.id.toLowerCase() === championId.toLowerCase());
+  return champion;
+}

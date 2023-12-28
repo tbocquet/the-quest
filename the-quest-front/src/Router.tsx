@@ -9,6 +9,7 @@ import { SummonerSuccess } from "./routes/SummonerSuccess";
 import { Error } from "./routes/Error";
 import { LiveGamePage } from "./routes/LiveGame";
 import { ChampionsPage } from "./routes/ChampionsPage";
+import EvaChampionPullPage from "./routes/EvaChampionPull";
 
 export function Router() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ export function Router() {
           element: <Home />,
         },
         { path: "/champions", element: <ChampionsPage /> },
+        {
+          path: "/evaChampionPull",
+          element: <EvaChampionPullPage />,
+        },
         {
           path: "/liveGame/:summonerName",
           element: <LiveGamePage />,
