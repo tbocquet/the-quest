@@ -24,19 +24,30 @@ import {
 } from "../utils/regex";
 import { Role } from "../models/Role";
 import { Rank } from "../models/Rank";
-import { kill } from "process";
 
 dotenv.config();
 
 const PORO_USER_AGENT = process.env.PORO_USER_AGENT;
 const PORO_BASE_URL = "https://porofessor.gg/partial/fr/live-partial/euw/";
 
+export type QueueTag = undefined | "soloqueue" | "flex" | "ranked-only";
+export type Period = undefined | "season"; //undefined = 30 derniers jours
+
 export async function getPorofessorLiveGameData(
   gameName: string,
-  tagLine: string
+  tagLine: string,
+  queueTag: QueueTag,
+  period: Period
 ): Promise<PoroLiveGameData | null> {
-  const encodedRiotId = encodeURI(`${gameName}-${tagLine}`);
-  const url = `${PORO_BASE_URL}${encodedRiotId}`;
+  const riotIdSegment = encodeURI(`${gameName}-${tagLine}`);
+
+  const queueTagSegment = `/${queueTag}`;
+  const periodSegment = `/${period}`;
+
+  const url = `${PORO_BASE_URL}${riotIdSegment}${
+    queueTag ? queueTagSegment : period ? periodSegment : ""
+  }${period && queueTag ? periodSegment : ""}`;
+
   const htmlString = await request(url);
 
   const summonersData = parseSummonersInfos(htmlString);

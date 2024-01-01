@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
-import { LiveGame } from "../models/LiveGame";
+import { LiveGame, LiveGameParticipant } from "../models/LiveGame";
+import { PoroSummoner } from "../models/porofessor-types";
 dotenv.config();
 
 const mongoPassword = process.env.MONGO_PASSORD;
@@ -32,7 +33,10 @@ export async function pingMongo() {
   }
 }
 
-export async function addLiveGame(liveGame: LiveGame) {
+export async function addRiotAPILiveGameParticipants(
+  gameId: number,
+  participants: LiveGameParticipant[]
+) {
   const client = new MongoClient(url, {
     serverApi: {
       version: ServerApiVersion.v1,
@@ -42,14 +46,125 @@ export async function addLiveGame(liveGame: LiveGame) {
   });
   try {
     await client.connect();
-    await client.db("the_quest").collection("live_game").insertOne(liveGame);
+    await client
+      .db("the_quest")
+      .collection("riot_API_live_game_participants")
+      .insertOne({ gameId, participants });
   } catch (err) {
     console.log(err);
   } finally {
     await client.close();
   }
 }
-export async function getLiveGame(gameId: number): Promise<LiveGame | null> {
+export async function getRiotAPILiveGameParticipants(
+  gameId: number
+): Promise<LiveGameParticipant[] | null> {
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  try {
+    await client.connect();
+    const res = await client
+      .db("the_quest")
+      .collection("riot_API_live_game_participants")
+      .findOne({ gameId: gameId });
+    if (res === null) return null;
+    return res.participants;
+  } catch (err) {
+    console.log(err);
+    return null;
+  } finally {
+    await client.close();
+  }
+}
+
+export async function addPorofessorILiveGameParticipantsData(
+  gameId: number,
+  participants: PoroSummoner[],
+  queueTag?: string,
+  period?: string
+) {
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  try {
+    await client.connect();
+    await client
+      .db("the_quest")
+      .collection("porofessor_live_game_participants_data")
+      .insertOne({ gameId, participants, queueTag, period });
+  } catch (err) {
+    console.log(err);
+  } finally {
+    await client.close();
+  }
+}
+export async function getPorofessorLiveGameParticipantsData(
+  gameId: number,
+  queueTag?: string,
+  period?: string
+): Promise<PoroSummoner[] | null> {
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  try {
+    await client.connect();
+    const res = await client
+      .db("the_quest")
+      .collection("porofessor_live_game_participants_data")
+      .findOne({ gameId: gameId, queueTag, period });
+    if (res === null) return null;
+    return res.participants;
+  } catch (err) {
+    console.log(err);
+    return null;
+  } finally {
+    await client.close();
+  }
+}
+
+export async function addLiveGame(
+  liveGame: LiveGame,
+  queueTag?: string,
+  period?: string
+) {
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  try {
+    await client.connect();
+    await client
+      .db("the_quest")
+      .collection("live_game")
+      .insertOne({ ...liveGame, queueTag, period });
+  } catch (err) {
+    console.log(err);
+  } finally {
+    await client.close();
+  }
+}
+
+export async function getLiveGame(
+  gameId: number,
+  queueTag?: string,
+  period?: string
+): Promise<LiveGame | null> {
   const client = new MongoClient(url, {
     serverApi: {
       version: ServerApiVersion.v1,
@@ -62,7 +177,7 @@ export async function getLiveGame(gameId: number): Promise<LiveGame | null> {
     const res = await client
       .db("the_quest")
       .collection("live_game")
-      .findOne({ gameId: gameId });
+      .findOne({ gameId: gameId, queueTag: queueTag, period: period });
     if (res === null) return null;
     return res as LiveGame;
   } catch (err) {
@@ -72,6 +187,7 @@ export async function getLiveGame(gameId: number): Promise<LiveGame | null> {
     await client.close();
   }
 }
+
 export async function deleteLiveGame(gameId: number) {
   const client = new MongoClient(url, {
     serverApi: {
@@ -86,6 +202,49 @@ export async function deleteLiveGame(gameId: number) {
       .db("the_quest")
       .collection("live_game")
       .deleteMany({ gameId: gameId });
+  } catch (err) {
+    console.log(err);
+    return null;
+  } finally {
+    await client.close();
+  }
+}
+
+export async function deleteAllRiotData() {
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  try {
+    await client.connect();
+    await client
+      .db("the_quest")
+      .collection("riot_API_live_game_participants")
+      .deleteMany({});
+  } catch (err) {
+    console.log(err);
+    return null;
+  } finally {
+    await client.close();
+  }
+}
+export async function deleteAllPorofessorData() {
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  try {
+    await client.connect();
+    await client
+      .db("the_quest")
+      .collection("porofessor_live_game_participants_data")
+      .deleteMany({});
   } catch (err) {
     console.log(err);
     return null;

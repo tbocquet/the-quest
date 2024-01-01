@@ -5,10 +5,13 @@ import * as controler from "../controllers/liveGame";
 const router: Router = express.Router();
 
 router.get(
-  "/liveGameByRiotId/:gameName/:tagLine",
+  "/liveGameByRiotId/:gameName/:tagLine/:queue?/:period?",
   controler.getLiveGameInfoByRiotId
 );
-router.get("/porofessor/:gameName/:tagLine", controler.getPorofessorLiveGame);
+router.get(
+  "/porofessor/:gameName/:tagLine/:queue?/:period?",
+  controler.getPorofessorLiveGame
+);
 router.get("/persistantLiveGame", controler.getPersistantLiveGame);
 
 export default router;

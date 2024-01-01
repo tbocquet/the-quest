@@ -4,7 +4,12 @@ import lolRoutes from "./routes/lolOld";
 import liveGameRoutes from "./routes/liveGame";
 import riotApi from "./routes/riotAPI";
 import cors from "cors";
-import { deleteAllGame, pingMongo } from "./services/mongoDb";
+import {
+  deleteAllGame,
+  deleteAllPorofessorData,
+  deleteAllRiotData,
+  pingMongo,
+} from "./services/mongoDb";
 
 dotenv.config();
 
@@ -18,12 +23,16 @@ app.use(cors());
 pingMongo().catch(console.dir);
 
 //Cleaning mongo games
-const interval = setInterval(() => deleteAllGame(), 1000 * 60 * 60 * 24);
+const interval = setInterval(() => {
+  deleteAllRiotData();
+  deleteAllPorofessorData();
+  deleteAllGame();
+}, 1000 * 60 * 60 * 24);
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
   res.send(
-    "The Quest : Express + TypeScript Server (last update : 08:12:2023 20:00)"
+    "The Quest : Express + TypeScript Server (last update : 01:01:2024 17:00)"
   );
 });
 
