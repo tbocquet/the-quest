@@ -6,6 +6,7 @@ import "./index.css";
 import { Router } from "./Router";
 import { EnableAnimationProvider } from "./context/EnableAnimationsContext";
 import { ChampionsFiltersProvider } from "./context/ChampionsFilterContext";
+import { LiveGameOptionsprovider } from "./context/LiveGameOptionsContext";
 
 const app = document.getElementById("root") as HTMLElement;
 
@@ -17,7 +18,9 @@ root.render(
       <MasteriesFiltersProvider>
         <ChampionsFiltersProvider>
           <EnableAnimationProvider>
-            <Router />
+            <LiveGameOptionsprovider>
+              <Router />
+            </LiveGameOptionsprovider>
           </EnableAnimationProvider>
         </ChampionsFiltersProvider>
       </MasteriesFiltersProvider>

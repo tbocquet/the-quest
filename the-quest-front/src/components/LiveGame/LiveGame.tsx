@@ -13,14 +13,20 @@ import { Loader } from "../Loader";
 import { getQueue } from "@/utils/Queue";
 import { LiveGameParticipant } from "@/models/LiveGame";
 import { RiotId } from "@/models/RiotId";
+import { SelectOptions } from "./SelectOptions";
+import { useLiveGameOptions } from "@/context/LiveGameOptionsContext";
 
 type Props = { riotId: RiotId; persistant?: boolean };
 export function LiveGame({ riotId, persistant = false }: Props) {
   const roles = ["top", "jungler", "mid", "adc", "support"];
   const lanes = ["top", "jungle", "mid", "adc", "support"];
+  const { queueOption, periodOption } = useLiveGameOptions();
   const { data, error, isLoading } = useSWR(
-    riotId,
-    persistant ? getPersistantLiveGame : getLiveGameByRiotId,
+    [riotId, queueOption, periodOption],
+    ([riotId, queueOption, periodOption]) =>
+      persistant
+        ? getPersistantLiveGame()
+        : getLiveGameByRiotId(riotId, queueOption, periodOption),
     { revalidateOnFocus: false }
   );
 
@@ -90,6 +96,7 @@ export function LiveGame({ riotId, persistant = false }: Props) {
         <span className={style.queue}>
           {data.gameStartTime && <GameTimer startTime={data.gameStartTime} />}
         </span>
+        <SelectOptions />
       </div>
 
       {/* Bans */}

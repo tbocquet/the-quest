@@ -4,9 +4,15 @@ import ky from "ky";
 const SERVER_URL = import.meta.env.VITE_APP_BACKEND_URL;
 
 export async function getLiveGameByRiotId(
-  riotId: RiotId
+  riotId: RiotId,
+  queueOption?: string,
+  periodOption?: string
 ): Promise<null | LiveGame> {
-  const url = `${SERVER_URL}liveGameByRiotId/${riotId.gameName}/${riotId.tagLine}`;
+  const queueOptSegment =
+    queueOption && queueOption !== "" ? `/${queueOption}` : "";
+  const periodOptSegment =
+    periodOption && periodOption !== "" ? `/${periodOption}` : "";
+  const url = `${SERVER_URL}liveGameByRiotId/${riotId.gameName}/${riotId.tagLine}${queueOptSegment}${periodOptSegment}`;
   try {
     const data: any = await ky.get(url).json();
     return data as LiveGame;
@@ -16,18 +22,22 @@ export async function getLiveGameByRiotId(
   }
 }
 
-export async function getLiveGameBySummonerName(
-  summonerName: string
-): Promise<null | LiveGame> {
-  const url = `${SERVER_URL}livegameByName/${summonerName}`;
-  try {
-    const data: any = await ky.get(url).json();
-    return data as LiveGame;
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-}
+// export async function getLiveGameBySummonerName(
+//   summonerName: string,
+//   queueOption?: string,
+//   periodOption?: string
+// ): Promise<null | LiveGame> {
+//   const url = `${SERVER_URL}livegameByName/${summonerName}${
+//     queueOption && queueOption !== "" ? "/" + queueOption : ""
+//   }${periodOption && periodOption !== "" ? "/" + periodOption : ""}`;
+//   try {
+//     const data: any = await ky.get(url).json();
+//     return data as LiveGame;
+//   } catch (e) {
+//     console.log(e);
+//     return null;
+//   }
+// }
 
 export async function getPersistantLiveGame(): Promise<null | LiveGame> {
   const url = `${SERVER_URL}persistantLiveGame`;
