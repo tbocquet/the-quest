@@ -1,7 +1,5 @@
-import style from "./styles/League.module.scss";
 import { getRankedIcon, getUnrankedIcon } from "@/services/imageGetter";
 import { firstLetterUpperCase } from "@/utils/textDataTransformer";
-import Tooltip from "./Tooltip";
 import { LolAPISummonerLeague } from "@/models/LiveGame";
 
 type Props = {
@@ -10,36 +8,29 @@ type Props = {
 export function League({ league }: Props) {
   if (league === null || league === undefined)
     return (
-      <div className={style.leagueInfo}>
-        <img
-          alt="league icon"
-          className={style.tierIcon}
-          src={getUnrankedIcon()}
-        />
-        <div className={style.textInfo}>
-          <div>
-            <span>Unranked</span>
-          </div>
+      <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row items-center justify-center w-12 h-12">
+          <img alt="league icon" className="w-6" src={getUnrankedIcon()} />
         </div>
+        <div className="text-sm">Unranked</div>
       </div>
     );
-
   const winrate = Math.floor(
     (league.wins / (league.losses + league.wins)) * 100
   );
   return (
-    <div className={style.leagueInfo}>
+    <div className="flex flex-row items-center gap-2">
       {league.tier && (
         <img
           alt="league icon"
-          className={style.tierIcon}
+          className="w-12 h-12 object-contain"
           src={getRankedIcon(league.tier)}
         />
       )}
-      <div className={style.textInfo}>
-        <div className={style.rankDiv}>
+      <div>
+        <div className="flex flex-row justify-start items-center gap-2">
           {league.tier && (
-            <span className={style.rank}>
+            <span className="font-bold">
               {firstLetterUpperCase(league.tier.toLowerCase())}
             </span>
           )}
@@ -48,23 +39,17 @@ export function League({ league }: Props) {
             league.tier.toLowerCase() !== "master" &&
             league.tier.toLowerCase() !== "grandmaster" &&
             league.tier.toLowerCase() !== "challenger" && (
-              <span className={style.division}>{league.rank}</span>
+              <span>{league.rank}</span>
             )}
-          <span className={style.lp}>{league.leaguePoints} LP</span>
+          <span className="text-sm text-yellow1">{league.leaguePoints} LP</span>
         </div>
-        <Tooltip
-          content={`${league.wins} victoire${league.wins > 1 && "s"} ${
-            league.losses
-          } defaite${league.losses > 1 && "s"}`}
-          direction="bottom"
-        >
-          <div className={style.winrateDiv}>
-            <span className={style.winrate}>{winrate}%</span>
-            <span className={style.gameAmount}>
-              ({league.wins + league.losses} jouées)
-            </span>
-          </div>
-        </Tooltip>
+
+        <div className="flex flex-row justify-start items-center gap-2 text-yellow1">
+          <span className="text-sm font-bold">{winrate}%</span>
+          <span className="text-sm">
+            ({league.wins + league.losses} jouées)
+          </span>
+        </div>
       </div>
     </div>
   );

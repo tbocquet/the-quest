@@ -1,5 +1,3 @@
-import style from "./styles/LiveGameParticipant.module.scss";
-
 import { League } from "./League";
 import { SummonerTags } from "./SummonerTags";
 import Tooltip from "./Tooltip";
@@ -14,7 +12,16 @@ type Props = {
   team: "blue" | "red";
 };
 export function GameParticipant({ sum, team }: Props) {
-  const getSideStyle = team === "blue" ? style.blueSide : style.redSide;
+  // const bgColor =
+  //   team === "blue"
+  //     ? "bg-[#0C2340] border-yellow1"
+  //     : "bg-slate-800 border-pink-400";
+
+  const bgColor = team === "blue" ? "border-blue-500/20" : "border-red-500/20";
+
+  const bg =
+    "w-full mt-1 rounded " +
+    (team === "blue" ? "bg-blue-500/10" : "bg-red-500/10");
   const soloQ = sum.leagues?.find(
     (league) => league.queueType === "RANKED_SOLO_5x5"
   );
@@ -22,25 +29,31 @@ export function GameParticipant({ sum, team }: Props) {
     (league) => league.queueType === "RANKED_FLEX_SR"
   );
   return (
-    <div className={style.gameParticipant}>
-      <div className={style.summonerRow + " " + getSideStyle}>
-        {/* Invocateur */}
+    <div
+      className={
+        "flex flex-col p-1 items-center gap-1 rounded border-4 border-double w-[16rem] h-[24rem] text-white mx-2 " +
+        bgColor
+      }
+    >
+      {/* Invocateur */}
+      <div className={bg}>
         <Invocateur sum={sum} />
+      </div>
 
-        {/* League */}
+      {/* League */}
 
-        <div className={style.leagueStats}>
-          <Tooltip content={"Classement Solo/Duo"} direction={"left"}>
-            <League league={sum.leagues && soloQ ? soloQ : null} />
-          </Tooltip>
-          <div className={style.flex}>
-            <Tooltip content={"Classsement Flex"} direction={"left"}>
-              <League league={sum.leagues && flexQ ? flexQ : null} />
-            </Tooltip>
-          </div>
-        </div>
+      <div className={"flex flex-col items-start " + bg}>
+        <Tooltip content={"Classement Solo/Duo"} direction={"left"}>
+          <League league={sum.leagues && soloQ ? soloQ : null} />
+        </Tooltip>
 
-        {/* Champion */}
+        <Tooltip content={"Classsement Flex"} direction={"left"}>
+          <League league={sum.leagues && flexQ ? flexQ : null} />
+        </Tooltip>
+      </div>
+
+      {/* Champion */}
+      <div className={bg}>
         <ChampionBlock
           championStats={
             sum.porofessorStats ? sum.porofessorStats.championStats : null
@@ -51,32 +64,24 @@ export function GameParticipant({ sum, team }: Props) {
           tokens={sum.masteries ? sum.masteries.championToken : 0}
           chestGranted={sum.masteries ? sum.masteries.chestGranded : true}
         />
+      </div>
 
-        {/* Runes */}
-        <div className="flex flex-row flex-wrap justify-center gap-5 py-1">
-          {/* Summoner Spells */}
+      {/* Runes */}
+      <div className={"flex flex-row flex-wrap justify-center gap-5 " + bg}>
+        {/* Summoner Spells */}
 
-          <Perks perks={sum.perks} />
-          <div>
-            <img
-              alt=""
-              className="w-7 mb-2"
-              src={getSummonerSpell(sum.spell1Id)}
-            />
-            <img
-              alt=""
-              className="w-7 mt-2"
-              src={getSummonerSpell(sum.spell2Id)}
-            />
-          </div>
+        <Perks perks={sum.perks} />
+        <div className="flex flex-col justify-center gap-2">
+          <img alt="" className="w-7" src={getSummonerSpell(sum.spell1Id)} />
+          <img alt="" className="w-7" src={getSummonerSpell(sum.spell2Id)} />
         </div>
+      </div>
 
-        {/* Tags */}
-        <div className={style.tagsContainer}>
-          {sum.porofessorStats && (
-            <SummonerTags tags={sum.porofessorStats?.tags} />
-          )}
-        </div>
+      {/* Tags */}
+      <div className={"h-16 " + bg}>
+        {sum.porofessorStats && (
+          <SummonerTags tags={sum.porofessorStats?.tags} />
+        )}
       </div>
     </div>
   );

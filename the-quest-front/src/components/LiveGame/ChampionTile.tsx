@@ -1,48 +1,30 @@
-import {
-  getChampionTileById,
-  getChestIcon2,
-  getMasteryIcon,
-} from "@/services/imageGetter";
-import style from "./styles/ChampionTile.module.scss";
+import { getChampionTileById, getChestIcon2 } from "@/services/imageGetter";
 import "../Masteries/Styles/Mastery-gradient.scss";
 import { getChampionNameFromId } from "@/services/masteries";
 
 type Props = {
   championId: number;
-  masteryLvl: number;
   chestGranted: boolean;
 };
-export function ChampionTile({ championId, masteryLvl, chestGranted }: Props) {
+export function ChampionTile({ championId, chestGranted }: Props) {
   return (
     <a
-      className={style.championTile}
       rel="noopener noreferrer"
       target="_blank"
       href={`https://leagueoflegends.fandom.com/wiki/${getChampionNameFromId(
         championId
       ).replace(" ", "_")}/LoL`}
     >
-      <div className={style.championTile}>
+      <div className="relative w-16 border border-solid border-yellow1">
         {/*Image champion */}
-        <div className={style.championImgContainer}>
-          <img alt="" src={getChampionTileById(championId)}></img>
-        </div>
-
-        {/*Icon Mastery */}
-        <img
-          alt=""
-          className={style.masteryIcon}
-          src={getMasteryIcon(masteryLvl)}
-        ></img>
+        <img alt="" src={getChampionTileById(championId)}></img>
 
         {/*Icon Coffre*/}
 
-        <div className={style.chestIconContainer}>
-          <img
-            alt=""
-            className={style.chestIcon}
-            src={getChestIcon2(chestGranted)}
-          ></img>
+        <div className="absolute rounded top-0 right-0 w-[0.9rem] h-[0.9rem] overflow-hidden">
+          <div className="absolute w-6 h-6 left-[-0.27rem] top-[-0.26rem] bg-red-50">
+            <img alt="" className="" src={getChestIcon2(chestGranted)}></img>
+          </div>
         </div>
       </div>
     </a>

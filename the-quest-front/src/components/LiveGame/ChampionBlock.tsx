@@ -1,7 +1,6 @@
 import { PoroChampionStats } from "@/models/porofessor";
 import { ChampionTile } from "./ChampionTile";
 import ChampionStats from "./ChampionStats";
-import style from "./styles/ChampionBlock.module.scss";
 
 type Props = {
   championId: number;
@@ -20,13 +19,10 @@ export default function ChampionBlock({
   championStats,
 }: Props) {
   return (
-    <div className={style.ChampionBlock}>
+    <div className="flex flex-row items-center pl-1">
       {/* Tile */}
-      <ChampionTile
-        championId={championId}
-        masteryLvl={masteryLvl}
-        chestGranted={chestGranted}
-      />
+      <ChampionTile championId={championId} chestGranted={chestGranted} />
+      {/*Icon Mastery */}
       {/* Stats */}
       <ChampionStats
         championStats={championStats}
