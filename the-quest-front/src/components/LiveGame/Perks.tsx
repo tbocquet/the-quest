@@ -1,6 +1,5 @@
 import { Perks as Runes } from "@/models/LiveGame";
 import { getPerkSrc } from "@/services/imageGetter";
-import style from "./styles/Perks.module.scss";
 type Props = { perks: Runes };
 export function Perks({ perks }: Props) {
   const mainPerk = perks.perkIds[0];
@@ -9,27 +8,41 @@ export function Perks({ perks }: Props) {
   const perkStatModes = perks.perkIds.slice(6, 9);
 
   return (
-    <div className={style.perks}>
-      <div className={style.mainPerk}>
-        <img alt="" src={getPerkSrc(mainPerk)} />
-      </div>
-      <div className={style.perksThree}>
-        <div className={style.perkStyle}>
-          {perkStyle.map((id) => (
-            <img alt="" key={id} src={getPerkSrc(id)} />
-          ))}
+    <div className="flex flex-col gap-1">
+      <div className="flex flex-row items-bottom gap-2">
+        <div className="w-8 bg-black rounded-full">
+          <img className="" alt="" src={getPerkSrc(mainPerk)} />
         </div>
 
-        <div className={style.perkSubStyle}>
-          {perkSubstyle.map((id) => (
-            <img alt="" key={id} src={getPerkSrc(id)} />
+        {perkStyle.map((id) => (
+          <img
+            className="w-8 object-contain"
+            alt=""
+            key={id}
+            src={getPerkSrc(id)}
+          />
+        ))}
+      </div>
+
+      <div className="flex flex-row items-center gap-2">
+        {perkSubstyle.map((id) => (
+          <img
+            alt=""
+            className="w-8 object-contain"
+            key={id}
+            src={getPerkSrc(id)}
+          />
+        ))}
+        <div className="flex flex-row gap-1">
+          {perkStatModes.map((id, index) => (
+            <div
+              key={`${id}_${index}`}
+              className="w-5 h-5 rounded-full bg-gray-900"
+            >
+              <img alt="" src={getPerkSrc(id)} />
+            </div>
           ))}
         </div>
-      </div>
-      <div className={style.perkStatModes}>
-        {perkStatModes.map((id, index) => (
-          <img alt="" key={`${id}_${index}`} src={getPerkSrc(id)} />
-        ))}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ export function LiveGamePage() {
   const { gameName, tagLine } = useParams();
 
   return gameName && tagLine ? (
-    <LiveGame riotId={{ gameName, tagLine }} persistant={false} />
+    <LiveGame riotId={{ gameName, tagLine }} persistant={true} />
   ) : (
     <div>Error : need to specifie a summoner name and tag</div>
   );

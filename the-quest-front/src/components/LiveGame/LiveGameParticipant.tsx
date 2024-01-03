@@ -53,14 +53,21 @@ export function GameParticipant({ sum, team }: Props) {
         />
 
         {/* Runes */}
-        <div className={style.PerksAndSummoners}>
+        <div className="flex flex-row flex-wrap justify-center gap-5 py-1">
           {/* Summoner Spells */}
 
           <Perks perks={sum.perks} />
-          <div className={style.summonerSpells}>
-            <img alt="" src={getSummonerSpell(sum.spell1Id)} />
-
-            <img alt="" src={getSummonerSpell(sum.spell2Id)} />
+          <div>
+            <img
+              alt=""
+              className="w-7 mb-2"
+              src={getSummonerSpell(sum.spell1Id)}
+            />
+            <img
+              alt=""
+              className="w-7 mt-2"
+              src={getSummonerSpell(sum.spell2Id)}
+            />
           </div>
         </div>
 
