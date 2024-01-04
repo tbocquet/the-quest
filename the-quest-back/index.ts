@@ -6,7 +6,6 @@ import riotApi from "./routes/riotAPI";
 import cors from "cors";
 import {
   deleteAllGame,
-  deleteAllPorofessorData,
   deleteAllRiotData,
   pingMongo,
 } from "./services/mongoDb";
@@ -25,14 +24,13 @@ pingMongo().catch(console.dir);
 //Cleaning mongo games
 const interval = setInterval(() => {
   deleteAllRiotData();
-  deleteAllPorofessorData();
   deleteAllGame();
 }, 1000 * 60 * 60 * 24);
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
   res.send(
-    "The Quest : Express + TypeScript Server (last update : 01:01:2024 17:00)"
+    "The Quest : Express + TypeScript Server (last update : 04:01:2024 17:00)"
   );
 });
 

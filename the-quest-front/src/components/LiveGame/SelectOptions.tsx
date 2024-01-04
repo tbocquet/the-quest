@@ -10,8 +10,8 @@ export function SelectOptions() {
       >
         <option value="">Normales et classées</option>
         <option value="ranked-only">Classées</option>
-        <option value="flex">Solo/Duo</option>
-        <option value="soloqueue">Flex</option>
+        <option value="soloqueue">Solo/Duo</option>
+        <option value="flex">Flex</option>
       </select>
 
       <select

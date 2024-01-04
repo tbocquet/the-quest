@@ -106,17 +106,20 @@ export const getLiveGameInfoByRiotId = (
       if (!sumData) return res.status(404).json("Summoner not found");
       const summonerId = sumData.id;
 
+      //Donner de la game coté RIOT
       getCurrentGameInfo(summonerId).then(async (lolAPIliveGameInfo) => {
         if (!lolAPIliveGameInfo)
           return res.status(500).json("Error getting currentGame (lolApi)");
 
-        // Si la game existe coté mongo
+        // Check if game is already stored on mongo
         const liveGameId = lolAPIliveGameInfo.gameId;
         mongoPersistence
           .getLiveGame(liveGameId, queueTag, periodTag)
           .then(async (game) => {
             //Si stoquée coté mongo on renvoit la game
-            if (game !== null) return res.status(200).json(game);
+            if (game !== null) {
+              return res.status(200).json(game);
+            }
 
             //Sinon on récupère les donées de la partie et on la stoque coté mongo
             const lolApiParticipant = lolAPIliveGameInfo.participants;
@@ -126,7 +129,9 @@ export const getLiveGameInfoByRiotId = (
               await mongoPersistence.getRiotAPILiveGameParticipants(
                 lolAPIliveGameInfo.gameId
               );
+            //Les données de riot ne sont pas en BDD
             if (!riotAPIGameParticipants) {
+              //Récupération des maitrises pour chaque participants
               const riotAPIParticipantsPromises = lolApiParticipant.map(
                 async (
                   elt: CurrentGameParticipant
@@ -161,8 +166,12 @@ export const getLiveGameInfoByRiotId = (
               riotAPIGameParticipants = await Promise.all(
                 riotAPIParticipantsPromises
               );
+
               // Store riot API data in MongoDb
-              if (riotAPIGameParticipants)
+              if (
+                riotAPIGameParticipants &&
+                riotAPIGameParticipants.length === lolApiParticipant.length
+              )
                 mongoPersistence.addRiotAPILiveGameParticipants(
                   lolAPIliveGameInfo.gameId,
                   riotAPIGameParticipants
@@ -171,49 +180,57 @@ export const getLiveGameInfoByRiotId = (
 
             if (
               !riotAPIGameParticipants ||
-              riotAPIGameParticipants.length === 0
+              riotAPIGameParticipants.length !== lolApiParticipant.length
             )
               return res
                 .status(500)
                 .json("Error getting game participants (Riot API)");
 
-            //On regarde si les données de porofessor sont déjà en BDD
-            let porofessorParticipantsData =
-              await mongoPersistence.getPorofessorLiveGameParticipantsData(
-                lolAPIliveGameInfo.gameId,
-                queueTag,
-                periodTag
-              );
-            if (!porofessorParticipantsData) {
-              const poroLiveGameInfo = await getPorofessorLiveGameData(
-                gameName,
-                tagLine,
-                "ranked-only",
-                "season"
-              );
-              if (poroLiveGameInfo) {
-                porofessorParticipantsData = riotAPIGameParticipants.reduce(
-                  (acc: PoroSummoner[], elt: LiveGameParticipant) => {
-                    const stats = findPoroStatsBySummonerName(
-                      poroLiveGameInfo,
-                      `${elt.gameName}#${elt.tagLine}`
-                    );
-                    return stats ? [...acc, stats] : acc;
-                  },
-                  []
-                );
-                // Store porofessor live game participants data
-                if (porofessorParticipantsData)
-                  mongoPersistence.addPorofessorILiveGameParticipantsData(
-                    lolAPIliveGameInfo.gameId,
-                    porofessorParticipantsData,
-                    queueTag,
-                    periodTag
-                  );
-              }
+            const resGameData = {
+              gameId: lolAPIliveGameInfo.gameId,
+              gameType: lolAPIliveGameInfo.gameType,
+              gameStartTime: lolAPIliveGameInfo.gameStartTime,
+              mapId: lolAPIliveGameInfo.mapId,
+              gameLength: lolAPIliveGameInfo.gameLength,
+              platformId: lolAPIliveGameInfo.platformId,
+              gameMode: lolAPIliveGameInfo.gameMode,
+              bannedChampions: lolAPIliveGameInfo.bannedChampions,
+              gameQueueConfigId: lolAPIliveGameInfo.gameQueueConfigId,
+            };
+
+            const poroFailuregameData: LiveGame = {
+              ...resGameData,
+              participants: riotAPIGameParticipants,
+            };
+
+            //Récupération des données de porofessor
+            const poroLiveGameInfo = await getPorofessorLiveGameData(
+              gameName,
+              tagLine,
+              queueTag as QueueTag,
+              periodTag as Period
+            );
+
+            if (!poroLiveGameInfo) {
+              return res.status(200).json(poroFailuregameData);
             }
-            if (!porofessorParticipantsData)
-              console.log("Error getting porofessor data");
+            const porofessorParticipantsData = riotAPIGameParticipants.reduce(
+              (acc: PoroSummoner[], elt: LiveGameParticipant) => {
+                const stats = findPoroStatsBySummonerName(
+                  poroLiveGameInfo,
+                  `${elt.gameName}#${elt.tagLine}`
+                );
+                return stats ? [...acc, stats] : acc;
+              },
+              []
+            );
+
+            if (
+              !porofessorParticipantsData ||
+              porofessorParticipantsData.length !== lolApiParticipant.length
+            ) {
+              return res.status(200).json(poroFailuregameData);
+            }
 
             // Regrouper les données de porofessor et riotAPI
             const participants = riotAPIGameParticipants.map(
@@ -226,20 +243,7 @@ export const getLiveGameInfoByRiotId = (
                   : null,
               })
             );
-
-            const liveGame: LiveGame = {
-              gameId: lolAPIliveGameInfo.gameId,
-              gameType: lolAPIliveGameInfo.gameType,
-              gameStartTime: lolAPIliveGameInfo.gameStartTime,
-              mapId: lolAPIliveGameInfo.mapId,
-              gameLength: lolAPIliveGameInfo.gameLength,
-              platformId: lolAPIliveGameInfo.platformId,
-              gameMode: lolAPIliveGameInfo.gameMode,
-              bannedChampions: lolAPIliveGameInfo.bannedChampions,
-              gameQueueConfigId: lolAPIliveGameInfo.gameQueueConfigId,
-              participants: participants,
-            };
-
+            const liveGame: LiveGame = { ...resGameData, participants };
             //Game persistence
             mongoPersistence.addLiveGame(liveGame, queueTag, periodTag);
 

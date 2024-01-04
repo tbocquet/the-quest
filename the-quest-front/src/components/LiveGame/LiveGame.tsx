@@ -17,8 +17,8 @@ export function LiveGame({ riotId, persistant = false }: Props) {
     ([riotId, queueOption, periodOption]) =>
       persistant
         ? getPersistantLiveGame()
-        : getLiveGameByRiotId(riotId, queueOption, periodOption),
-    { revalidateOnFocus: false }
+        : getLiveGameByRiotId(riotId, queueOption, periodOption)
+    // { revalidateOnFocus: false }
   );
 
   if (isLoading)

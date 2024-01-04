@@ -10,7 +10,6 @@ import { SummonerData } from "@/models/Summoner";
 import useSWR from "swr";
 import { getSummonerLeagues } from "@/services/summonerRankedStats";
 import { SummonerLeague } from "@/models/SummonerLeague";
-import Tooltip from "../LiveGame/Tooltip";
 import { SummonerAccount } from "@/models/SummonerAccount";
 
 type Props = { summonerAccount: SummonerAccount; sumData: SummonerData };

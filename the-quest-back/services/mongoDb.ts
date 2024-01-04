@@ -82,59 +82,6 @@ export async function getRiotAPILiveGameParticipants(
   }
 }
 
-export async function addPorofessorILiveGameParticipantsData(
-  gameId: number,
-  participants: PoroSummoner[],
-  queueTag?: string,
-  period?: string
-) {
-  const client = new MongoClient(url, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    },
-  });
-  try {
-    await client.connect();
-    await client
-      .db("the_quest")
-      .collection("porofessor_live_game_participants_data")
-      .insertOne({ gameId, participants, queueTag, period });
-  } catch (err) {
-    console.log(err);
-  } finally {
-    await client.close();
-  }
-}
-export async function getPorofessorLiveGameParticipantsData(
-  gameId: number,
-  queueTag?: string,
-  period?: string
-): Promise<PoroSummoner[] | null> {
-  const client = new MongoClient(url, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    },
-  });
-  try {
-    await client.connect();
-    const res = await client
-      .db("the_quest")
-      .collection("porofessor_live_game_participants_data")
-      .findOne({ gameId: gameId, queueTag, period });
-    if (res === null) return null;
-    return res.participants;
-  } catch (err) {
-    console.log(err);
-    return null;
-  } finally {
-    await client.close();
-  }
-}
-
 export async function addLiveGame(
   liveGame: LiveGame,
   queueTag?: string,
@@ -223,27 +170,6 @@ export async function deleteAllRiotData() {
     await client
       .db("the_quest")
       .collection("riot_API_live_game_participants")
-      .deleteMany({});
-  } catch (err) {
-    console.log(err);
-    return null;
-  } finally {
-    await client.close();
-  }
-}
-export async function deleteAllPorofessorData() {
-  const client = new MongoClient(url, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    },
-  });
-  try {
-    await client.connect();
-    await client
-      .db("the_quest")
-      .collection("porofessor_live_game_participants_data")
       .deleteMany({});
   } catch (err) {
     console.log(err);
