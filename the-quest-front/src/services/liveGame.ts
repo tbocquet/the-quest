@@ -1,4 +1,4 @@
-import type { LiveGame } from "@/models/liveGame";
+import type { LiveGame } from "@/models/LiveGame";
 import { RiotId } from "@/models/RiotId";
 import ky from "ky";
 const SERVER_URL = import.meta.env.VITE_APP_BACKEND_URL;

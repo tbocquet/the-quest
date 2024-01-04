@@ -23,7 +23,7 @@ export function GameParticipant({ sum, team }: Props) {
     (league) => league.queueType === "RANKED_FLEX_SR"
   );
   return (
-    <div className="h-[23rem]">
+    <div className="h-[25rem]">
       <div
         className={
           "flex flex-col p-1 items-center gap-1 rounded border-4 border-double w-[16rem] text-white mx-2 " +
@@ -62,7 +62,9 @@ export function GameParticipant({ sum, team }: Props) {
         </div>
 
         {/* Runes */}
-        <div className={"flex flex-row flex-wrap justify-center gap-5 " + bg}>
+        <div
+          className={"flex flex-row flex-wrap justify-center gap-8 py-1 " + bg}
+        >
           {/* Summoner Spells */}
 
           <Perks perks={sum.perks} />
@@ -73,7 +75,7 @@ export function GameParticipant({ sum, team }: Props) {
         </div>
 
         {/* Tags */}
-        <div className={"" + bg}>
+        <div className={"py-1 " + bg}>
           {sum.porofessorStats && (
             <SummonerTags tags={sum.porofessorStats?.tags} />
           )}

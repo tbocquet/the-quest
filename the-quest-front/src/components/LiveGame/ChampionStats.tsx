@@ -1,6 +1,6 @@
 import { numberAbrevier } from "@/utils/textDataTransformer";
 import Tooltip from "./Tooltip";
-import { PoroChampionStats } from "@/models/porofessor";
+import { PoroChampionStats } from "@/models/Porofessor";
 import { getMasteryIcon, getMasteryToken } from "@/services/imageGetter";
 
 type Props = {

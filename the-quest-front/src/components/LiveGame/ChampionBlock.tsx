@@ -1,4 +1,4 @@
-import { PoroChampionStats } from "@/models/porofessor";
+import { PoroChampionStats } from "@/models/Porofessor";
 import { ChampionTile } from "./ChampionTile";
 import ChampionStats from "./ChampionStats";
 
