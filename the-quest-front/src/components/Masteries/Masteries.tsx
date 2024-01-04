@@ -108,6 +108,7 @@ export function Masteries({ masteries }: Props) {
       default:
     }
     setChampionMasteries(T);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     masteries,
     filters.sortingOption,

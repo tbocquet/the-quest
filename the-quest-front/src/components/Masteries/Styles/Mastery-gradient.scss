@@ -83,10 +83,10 @@
 }
 
 //Mastery 5
-.gradient-M3-back,
-.gradient-M2-back,
-.gradient-M1-back,
-.gradient-M0-back {
+.gradient-M3-front,
+.gradient-M2-front,
+.gradient-M1-front,
+.gradient-M0-front {
   background: rgb(89, 109, 130);
   background: linear-gradient(
     283deg,
@@ -96,10 +96,10 @@
   );
 }
 
-.gradient-M3-front,
-.gradient-M2-front,
-.gradient-M1-front,
-.gradient-M0-front {
+.gradient-M3-back,
+.gradient-M2-back,
+.gradient-M1-back,
+.gradient-M0-back {
   background: rgb(52, 59, 65);
   background: linear-gradient(
     283deg,

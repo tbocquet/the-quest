@@ -50,7 +50,7 @@ export default function ChampionStats({
       {/* Champion Mastery , Points, Tokens*/}
 
       <div
-        className={`gradient-M${masteryLvl}-front flex flex-row items-center px-1 rounded min-w-32 gap-2`}
+        className={`gradient-M${masteryLvl}-back flex flex-row items-center px-1 rounded min-w-[10.5rem] gap-2`}
       >
         <img alt="" className="w-7" src={getMasteryIcon(masteryLvl)}></img>
         <div className="font-bold">{numberAbrevier(masteryPoint)} pts</div>

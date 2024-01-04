@@ -4,7 +4,7 @@ type Props = {
   search: string;
   setSearch: (search: string) => void;
 };
-export function SearchBar({ suggestions, search, setSearch }: Props) {
+export function SearchBar({ search, setSearch }: Props) {
   function onChangeHandler(v: string): void {
     setSearch(v);
   }

@@ -1,4 +1,4 @@
-import { secondsElapsedSince, formatTime, formatTime2 } from "@/utils/date";
+import { secondsElapsedSince, formatTime2 } from "@/utils/date";
 import { useEffect, useState } from "react";
 import style from "./styles/LiveGame.module.scss";
 

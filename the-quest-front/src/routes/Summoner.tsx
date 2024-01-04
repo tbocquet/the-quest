@@ -9,6 +9,7 @@ import { SummonerAccount } from "@/models/SummonerAccount";
 
 export function Summoner() {
   //Récupération des données du loader
+
   const data = useLoaderData() as any;
   const summonerData = data.summonerData as SummonerData;
   const summonerMasteries = data.summonerMasteries as ChampionMastery[];

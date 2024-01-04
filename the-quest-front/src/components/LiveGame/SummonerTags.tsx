@@ -5,7 +5,7 @@ type Props = {
 };
 export function SummonerTags({ tags }: Props) {
   return (
-    <div className="flex flex-row flex-wrap gap-1 items-start justify-center">
+    <div className="flex flex-row flex-wrap min-h-[3rem] py-1 gap-1 items-start justify-center">
       {tags.map((tag, index) => {
         let color = "";
         switch (tag.value.toString()) {

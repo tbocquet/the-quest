@@ -8,6 +8,7 @@ export async function getLiveGameByRiotId(
   queueOption?: string,
   periodOption?: string
 ): Promise<null | LiveGame> {
+  console.log("DJ called 1");
   const queueOptSegment =
     queueOption && queueOption !== "" ? `/${queueOption}` : "";
   const periodOptSegment =
@@ -15,29 +16,13 @@ export async function getLiveGameByRiotId(
   const url = `${SERVER_URL}liveGameByRiotId/${riotId.gameName}/${riotId.tagLine}${queueOptSegment}${periodOptSegment}`;
   try {
     const data: any = await ky.get(url).json();
+    console.log("DJ called 2");
     return data as LiveGame;
   } catch (e) {
     console.log(e);
     return null;
   }
 }
-
-// export async function getLiveGameBySummonerName(
-//   summonerName: string,
-//   queueOption?: string,
-//   periodOption?: string
-// ): Promise<null | LiveGame> {
-//   const url = `${SERVER_URL}livegameByName/${summonerName}${
-//     queueOption && queueOption !== "" ? "/" + queueOption : ""
-//   }${periodOption && periodOption !== "" ? "/" + periodOption : ""}`;
-//   try {
-//     const data: any = await ky.get(url).json();
-//     return data as LiveGame;
-//   } catch (e) {
-//     console.log(e);
-//     return null;
-//   }
-// }
 
 export async function getPersistantLiveGame(): Promise<null | LiveGame> {
   const url = `${SERVER_URL}persistantLiveGame`;

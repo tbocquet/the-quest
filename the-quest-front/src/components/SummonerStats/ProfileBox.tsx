@@ -32,9 +32,7 @@ export function ProfileBox({ summonerAccount, sumData }: Props) {
           alt=""
           className="summoner-icon"
         />
-        <Tooltip direction="bottom" content={"Niveau de l'invocateur"}>
-          <h4 className="summoner-level">{sumData.summonerLevel}</h4>
-        </Tooltip>
+        <h4 className="summoner-level">{sumData.summonerLevel}</h4>
       </div>
 
       <div className="summoner-rank-infos">

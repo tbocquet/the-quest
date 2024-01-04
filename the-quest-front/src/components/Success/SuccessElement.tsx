@@ -29,26 +29,21 @@ export function SuccessElement({
   const boxRef = useRef<HTMLDivElement>(null);
   // X
   const [x, setX] = useState<number | undefined>();
-  // Y
-  const [y, setY] = useState<number | undefined>();
 
   // This function calculate X and Y
-  const getPosition = () => {
+  const getXPosition = () => {
     const x = boxRef.current?.offsetLeft;
     setX(x);
-
-    const y = boxRef.current?.offsetTop;
-    setY(y);
   };
 
   // Get the position of the red box in the beginning
   useEffect(() => {
-    getPosition();
+    getXPosition();
   }, []);
 
   // Re-calculate X and Y of the red box when the window gets resized by the user
   useEffect(() => {
-    window.addEventListener("resize", getPosition);
+    window.addEventListener("resize", getXPosition);
   }, []);
 
   return (
