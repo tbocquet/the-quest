@@ -30,7 +30,7 @@ const interval = setInterval(() => {
 //Routes
 app.get("/", (req: Request, res: Response) => {
   res.send(
-    "The Quest : Express + TypeScript Server (last update : 04:01:2024 17:00)"
+    "The Quest : Express + TypeScript Server (last update : 05:01:2024 17:00)"
   );
 });
 
